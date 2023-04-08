@@ -2,7 +2,7 @@
 
 # **Maristory**
 
-## **Projeto Trainee, Code Jr, Grupo 000, 2023.1**
+## **Projeto Trainee, Code Jr, Grupo 004, 2023.1**
 
 | **Sumário** |
 |-------------|
@@ -13,10 +13,11 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
+* Leandro Alvares
+* Vitória Cristina
+* Rhara Ianna
+* Vitor Fernandes
+* Ricardo Silva
 
 
 #### Scrum Master:
