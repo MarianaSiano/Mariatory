@@ -1,0 +1,33 @@
+.navegaçao
+    h1 {
+        color:#E0AAFF;
+        background-color: #10002B;
+      
+    }
+
+.paginicial 
+
+    h1 {
+        
+        margin-top: 10%;
+        margin-left: 3%;
+        color:#7B2CBF;
+    }
+
+    h2 {
+        color:#3C096C;
+        margin-left: 3%;
+    }
+
+    h3{
+        color:#240046;
+        margin-bottom: 20%;
+        margin-left: 3%;
+    }
+
+.rodape
+    h1 {
+        color:#E0AAFF;
+        background-color: #10002B;
+    }
+
