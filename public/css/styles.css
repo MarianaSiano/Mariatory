@@ -44,7 +44,15 @@ body{
     height: 250px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
+    overflow: hidden;
+    -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+}
+
+.content-image:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 .written-content{
     vertical-align: top;
@@ -225,5 +233,56 @@ body{
     100% {
         opacity: 1;
         transform: translate(0px, 0px);
+    }
+}
+
+@media (max-width: 1200px){
+    .col-md-4{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .col-md-8{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .sidebar .search-bar{
+        text-align: center;
+    }
+
+    .sidebar h3{
+        text-align: center;
+    }
+
+    .reviews-recent{
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 770px){
+    .content-image{
+        width: 90%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .written-content a{
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+    }
+
+    .individual-post{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .written-content{
+        width: 100%;
     }
 }
