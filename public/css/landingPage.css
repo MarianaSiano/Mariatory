@@ -1,31 +1,53 @@
 .paginicial 
 
+    .telinha {
+
+        float: right;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 10%;
+        margin-top: -4%;
+
+    }
 
     h1 {
         
-        margin-top: 20%;
+        font-size: 300% ;
+        margin-top: 15%;
         margin-left: 5%;
+        margin-right: 0%;
         color:#7B2CBF;
+        
     }
 
     h2 {
+        font-size: 200% ;
         color:#3C096C;
         margin-left: 5%;
+        margin-right: 0%;
     }
 
     h3{
+        font-size: 150% ;
         color:#240046;
 
         margin-left: 5%;
-        margin-bottom: 30%;
+        margin-right: 0%;
+        margin-bottom: 15%;
+        
     }
 
-    li{
+    .post{
         
         display: inline-block;
-        padding-left: 3%;
-        padding-right: 3%;
-        background-color:#A650DF;
+        margin-left: 5%;
+        margin-right: 2,5%;
+        margin-top: -5%;
+        margin-bottom: 10%;
+
+        animation-name: posts;
+        animation-duration: 2s;
+        
     }
 
 body
@@ -38,6 +60,76 @@ body
     width: 100%;
     height: 10%;
     z-index: -10;
-    background: url(../assets/Design\ sem\ nome\ \(3\).png) repeat center;
-    background-size: cover;
+    background: url(../assets/fundosite.png) repeat center;
+    background-size: calc(150%);
+}
+
+@keyframes posts {
+
+    0%{
+        transform: translate(0%,20%) ;
+    }
+
+    100%{
+        transform: translate(0%,0%) ;
+    }
+    
+}
+
+
+@media (max-width: 1000px)
+{
+    body{background-size: calc(250%);
+
+    } 
+
+
+    .telinha {
+       
+        width:120%;
+        float: left;
+    
+    }
+    
+    h1 {
+            
+        font-size: 200% ;
+        margin-top: -55%;
+        margin-left: 5%;
+        margin-right: 0%;
+        color:#7B2CBF;
+            
+    }
+    
+    h2 {
+        font-size: 150% ;
+        color:#3C096C;
+        margin-left: 5%;
+        margin-right: 0%;
+        }
+    
+    h3{
+        font-size: 100% ;
+        color:#240046;
+    
+        margin-left: 5%;
+        margin-right: 0%;
+        margin-bottom: 0%;
+            
+    }
+    
+    .post{
+
+        clear: left;
+        display:flex;
+        margin-left: 25%;
+        margin-right: 0%;
+        margin-top: 8%;
+        margin-bottom: 0%;
+            
+        animation-name: posts;
+        animation-duration: 2s;
+            
+    }
+
 }
