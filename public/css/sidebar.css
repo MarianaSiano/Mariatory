@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+/*
+#10002B (~roxo escuro)
+#240046
+#3C096C
+#7B2CBF
+#9D4EDD
+#A650DF
+#C77DFF
+#E0AAFF (~rosa claro)
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar" "main-content"
+    ;
+}
+
+/*CSS da barra lateral*/
+
+.sidebar{
+    grid-area: sidebar;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: #240046;
+}
+
+.top img{
+    width: 100px;
+}
+
+.top span{
+    color: #C77DFF;
+    font-family: 'Cedarville Cursive', cursive;
+    margin-left: 15px;
+}
+
+#btn{
+    display: flex;
+    margin: 10px;
+}
+
+.three-line-icon{
+    color:#f5f5f5;
+    margin-right: 10px;
+}
+
+.user img{
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-left: 20px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.name-type{
+    margin-left: 20px;
+}
+
+.user h1{
+    color: #C77DFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user h2{
+    color: #C77DFF;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+hr{
+    color: #f5f5f5;
+}
+
+.itens{
+    margin:0;
+    padding: 0;
+}
+
+.itens li{
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+.itens a{
+    text-decoration: none;
+    color: #C77DFF;
+}
+
+.extra-info ul{
+    list-style: none;
+}
+
+.extra-info a{
+    text-decoration: none;
+    color: #C77DFF;
+}
+
+.copyright{
+    color: #C77DFF;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*CSS do conteúdo principal*/
+
+.main-content{
+    grid-area: main-content;
+}
