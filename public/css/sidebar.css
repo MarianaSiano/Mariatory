@@ -18,48 +18,59 @@
 }
 
 body{
-    display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "sidebar" "main-content"
-    ;
+    height: 1   00vh;
 }
-
-/*CSS da barra lateral*/
 
 .sidebar{
-    grid-area: sidebar;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
     background-color: #240046;
+    width: 80px;
+    height: 100vh;
+    padding: 6px 10px;
+    box-shadow: 3px 0px 0px #E0AAFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
 
-.top img{
-    width: 100px;
+.top{
+    width: 100%;
 }
 
-.top span{
-    color: #C77DFF;
-    font-family: 'Cedarville Cursive', cursive;
-    margin-left: 15px;
-}
-
-#btn{
-    display: flex;
-    margin: 10px;
-}
-
-.three-line-icon{
-    color:#f5f5f5;
-    margin-right: 10px;
-}
-
-.user img{
+.top > img{
+    margin-top: 10px;
     width: 50px;
-    border-radius: 100%;
-    border: 1px solid rgba(0,0,0,0.1);
-    margin-left: 20px;
+    transition: 0.5s ease;
+    margin-left: 5px;
+}
+
+.top > img:hover{
+    opacity: 0.8;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn-reduce{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #C77DFF;
+    margin-top: 10px;
+}
+
+.btn-reduce > i{
+    cursor: pointer;
+}
+
+.external{
+    width: 65px;
+    height: 55px;
+    background-image: linear-gradient(to right, #7B2CBF,#9D4EDD, #A650DF, #C77DFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user{
@@ -67,17 +78,23 @@ body{
     align-items: center;
 }
 
-.name-type{
+.user img{
+    width: 60px;
+    height: 50px;
+    border: 7px 1px solid rgba(0,0,0,0.1);
+}
+
+.user-name-type{
     margin-left: 20px;
 }
 
-.user h1{
+.user-name-type h1{
     color: #C77DFF;
     font-size: 18px;
     font-weight: bold;
 }
 
-.user h2{
+.user-name-type h2{
     color: #C77DFF;
     font-size: 14px;
     font-weight: 300;
@@ -88,40 +105,222 @@ hr{
 }
 
 .itens{
-    margin:0;
-    padding: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .itens li{
-    list-style: none;
+    transition: 0.4s ease;
+}
+
+.itens li:hover{
+    transition: 0.4s ease;
+    background-color: #A650DF69;
+    border-radius: 10px;
+}
+
+.itens .actived{
+    background-color: #A650DF69;
+    border-radius: 10px;
+}
+
+.itens li a{
+    color: #C77DFF;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    line-height: 35px;
+}
+
+.itens li a i{
+    color: #E0AAFF;
+}
+
+.itens li a span{
+    display: none;
+    margin-left: 10px;
+}
+
+.main-content{
+    margin-left: 80px;
+    transition: all 0.5s ease;
+}
+
+.extra-info{
+    display: none;
+}
+
+.sidebar-footer{
+    display: none;
+}
+
+.sidebar.on{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #240046;
+    width: 240px;
+    height: 100vh;
+    padding: 6px 14px;
+    box-shadow: 3px 0px 0px #E0AAFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.on .top{
+    display: flex;
+    width: 100%;
+}
+
+.sidebar.on .top > img{
+    margin-top: 10px;
+    width: 100px;
+    transition: 0.5s ease;
+}
+
+.sidebar.on .top > img:hover{
+    opacity: 0.8;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.sidebar.on .btn-reduce{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #C77DFF;
+}
+
+.sidebar.on .btn-reduce > i{
+    cursor: pointer;
+}
+
+.sidebar.on .external{
+    width: 65px;
+    height: 55px;
+    background-image: linear-gradient(to right, #7B2CBF,#9D4EDD, #A650DF, #C77DFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.on .user{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar.on .user img{
+    width: 60px;
     height: 50px;
-    line-height: 50px;
+    border: 7px 1px solid rgba(0,0,0,0.1);
+}
+
+.sidebar.on .user-name-type{
     margin-left: 20px;
 }
 
-.itens a{
-    text-decoration: none;
+.sidebar.on .user-name-type h1{
     color: #C77DFF;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.extra-info ul{
+.sidebar.on .user-name-type h2{
+    color: #C77DFF;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sidebar.on .itens{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar.on .itens li{
+    transition: 0.4s ease;
+}
+
+.sidebar.on .itens li:hover{
+    transition: 0.4s ease;
+    background-color: #A650DF69;
+    border-radius: 10px;
+}
+
+.sidebar.on .itens li a{
+    color: #C77DFF;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 15px;
+    line-height: 35px;
+}
+
+.sidebar.on .itens li a i{
+    color: #E0AAFF;
+}
+
+.sidebar.on .itens li a span{
+    margin-left: 10px;
+    display: flex;
+}
+
+
+.sidebar.on .main-content{
+    margin-left: 240px;
+}
+
+.main-content.on{
+    margin-left: 240px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.on .extra-info{
+    display: flex;
+}
+
+.sidebar.on .sidebar-footer{
+    display: flex;
+}
+
+.sidebar.on .extra-info ul{
     list-style: none;
+    padding: 10px 10px;
+    line-height: 30px;
 }
 
-.extra-info a{
+.sidebar.on .extra-info a{
     text-decoration: none;
     color: #C77DFF;
 }
 
-.copyright{
+.sidebar.on .sidebar-footer{
     color: #C77DFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sidebar.on .sidebar-footer .content-footer{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+    .btn-reduce{
+        display: none;
+    }
+}
 
-/*CSS do conteúdo principal*/
-
-.main-content{
-    grid-area: main-content;
+@media screen and (max-height: 680px) {
+    .sidebar.on .sidebar-footer{
+        display: none;
+    }
 }
