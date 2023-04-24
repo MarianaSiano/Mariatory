@@ -42,6 +42,11 @@ body {
     align-items: center;
 }
 
+.left-container > img {
+    width: 350px;
+    height: 350px;
+}
+
 
 .right-container {
     height: 80vh;
@@ -114,6 +119,11 @@ body {
 }
 
 @media screen and (max-height: 500px){
+
+    .left-container > img {
+        width: 200px;
+        height: 200px;
+    }
 
     .right-container > button {
         height: 50px;
