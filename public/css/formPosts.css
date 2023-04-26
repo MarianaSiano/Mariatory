@@ -1,0 +1,143 @@
+/*
+#10002B
+#240046
+#3C096C
+#7B2CBF
+#9D4EDD
+#A650DF
+#C77DFF
+#E0AAFF
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #10002B;
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+
+    margin: 5vh 5vw;
+
+    background-color: #240046;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 20px;
+}
+
+.left-container {
+    height: 90vh;
+    width: 44vw;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container > img {
+    height: 200px;
+    width: 200px;
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    font-size: 25px;
+}
+
+.text-field > label {
+    color: #A650DF;
+
+    margin-bottom: 10px;
+}
+
+.text-field input {
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    width: 35vw;
+
+    background-color: #A650DF;
+    color: white;
+    font-size: 12;
+
+    box-sizing: border-box;
+}
+
+.text-field > input::placeholder{
+    color: #E0AAFF;
+}
+
+.fa-eye {
+    color: #240046;
+    justify-self: end;
+    cursor: pointer;
+    position: absolute;
+    right: 56%;
+    margin-top: 15px;
+}
+
+#linha-vertical {
+    height: 75vh;
+    width: 1vw;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: auto 0;    
+    border-right: 1px solid #A650DF;
+}
+
+.right-container {
+
+    height: 90vh;
+    width: 45vw;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right-container > button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 65px;
+
+    margin: auto;
+    padding: 15px 15px;
+    width: 80%;
+
+    background-color: #A650DF;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.right-container > button:hover {
+    opacity: 0.7;
+}
