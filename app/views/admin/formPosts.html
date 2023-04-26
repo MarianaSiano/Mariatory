@@ -8,33 +8,36 @@
     <link rel="stylesheet" href="/public/css/formPosts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     
-    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="public/assets/Maristory-Transparente2" sizes="32x32">
 
     <title>Formulário de Posts</title>
 </head>
 <body>
 
+
     <div class="container">
 
         <div class="left-container">
 
-            <img src="/public/assets/Maristory-Transparente2.png" alt="Maristory logo">
-
             <form>
                 <div class="text-field">
-                    <label for="userName">Nome:</label>
-                    <input type="text" id="userName" name="userName" placeholder="Nome" required/>
+                    <label for="title">Titulo:</label>
+                    <input type="text" id="title" name="title" placeholder="Titulo" required/>
                 </div>
 
                 <div class="text-field">
-                    <label for="userEmail">Email:</label>
-                    <input type="email" id="userEmail" name="userEmail" placeholder="Email" required/>
+                    <label for="textarea">Conteúdo:</label>
+                    <textarea type="text" id="text" name="text" placeholder="Conteúdo" rows="5" cols="71" ></textarea>
                 </div>
 
                 <div class="text-field">
-                    <label for="userPassword">Senha:</label>
-                    <input type="password" id="userPassword" name="userPassword" placeholder="Senha" required/>
-                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date"/>  
+                </div>
+
+                <div class="text-field">
+                    <label for="title">Autor (Usuário):</label>
+                    <input type="text" id="Autor" name="Autor" placeholder="Autor (Usuário)" required/>
                 </div>
             </form>
 
@@ -44,10 +47,10 @@
 
         <div class="right-container">
 
-            <button>Adicionar Usuário</button>
-            <button>Visualizar Usuário</button>
-            <button>Editar Usuário</button>
-            <button id="excluirUsuario">Excluir Usuário</button> 
+            <button>Adicionar Posts</button>
+            <button>Visualizar Posts</button>
+            <button>Editar Posts</button>
+            <button id="excluirUsuario">Excluir Posts</button> 
 
         </div>
 

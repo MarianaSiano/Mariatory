@@ -64,7 +64,7 @@ body {
     margin-bottom: 10px;
 }
 
-.text-field input {
+.text-field input ,  textarea {
     border: none;
     outline: none;
 
