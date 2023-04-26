@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: ['./app/**/*.html'],
   theme: {
@@ -11,6 +13,14 @@ module.exports = {
       'roxo-escuro-2':'#3C096C',
       'azul-escuro-1':'#240046',
       'azul-escuro-2':'#10002B',
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      emerald: colors.emerald,
+      indigo: colors.indigo,
+      yellow: colors.yellow,
     },
     extend: {},
   },
