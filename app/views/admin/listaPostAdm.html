@@ -1,49 +1,50 @@
 <!doctype html>
-<html lang="en">
- <head>
-    <link rel="stylesheet" href="../../../public/css/stylesListPost.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<html>
+<head>
+    <link rel="stylesheet" href="../../../public/css/listaPostAdm.css">
     <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   <title>Lista de Posts</title>
- </head>
- <body>
-   <img src="../../../public/assets/Maristory - Navbar - Transparente.png"class="rounded mx-auto d-block" alt="logo Maristory">>
-   <h1>Lista posts</h1>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button">Criar Post</button>
-    </div>
-   <div class="position-relative">
-    <div class="position-absolute top-50 start-50 translate-middle"> 
-        <table class="table">
-            <thead>
-                <th>Post</th>
-                <th>Data</th>
-                <th>Vizualizações</th>
-                <th>Organização</th>
-            </thead>
-            <tbody>
-                <th>Os 7 Maridos de evelyn hugo</th>
-                <th>22/04/23</th>
-                <th>856</th>
-                <th>
-                    <a href = "#" class = "edit" data-toggle = "modal">
-                        <i class = "material-icons" data-toggle="tooltip" title="Edit">e872;</i>
-                        <a href = "#" class = "edit" data-toggle = "modal">
-                        <i class = "material-icons" data-toggle="tooltip" title="Edit">&#xE872;</i>
-                    </a>
-                </th>
-            </tbody>
-        </table>
-    </div>
-    </div>
-   <!-- Optional JavaScript -->
-   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
- </body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lista de Posts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <img class = "mx-auto my-5" src="../../../public/assets/Maristory-Navbar-Transparente.png" alt="logo Maristory">
+    <h1 class="text-center text-4xl">Lista de Posts</h1>
+    
+    <div class="flex flex-row mx-[12.5%] gap-5"> 
+        <form class="flex gap-2 basis-full">
+            <svg aria-hidden="true" class="w-5 h-5 text-[#7B2CBF]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <input type="search" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-none focus:border-none" placeholder="Procurar artigo" required>
+            <button type="submit" class="text-white bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-4 py-2 ">Busca</button>
+        </form>
+        <button class="block bg-[#E0AAFF] drop-shadow-lg hover:bg-purple-700 px-2 py-3 text-white rounded-lg min-w-fit" type="button">Criar Postagem</button>
+    </div> 
+    
+    <table class = "mt-3 w-3/4 rounded-xl text-center bg-roxo-claro-1 mx-auto border border-gray-900 border-separate border-spacing-0">
+        <tr>
+            <th class="p-2">Post</th>
+            <th class="border-x border-gray-900 p-2">Data</th>
+            <th class="p-2">Edição</th>
+        </tr>
+        <tr>
+            <td class="border-y border-gray-900 p-2">Os 7 maridos de Evelyn Hugo</td>
+            <td class="border border-gray-900 p-2">29/11/22</td>
+            <td class="border-y border-gray-900 p-2">
+                <button class="text-white bottom-1 bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-2 py-1 ">  Editar </button>
+                <button class="text-white bottom-1 bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-2 py-1 " >   Excluir </button>
+                <button class="text-white bottom-1 bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-2 py-1 ">  Visualizar </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="p-2">Felicidade Clandestina</td>
+            <td class="border-x border-gray-900 p-2">03/11/22</td>
+            <td class="p-2">
+                <button class="text-white bottom-1 bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-2 py-1 ">  Editar </button>
+                <button class="text-white bottom-1 bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-2 py-1 " >   Excluir </button>
+                <button class="text-white bottom-1 bg-[#9D4EDD] hover:bg-[#7B2CBF] focus:outline-none font-medium rounded-lg text-sm px-2 py-1 ">  Visualizar </button>
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
