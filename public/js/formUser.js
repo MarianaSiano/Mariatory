@@ -1,6 +1,5 @@
 //Variável para visualizar a senha
 let btn = document.querySelector('.fa-eye');
-let modal = document.querySelector()
 
 //Funcionalidade para visualizar a senha
 btn.addEventListener('click', ()=>{
@@ -14,5 +13,3 @@ btn.addEventListener('click', ()=>{
     }
 
 });
-
-alert('Você precisa estar logado para acessar essa página.');

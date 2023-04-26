@@ -56,15 +56,15 @@ body {
     align-items: flex-start;
 
     font-size: 25px;
+    box-sizing: border-box;
 }
 
 .text-field > label {
     color: #A650DF;
-
     margin-bottom: 10px;
 }
 
-.text-field input {
+.text-field > input {
     border: none;
     outline: none;
 
@@ -75,7 +75,7 @@ body {
 
     background-color: #A650DF;
     color: white;
-    font-size: 12;
+    font-size: 12px;
 
     box-sizing: border-box;
 }
@@ -140,4 +140,101 @@ body {
 
 .right-container > button:hover {
     opacity: 0.7;
+}
+
+@media screen and (max-width: 500px) {
+
+    .left-container > img {
+        display: none;
+    }
+
+    .text-field > label {
+        margin-bottom: 5px;
+    }
+
+    .text-field > input {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 35vw;
+    }
+
+    .right-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-container > button {
+        height: 55px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-height: 600px) {
+
+    .text-field > label {
+        margin-bottom: 5px;
+    }
+
+    .text-field > input {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 35vw;
+    }
+}
+
+@media screen and (max-height: 500px) {
+
+    .left-container > img {
+        display: none;
+    }
+
+    .right-container > button {
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .text-field > label {
+        font-size: 18px;
+    }
+
+    .fa-eye {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-height: 350px) {
+
+    .right-container > button {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .text-field > input {
+        font-size: 10px;
+    }
+
+    .text-field > label {
+        font-size: 16px;
+    }
+
+    .fa-eye {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 275px) {
+
+    .right-container > button {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .text-field > label {
+        font-size: 14px;
+    }
+
+    .fa-eye {
+        font-size: 14px;
+    }
 }
