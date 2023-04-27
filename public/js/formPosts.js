@@ -1,18 +1,21 @@
-//Variável para visualizar a senha
-let btn = document.querySelector('.fa-eye');
-let modal = document.querySelector()
+//Funcionamento do modal
+const fade = document.querySelector('.fade');
 
-//Funcionalidade para visualizar a senha
-btn.addEventListener('click', ()=>{
-    let inputSenha = document.querySelector('#userPassword')
+function openModal(){
+    fade.classList.add('actived');
+}
 
-    if (inputSenha.getAttribute('type') == 'password'){
-        inputSenha.setAttribute('type', 'text')
+function closeModal(){
+    fade.classList.remove('actived');
+}
+
+window.addEventListener('click', (event) => {
+    if(event.target == fade){
+        fade.classList.remove('actived');
     }
-    else {
-        inputSenha.setAttribute('type', 'password')
-    }
+})
 
-});
-
-alert('Você precisa estar logado para acessar essa página.');
+function pseudoDelete(){
+    fade.classList.remove('actived');
+    window.alert('Post deletado com sucesso!');
+}

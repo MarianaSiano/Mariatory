@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="/public/css/formPosts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <link rel="icon" type="image/png" href="public/assets/Maristory-Transparente2" sizes="32x32">
 
@@ -26,8 +27,8 @@
                 </div>
 
                 <div class="text-field">
-                    <label for="textarea">Conteúdo:</label>
-                    <textarea type="text" id="text" name="text" placeholder="Conteúdo" rows="5" cols="71" ></textarea>
+                    <label id="text-area" for="textarea">Conteúdo:</label>
+                    <textarea type="text" id="text" name="text" placeholder="Conteúdo" rows="3" cols="71" ></textarea>
                 </div>
 
                 <div class="text-field">
@@ -39,6 +40,17 @@
                     <label for="title">Autor (Usuário):</label>
                     <input type="text" id="Autor" name="Autor" placeholder="Autor (Usuário)" required/>
                 </div>
+
+                <div class="text-field">
+                    <label for="title">Imagem:</label>
+                    <div class="upload">
+                        <div class="upload-button">
+                            <label for="arq">Envie uma imagem</label>
+                            <input name="arq" type="file" id="up-file"  onchange="readURL(this);">
+                        </div>
+                        <img class="file-img" id="file-upload">
+                    </div>
+                </div>
             </form>
 
         </div>
@@ -47,12 +59,31 @@
 
         <div class="right-container">
 
-            <button>Adicionar Posts</button>
+            <button>Adicionar Post</button>
             <button>Visualizar Posts</button>
-            <button>Editar Posts</button>
-            <button id="excluirUsuario">Excluir Posts</button> 
+            <button>Editar Post</button>
+            <button class="open-modal" onclick="openModal()">Excluir Post</button>
 
         </div>
+
+
+        <!--Parte do Modal-->
+        <div class="fade">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Apenas checando...</h3>
+                </div>
+                <div class="modal-content">
+                    <h2>Deletar esse post ?</h2>
+                    <p>Esta ação é final e você NÃO poderá recuperar qualquer dado posteriormente</p>
+                </div>
+                <div class="options">
+                    <button class="option" onclick="pseudoDelete()">Sim</button>
+                    <button onclick="closeModal()" class="option">Não</button>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 

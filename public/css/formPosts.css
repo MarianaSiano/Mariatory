@@ -56,6 +56,7 @@ body {
     align-items: flex-start;
 
     font-size: 25px;
+    box-sizing: border-box;
 }
 
 .text-field > label {
@@ -64,7 +65,7 @@ body {
     margin-bottom: 10px;
 }
 
-.text-field input ,  textarea {
+.text-field > input ,  textarea {
     border: none;
     outline: none;
 
@@ -75,12 +76,16 @@ body {
 
     background-color: #A650DF;
     color: white;
-    font-size: 12;
+    font-size: 12px;
 
     box-sizing: border-box;
 }
 
 .text-field > input::placeholder{
+    color: #E0AAFF;
+}
+
+.text-field > textarea::placeholder{
     color: #E0AAFF;
 }
 
@@ -140,4 +145,238 @@ body {
 
 .right-container > button:hover {
     opacity: 0.7;
+}
+
+input[type=file]{
+    display: none;
+}
+
+.upload-button label{
+    border: 2px dashed #E0AAFF;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+
+    margin: auto;
+    padding: 15px 15px;
+    width: 80%;
+
+    background-color: #A650DF;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.upload{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.file-img{
+    border: 3px solid #E0AAFF;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #813ac466;
+}
+
+
+/*Parte do modal*/
+
+.fade{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    border-radius: 1rem;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: #fff;
+    width: 500px;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: 15px;
+    color: #A650DF;
+}
+
+.modal-content{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-content h2{
+    font-size: 35px;
+}
+
+.modal-content p{
+    font-size: 14px;
+    margin: 15px 20%;
+    text-align: center;
+}
+
+.modal-header i:hover{
+    cursor: pointer;
+}
+
+.options{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options button{
+    width: 30%;
+    height: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #A650DF;
+    color: #fff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.options button:hover{
+    background-color: #A650DFCC;
+    transition: all 0.3s ease;
+}
+
+.actived{
+    animation: modal 0.6s;
+    display: flex;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate(0, -70px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .left-container > img {
+        display: none;
+    }
+
+    .text-field > label {
+        margin-bottom: 5px;
+    }
+
+    .text-field > input {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 35vw;
+    }
+
+    .right-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-container > button {
+        height: 55px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-height: 600px) {
+
+    .text-field > label {
+        margin-bottom: 5px;
+    }
+
+    .text-field > input {
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 35vw;
+    }
+}
+
+@media screen and (max-height: 500px) {
+
+    .left-container > img {
+        display: none;
+    }
+
+    .right-container > button {
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .text-field > label {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-height: 350px) {
+
+    .right-container > button {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .text-field > input {
+        font-size: 10px;
+    }
+
+    .text-field > label {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 275px) {
+
+    .right-container > button {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .text-field > label {
+        font-size: 14px;
+    }
 }
