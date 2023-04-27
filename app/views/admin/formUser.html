@@ -46,9 +46,27 @@
             <button>Adicionar Usuário</button>
             <button>Visualizar Usuário</button>
             <button>Editar Usuário</button>
-            <button>Excluir Usuário</button> 
+            <button onclick="openModal()">Excluir Usuário</button> 
 
         </div><!-- right-container -->
+
+
+         <!--Parte do Modal-->
+         <div class="fade">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Apenas checando...</h3>
+                </div>
+                <div class="modal-content">
+                    <h2>Deletar esse usuário ?</h2>
+                    <p>Esta ação é final e você NÃO poderá desfazer isso posteriormente</p>
+                </div>
+                <div class="options">
+                    <button class="option">Sim</button>
+                    <button onclick="closeModal()" class="option">Não</button>
+                </div>
+            </div>
+        </div>
 
     </div><!-- container -->
 
