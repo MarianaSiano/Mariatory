@@ -20,7 +20,7 @@ module.exports = {
       gray: colors.gray,
       emerald: colors.emerald,
       indigo: colors.indigo,
-      yellow: colors.yellow,
+      purple: colors.purple,
     },
     screens:{
       'smartphone': {'max': '472px'},
