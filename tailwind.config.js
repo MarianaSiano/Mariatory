@@ -23,9 +23,9 @@ module.exports = {
       yellow: colors.yellow,
     },
     screens:{
-      'smartphone': {'max':},
-      'tablet': {'min':'', 'max':},
-      'desktop': {'min':''},
+      'smartphone': {'max': '100px'},
+      'tablet': {'min': '100px', 'max' : '500px'},
+      'desktop': {'min':'200px'},
     },
     extend: {
       backgroundImage: {
