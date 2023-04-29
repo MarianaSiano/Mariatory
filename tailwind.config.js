@@ -23,8 +23,8 @@ module.exports = {
       yellow: colors.yellow,
     },
     screens:{
-      'smartphone': {'max': '100px'},
-      'tablet': {'min': '100px', 'max' : '500px'},
+      'smartphone': {'max': '472px'},
+      'tablet': {'min': '472px', 'max' : '693px'},
       'desktop': {'min':'200px'},
     },
     extend: {

@@ -520,15 +520,15 @@ video {
   width: 100%;
 }
 
-@media (min-width: 100px) {
-  .container {
-    max-width: 100px;
-  }
-}
-
 @media (min-width: 200px) {
   .container {
     max-width: 200px;
+  }
+}
+
+@media (min-width: 472px) {
+  .container {
+    max-width: 472px;
   }
 }
 
@@ -555,10 +555,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -571,16 +567,8 @@ video {
   display: table;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .w-3\/4 {
   width: 75%;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-full {
@@ -669,10 +657,6 @@ video {
   background-color: rgb(157 78 221 / var(--tw-bg-opacity));
 }
 
-.bg-lupa {
-  background-image: url('/public/assets/lupa.png');
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -702,8 +686,8 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.pl-10 {
-  padding-left: 2.5rem;
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
 .text-center {
@@ -756,4 +740,24 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (max-width: 472px) {
+  .smartphone\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .smartphone\:flex-col {
+    flex-direction: column;
+  }
+
+  .smartphone\:gap-2 {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 472px) and (max-width: 693px) {
+  .tablet\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
 }
