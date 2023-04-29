@@ -22,7 +22,16 @@ module.exports = {
       indigo: colors.indigo,
       yellow: colors.yellow,
     },
-    extend: {},
+    screens:{
+      'smartphone': {'max':},
+      'tablet': {'min':'', 'max':},
+      'desktop': {'min':''},
+    },
+    extend: {
+      backgroundImage: {
+        'lupa':"url('/public/assets/lupa.png')"
+      },
+    },
   },
   plugins: [],
 }
