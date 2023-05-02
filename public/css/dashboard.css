@@ -87,6 +87,7 @@ body {
 .right-container > button > a {
     text-decoration: none;
     text-align: center;
+    font-size: 20px;
     flex-grow: 1;
     color: #240046;
 }
