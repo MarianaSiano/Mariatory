@@ -1,0 +1,93 @@
+#usuarios {
+    width: 96%;
+    margin-top: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 1px 5px 30px #7B2CBF;
+
+}
+#cardes{
+
+    width: 100px;
+    margin-top: 10%;
+    margin-bottom: -15%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 1px 5px 30px #7B2CBF;
+}
+@media (max-width: 1000px) {
+    #usuarios{
+        width: 150%;
+    }
+}
+
+
+th {
+    color: #10002B;
+}
+
+td {
+    color: #3C096C;
+}
+
+.btn1 {
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.btn1:hover {
+
+    background-color: #C77DFF;
+    transition: 1s;
+
+}
+
+.btn2 {
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.btn2:hover {
+
+    background-color: #C77DFF;
+    transition: 1s;
+
+}
+
+.btn3 {
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.btn3:hover {
+
+    background-color: #C77DFF;
+    transition: 1s;
+
+}
+
+.btn4 {
+
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    right: 2%;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 1px 5px 30px #7B2CBF;
+}
+
+.btn4:hover {
+
+    background-color: #C77DFF;
+    transition: 1s;
+
+}
+
+body{
+    background: url(../assets/fundosite.png) repeat center;
+}

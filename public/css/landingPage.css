@@ -1,58 +1,55 @@
-.paginicial 
+.paginicial .telinha {
 
-    .telinha {
+    float: right;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 10%;
+    margin-top: -4%;
 
-        float: right;
-        margin-left: 4%;
-        margin-right: 4%;
-        margin-bottom: 10%;
-        margin-top: -4%;
+}
 
-    }
+h1 {
 
-    h1 {
-        
-        font-size: 300% ;
-        margin-top: 15%;
-        margin-left: 5%;
-        margin-right: 0%;
-        color:#7B2CBF;
-        
-    }
+    font-size: 300%;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 0%;
+    color: #7B2CBF;
 
-    h2 {
-        font-size: 200% ;
-        color:#3C096C;
-        margin-left: 5%;
-        margin-right: 0%;
-    }
+}
 
-    h3{
-        font-size: 150% ;
-        color:#240046;
+h2 {
+    font-size: 200%;
+    color: #3C096C;
+    margin-left: 5%;
+    margin-right: 0%;
+}
 
-        margin-left: 5%;
-        margin-right: 0%;
-        margin-bottom: 15%;
-        
-    }
+h3 {
+    font-size: 150%;
+    color: #240046;
 
-    .post{
-        
-        display: inline-block;
-        margin-left: 5%;
-        margin-right: 2,5%;
-        margin-top: -5%;
-        margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 0%;
+    margin-bottom: 15%;
 
-        animation-name: posts;
-        animation-duration: 2s;
-        
-    }
+}
 
-body
-{
-   
+.post {
+
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 2, 5%;
+    margin-top: -5%;
+    margin-bottom: 10%;
+
+    animation-name: posts;
+    animation-duration: 2s;
+
+}
+
+body {
+
     right: 0;
     bottom: 0;
     min-width: 10%;
@@ -66,70 +63,70 @@ body
 
 @keyframes posts {
 
-    0%{
-        transform: translate(0%,20%) ;
+    0% {
+        transform: translate(0%, 20%);
     }
 
-    100%{
-        transform: translate(0%,0%) ;
+    100% {
+        transform: translate(0%, 0%);
     }
-    
+
 }
 
 
-@media (max-width: 1000px)
-{
-    body{background-size: calc(250%);
+@media (max-width: 1000px) {
+    body {
+        background-size: calc(250%);
 
-    } 
+    }
 
 
     .telinha {
-       
-        width:120%;
+
+        width: 120%;
         float: left;
-    
+
     }
-    
+
     h1 {
-            
-        font-size: 200% ;
+
+        font-size: 200%;
         margin-top: -55%;
         margin-left: 5%;
         margin-right: 0%;
-        color:#7B2CBF;
-            
+        color: #7B2CBF;
+
     }
-    
+
     h2 {
-        font-size: 150% ;
-        color:#3C096C;
+        font-size: 150%;
+        color: #3C096C;
         margin-left: 5%;
         margin-right: 0%;
-        }
-    
-    h3{
-        font-size: 100% ;
-        color:#240046;
-    
+    }
+
+    h3 {
+        font-size: 100%;
+        color: #240046;
+
         margin-left: 5%;
         margin-right: 0%;
         margin-bottom: 0%;
-            
+
     }
-    
-    .post{
+
+    .post {
 
         clear: left;
-        display:flex;
+        display: flex;
         margin-left: 25%;
         margin-right: 0%;
         margin-top: 8%;
         margin-bottom: 0%;
-            
+
         animation-name: posts;
         animation-duration: 2s;
-            
+
     }
 
 }
