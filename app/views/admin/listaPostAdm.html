@@ -2,7 +2,6 @@
 <html>
   <head>
     <link rel="stylesheet" href="../../../public/css/listaPostAdm.css" />
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -11,37 +10,41 @@
     <title>Lista de Posts</title>
   </head>
   <body>
-    <!-- The Modal -->
-    <div
+    <dialog
       id="myModal"
-      class="fixed left-0 right-0 z-10 hidden h-full w-full overflow-auto bg-roxo-escuro-2/20"
+      class="rounded-lg border border-solid border-roxo-escuro-2 bg-white p-5 backdrop:bg-roxo-escuro-2/20"
     >
-      <!-- Modal content -->
-      <div
-        class="mx-[20%] my-[15%] min-w-fit rounded-lg border border-solid border-roxo-escuro-2 bg-white p-5"
-      >
-        <div class="modal-box relative">
-          <span class="close btn-sm btn-circle absolute right-2 text-lg"
-            >&times;</span
-          >
-          <p class="text-center font-bold">Só checando</p>
-        </div>
-        <p class="text-center">Tem certeza que deseja excluir este artigo?</p>
-        <div class="text-center">
-          <button
-            class="mt-4 rounded-lg bg-roxo-medio-2 px-2 py-1 text-white drop-shadow-lg"
-          >
-            sim
-          </button>
-          <button
-            class="rounded-lg bg-roxo-claro-1 px-2 py-1 drop-shadow-lg"
-            id="cBtn"
-          >
-            não
-          </button>
-        </div>
+      <div class="relative">
+        <span class="close absolute right-2 mb-10 cursor-pointer">&times;</span>
+        <p class="text-center font-bold">Só checando</p>
       </div>
-    </div>
+      <p class="text-center">Tem certeza que deseja excluir este artigo?</p>
+      <div class="text-center">
+        <button
+          class="mt-4 rounded-lg bg-roxo-medio-2 px-2 py-1 text-white drop-shadow-lg"
+          id="sBtn"
+        >
+          sim
+        </button>
+        <button
+          class="rounded-lg bg-roxo-claro-1 px-2 py-1 drop-shadow-lg"
+          id="cBtn"
+        >
+          não
+        </button>
+      </div>
+    </dialog>
+
+    <dialog id="modalEdicao" class="rounded-lg backdrop:bg-roxo-escuro-2/20">
+      <p>Teste</p>
+    </dialog>
+
+    <dialog
+      id="modalVisualizacao"
+      class="h-4/5 w-4/5 rounded-lg backdrop:bg-roxo-escuro-2/20"
+    >
+      <iframe class="h-[100%] w-[100%]" src="../site/vpost.html"></iframe>
+    </dialog>
 
     <div id="vizualisar" class=""></div>
 
@@ -93,6 +96,7 @@
         <td class="border-y border-gray-900 p-2">
           <button
             class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2 tablet:mb-2"
+            id="botaoEditar"
           >
             Editar
           </button>
@@ -126,6 +130,7 @@
           </button>
           <button
             class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
+            id="botaoVisualizar"
           >
             Visualizar
           </button>

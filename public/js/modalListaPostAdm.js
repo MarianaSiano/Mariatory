@@ -1,36 +1,60 @@
-// Get the modal
+// Modal para excluir------------------------------------------
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var obtn = document.getElementById("moBtn");
 
 var cbtn = document.getElementById("cBtn");
-
-// Get the <span> element that closes the modal
+var sbtn = document.getElementById("sBtn");
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
+function abrirModalExcluir() {
+  modal.showModal();
+}
 
-obtn.onclick = function () {
-  modal.style.display = "block";
-};
+function fecharModalExcluir() {
+  modal.close();
+}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+btn.onclick = abrirModalExcluir;
+obtn.onclick = abrirModalExcluir;
 
-cbtn.onclick = function () {
-  modal.style.display = "none";
-};
+span.onclick = fecharModalExcluir;
+cbtn.onclick = fecharModalExcluir;
+sbtn.onclick = fecharModalExcluir;
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+modal.onclick = function (event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.close();
+  }
+};
+//-------------------------------------------------------------
+
+//Modal de edição----------------------------------------------
+var modalEdicao = document.getElementById("modalEdicao");
+var botaoEditar = document.getElementById("botaoEditar");
+
+botaoEditar.onclick = function () {
+  modalEdicao.showModal();
+};
+
+modalEdicao.onclick = function (event) {
+  if (event.target == modalEdicao) {
+    modalEdicao.close();
+  }
+};
+//-------------------------------------------------------------
+
+//Modal de vizualização----------------------------------------
+var modalVisualizacao = document.getElementById("modalVisualizacao");
+var botaoVisualizar = document.getElementById("botaoVisualizar");
+
+botaoVisualizar.onclick = function () {
+  modalVisualizacao.showModal();
+};
+
+modalVisualizacao.onclick = function (event) {
+  if (event.target == modalVisualizacao) {
+    modalVisualizacao.close();
   }
 };
