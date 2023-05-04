@@ -1,0 +1,183 @@
+/*
+#10002B
+#240046
+#3C096C
+#7B2CBF
+#9D4EDD
+#A650DF
+#C77DFF
+#E0AAFF
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #10002B;
+}
+
+.container {
+    width: 80vw;
+    height: 80vh;
+
+    margin: 10vh 10vw;
+
+    background-color: #240046;
+
+    display: flex;
+    flex-direction: row;
+
+
+    border-radius: 20px;
+}
+
+.left-container {
+    height: 80vh;
+    width: 40vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container > img {
+    width: 350px;
+    height: 350px;
+}
+
+
+.right-container {
+    height: 80vh;
+    width: 40vw;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container > button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    height: 65px;
+
+    margin: auto;
+    padding: 15px 15px;
+    width: 80%;
+
+    background-color: #A650DF;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.right-container > button:hover {
+    opacity: 0.7;
+}
+
+.right-container > button > a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    flex-grow: 1;
+    color: #240046;
+}
+
+.right-container > button > i {
+    color: #240046;
+}
+
+@media screen and (max-width: 800px) {
+
+    .left-container > img {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .left-container {
+        display: none;
+    }
+
+    .right-container {
+        height: 80vh;
+        width: 80vw;
+    }
+
+}
+
+@media screen and (max-height: 500px){
+
+    .left-container > img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .right-container > button {
+        height: 50px;
+    }
+    
+    .right-container > button > a {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-height: 400px){
+
+    .right-container > button {
+        height: 40px;
+    }
+    
+    .right-container > button > a {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-height: 300px){
+
+    .right-container > button {
+        height: 25px;
+    }
+    
+    .right-container > button > a {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-height: 225px){
+
+    .container {
+        border-radius: 10px;
+    }
+
+    .left-container {
+        display: none;
+    }
+
+    .right-container {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    .right-container > button {
+        height: 20px;
+        border-radius: 5px;
+    }
+    
+}
