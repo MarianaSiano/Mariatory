@@ -1,38 +1,94 @@
-#usuarios {
-    width: 96%;
-    margin-top: 20%;
-    margin-left: 2%;
-    margin-right: 2%;
-    box-shadow: 1px 5px 30px #7B2CBF;
-
+h1 {
+    
+    text-align: center;
 }
-#cardes{
-
-    width: 100px;
-    margin-top: 10%;
-    margin-bottom: -15%;
-    margin-left: 2%;
-    margin-right: 2%;
-    box-shadow: 1px 5px 30px #7B2CBF;
+.heading {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
 }
-@media (max-width: 1000px) {
-    #usuarios{
-        width: 150%;
+
+
+.formulario {
+    display: flex;
+    flex-basis: 100%;
+    gap: 0.5 rem;
+}
+
+.procurar {
+    /* focus: ring-none; */
+    width: 60.8%;
+    margin-left: 12.5%;
+    margin-right: 0.5%;
+    border-radius: 0.5 rem;
+    border-width: 1px;
+    background-color: rgb(224 170 255);
+    background-color: rgb(249 250 251);
+    padding-left: 1.5 rem;
+    font-size: 0.875 rem;
+    line-height: 1.25 rem;
+    color: rgb(17 24 39);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.04)) ;
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1)); 
+    border-style: none;
+}
+
+.busca {
+    margin-right: 0.5%;
+    border-radius: 0.5rem;
+    background-color: rgb(224 170 255);
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.04));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+}
+
+.busca:hover {
+    background-color: #C77DFF;
+    transition: 1s;
+}
+
+.busca:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.usuario {
+    border-radius: 0.5rem;
+    min-width: fit-content;
+    background-color: rgb(224 170 255);
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.04));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+}
+
+.usuario:hover {
+    background-color: #C77DFF;
+    transition: 1s;
+}
+
+
+
+@media(max-width: 472px) {
+    .heading {
+        flex-direction: column;
+        gap: 0.5rem
     }
-}
-
-
-th {
-    color: #10002B;
-}
-
-td {
-    color: #3C096C;
 }
 
 .btn1 {
     background-color: white;
-    border: 1px black solid;
+    border: 0;
     border-radius: 5px;
 }
 
@@ -45,7 +101,7 @@ td {
 
 .btn2 {
     background-color: white;
-    border: 1px black solid;
+    border: 0;
     border-radius: 5px;
 }
 
@@ -58,7 +114,7 @@ td {
 
 .btn3 {
     background-color: white;
-    border: 1px black solid;
+    border: 0;
     border-radius: 5px;
 }
 
@@ -68,26 +124,66 @@ td {
     transition: 1s;
 
 }
-
-.btn4 {
-
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    right: 2%;
-    background-color: white;
-    border: 1px black solid;
-    border-radius: 5px;
-    box-shadow: 1px 5px 30px #7B2CBF;
-}
-
-.btn4:hover {
-
-    background-color: #C77DFF;
-    transition: 1s;
-
-}
-
-body{
+body::after {
+    content: "";
     background: url(../assets/fundosite.png) repeat center;
+    background-size: calc(90%);
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+.tabela1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75rem;
+    width: 75%;
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    border-radius: 0.75rem;
+    border-width: 1px;
+    border-color: rgb(17 24 39);
+    background-color: rgb(224 170 255);
+    text-align: center;
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0 / 0.4)) drop-shadow(0px 4px 3px rgb(0 0 0 / 0.1));
+    box-shadow: 1px 5px 30px #7B2CBF;
+
+}
+
+.c1 {
+    padding: 0.5rem;
+}
+
+.c2 {
+    border-left-width: 1px;
+    border-color: rgb(17 24 39);
+    padding: 0.5rem;
+}
+
+.c3 {
+    padding: 0.5rem;
+}
+
+.l1c1 {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgb(17 24 39);
+    padding: 0.5rem;
+}
+
+.l1c2 {
+    border-width: 1px;
+    border-color: rgb(17 24 39);
+    padding: 0.5rem;
+}
+
+.l1c3 {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgb(17 24 39);
+    padding: 0.5rem;
 }
