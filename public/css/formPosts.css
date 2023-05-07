@@ -65,7 +65,7 @@ body {
     margin-bottom: 10px;
 }
 
-.text-field > input ,  textarea {
+.text-field > input {
     border: none;
     outline: none;
 
@@ -82,10 +82,6 @@ body {
 }
 
 .text-field > input::placeholder{
-    color: #E0AAFF;
-}
-
-.text-field > textarea::placeholder{
     color: #E0AAFF;
 }
 
@@ -152,7 +148,7 @@ input[type=file]{
 }
 
 .upload-button label{
-    border: 2px dashed #E0AAFF;
+    border: 2px dashed #992dd7;
     outline: none;
     cursor: pointer;
 
@@ -162,14 +158,15 @@ input[type=file]{
 
     height: 40px;
 
-    margin: auto;
-    padding: 15px 15px;
+    padding: 5px 5px;
     width: 80%;
 
     background-color: #A650DF;
     border-radius: 10px;
     letter-spacing: 1px;
     font-size: 20px;
+
+    color: white !important;
 }
 
 .upload{
@@ -187,6 +184,39 @@ input[type=file]{
     background-color: #813ac466;
 }
 
+.written-content{
+    vertical-align: top;
+}
+
+.written-content h1{
+    font-family: serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.written-content p{
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.written-content ul{
+    list-style: none;
+}
+
+.written-content ul{
+    margin-top: 20px;
+}
+
+.written-content ul li span{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.written-content ul li{
+    margin-bottom: 10px;
+}
 
 /*Parte do modal*/
 
@@ -200,8 +230,6 @@ input[type=file]{
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 5;
     border-radius: 1rem;
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .modal{
@@ -211,15 +239,21 @@ input[type=file]{
     transform: translate(-50%, -50%);
     z-index: 10;
     background-color: #fff;
-    width: 500px;
+    width: 600px;
     max-width: 90%;
     padding: 1rem;
     border-radius: 1rem;
+    height: 90vh;
+}
+
+.modal.delete {
+    height: 250px;
+    width: 500px;
 }
 
 .modal-header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     text-transform: uppercase;
     align-items: center;
     border-bottom: 1px solid #ccc;
@@ -227,6 +261,23 @@ input[type=file]{
     padding-bottom: 1rem;
     font-size: 15px;
     color: #A650DF;
+}
+
+textarea{
+    resize: none;
+    width: 95%;
+
+    outline: none;
+
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 1px;
+
+    background-color: #A650DF;
+    color: white;
+    font-size: 12px;
+
+    box-sizing: border-box;
 }
 
 .modal-content{
@@ -268,11 +319,15 @@ input[type=file]{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     font-size: 15px;
-    background-color: #A650DF;
+    font-weight: 600;
+    background-color: #9920e9;
     color: #fff;
     margin-left: 1rem;
     margin-right: 1rem;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .options button:hover{
@@ -283,6 +338,77 @@ input[type=file]{
 .actived{
     animation: modal 0.6s;
     display: flex;
+}
+
+.content{
+    height: 80%;
+    display: flex;
+}
+
+.content .formulario{
+    width: 50%;
+}
+
+.content .container-textarea{
+    height: 100%;
+    width: 50%;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.field label{
+    color: #A650DF;
+    margin-bottom: 5px;
+}
+
+.field input{
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 80%;
+
+    background-color: #A650DF;
+    color: white;
+    font-size: 12px;
+
+    box-sizing: border-box;
+}
+
+
+.field input::placeholder{
+    color: white;
+} 
+
+textarea::placeholder{
+    color: white;
+    padding: 1px;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 250px;
+    display: flex;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
 }
 
 @keyframes modal {

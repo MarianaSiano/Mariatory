@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="/public/css/formPosts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -20,66 +21,148 @@
 
         <div class="left-container">
 
-            <form>
-                <div class="text-field">
-                    <label for="title">Titulo:</label>
-                    <input type="text" id="title" name="title" placeholder="Titulo" required/>
-                </div>
-
-                <div class="text-field">
-                    <label id="text-area" for="textarea">Conteúdo:</label>
-                    <textarea type="text" id="text" name="text" placeholder="Conteúdo" rows="3" cols="71" ></textarea>
-                </div>
-
-                <div class="text-field">
-                    <label for="date">Data:</label>
-                    <input type="date" id="date" name="date"/>  
-                </div>
-
-                <div class="text-field">
-                    <label for="title">Autor (Usuário):</label>
-                    <input type="text" id="Autor" name="Autor" placeholder="Autor (Usuário)" required/>
-                </div>
-
-                <div class="text-field">
-                    <label for="title">Imagem:</label>
-                    <div class="upload">
-                        <div class="upload-button">
-                            <label for="arq">Envie uma imagem</label>
-                            <input name="arq" type="file" id="up-file"  onchange="readURL(this);">
-                        </div>
-                        <img class="file-img" id="file-upload">
-                    </div>
-                </div>
-            </form>
-
         </div>
 
         <div id="linha-vertical"></div>
 
         <div class="right-container">
 
-            <button>Adicionar Post</button>
-            <button>Visualizar Posts</button>
-            <button>Editar Post</button>
-            <button class="open-modal" onclick="openModal()">Excluir Post</button>
+            <button onclick="openModalCadastrar()">Adicionar Post</button>
+            <button onclick="openModalVisualizar()">Visualizar Posts</button>
+            <button onclick="openModalEditar()">Editar Post</button>
+            <button class="open-modal" onclick="openModalExcluir()">Excluir Post</button>
 
         </div>
 
-
-        <!--Parte do Modal-->
-        <div class="fade">
+        <!--Parte do Modal de Cadastro-->
+        <div class="fade cadastrar">
             <div class="modal">
                 <div class="modal-header">
-                    <h3>Apenas checando...</h3>
+                    <h3>Cadastrar post</h3>
+                    <i onclick="closeModalCadastrar()" class='bx bx-x bx-sm'></i>
+                </div>
+                <div class="content">   
+                    <div class="formulario">
+                        <div class="field">
+                            <label for="autor">Autor:</label>
+                            <input type="text" for="autor" placeholder="Autor...">
+                        </div>
+                        <div class="field">
+                            <label for="titulo">Título:</label>
+                            <input type="text" for="titulo" placeholder="Título...">
+                        </div>
+                        <div class="field">
+                            <label for="data">Data de criação:</label>
+                            <input type="date">
+                        </div>
+                        <div class="field">
+                            <label for="imagem">Imagem:</label>
+                            <div class="upload-button">
+                                <label for="arq">Anexe uma imagem</label>
+                                <input name="arq" type="file" id="up-file"  onchange="readURL(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-textarea">
+                        <div class="field">
+                            <label for="text-area">Conteúdo</label>
+                             <textarea name="text-area" id="" cols="30" rows="15" placeholder="Conteúdo..."></textarea>
+                        </div>
+                    </div>
+                </div> 
+                <div class="options">
+                    <button class="option action"><span class="material-symbols-outlined">
+                        app_registration
+                        </span>Cadastrar</button>
+                    <button onclick="closeModalCadastrar()" class="option cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Parte do Modal de Editar-->
+        <div class="fade editar">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Editar post</h3>
+                    <i onclick="closeModalEditar()" class='bx bx-x bx-sm'></i>
+                </div>
+                <div class="content">   
+                    <div class="formulario">
+                        <div class="field">
+                            <label for="autor">Autor:</label>
+                            <input type="text" for="autor" placeholder="Autor...">
+                        </div>
+                        <div class="field">
+                            <label for="titulo">Título:</label>
+                            <input type="text" for="titulo" placeholder="Título...">
+                        </div>
+                        <div class="field">
+                            <label for="data">Data de criação:</label>
+                            <input type="date">
+                        </div>
+                        <div class="field">
+                            <label for="imagem">Imagem:</label>
+                            <div class="upload-button">
+                                <label for="arq">Anexe uma imagem</label>
+                                <input name="arq" type="file" id="up-file"  onchange="readURL(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-textarea">
+                        <div class="field">
+                            <label for="text-area">Conteúdo</label>
+                             <textarea name="text-area" id="" cols="30" rows="15" placeholder="Conteúdo..."></textarea>
+                        </div>
+                    </div>
+                </div> 
+                <div class="options">
+                    <button class="option action"><i class='bx bxs-edit-alt'></i>Editar</button>
+                    <button onclick="closeModalEditar()" class="option cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Parte do Modal de Visualizar-->
+        <div class="fade visualizar">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Visualizar post</h3>
+                    <i onclick="closeModalVisualizar()" class='bx bx-x bx-sm'></i>
+                </div>
+                <div class="content">
+                    <div class="written-content">
+
+                        <h1>Corte de Espinhos e Rosas, uma adorável fantasia de Sarah J. Maas</h1>
+
+                        <div class="center">
+                            <div class="image"><img src="https://poltronanerd.com.br/wp-content/uploads/2017/12/81cAEHClU4L.jpg" alt=""></div>
+                        </div>
+
+                        <p>Corte de Espinhos e Rosas é um romance de fantasia best-seller da autora Sarah J. Maas, que conta a história de Feyre, uma humana capturada por um feérico e envolvida em uma trama que ameaça a paz entre humanos e seres feéricos.</p>
+
+                        <ul>
+                            <li><span>Autor: Rafael dos Santos</span></li>
+                            <li>Data da postagem: 23/05/2023</li>
+
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        
+        <!--Parte do Modal de Deletar-->
+        <div class="fade excluir">
+            <div class="modal delete">
+                <div class="modal-header">
+                    <h3>Deletar Post</h3>
                 </div>
                 <div class="modal-content">
                     <h2>Deletar esse post ?</h2>
                     <p>Esta ação é final e você NÃO poderá recuperar qualquer dado posteriormente</p>
                 </div>
                 <div class="options">
-                    <button class="option" onclick="pseudoDelete()">Sim</button>
-                    <button onclick="closeModal()" class="option">Não</button>
+                    <button class="option">Sim</button>
+                    <button onclick="closeModalExcluir()" class="option">Não</button>
                 </div>
             </div>
         </div>
