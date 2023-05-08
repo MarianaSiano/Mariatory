@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css"
+    />
     <link rel="stylesheet" href="../../../public/css/listaPostAdm.css" />
     <meta charset="utf-8" />
     <meta
@@ -32,6 +36,29 @@
         >
           não
         </button>
+      </div>
+    </dialog>
+
+    <dialog
+      id="modalCriacao"
+      class="rounded-lg backdrop:bg-roxo-escuro-2/20"
+      open
+    >
+      <h2 class="m-4 text-center">Criar postagem</h2>
+
+      <div class="rounded-lg bg-roxo-claro-2 p-2">
+        <ul class="flex flex-wrap gap-2">
+          <input
+            type="text"
+            spellcheck="false"
+            class="border-transparent bg-roxo-claro-2 text-white placeholder:text-white focus:outline-0"
+          />
+          <li>teste <i class="uit uit-multiply"></i></li>
+        </ul>
+      </div>
+      <div class="details flex gap-9">
+        <p class="mt-2"><span>5</span> tags faltando</p>
+        <button class="mt-2 rounded-lg bg-roxo-claro-1">Remover todas</button>
       </div>
     </dialog>
 
@@ -74,6 +101,7 @@
       </form>
       <button
         class="min-w-fit rounded-lg bg-roxo-claro-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
+        id="botaoCriar"
         type="button"
       >
         Criar Postagem
