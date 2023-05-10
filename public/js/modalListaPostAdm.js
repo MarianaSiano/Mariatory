@@ -139,37 +139,39 @@ removeBtn.addEventListener("click", () => {
 //-------------------------------------------------------------
 
 //Modal de Red flags---------------------------------------------
-/*
-const ul = document.querySelector("ul"),
-  input = document.querySelector("input"),
-  tagNumb = document.querySelector(".redflags span");
+const ul_red = document.querySelector("ul"),
+  input_red = document.querySelector("input"),
+  tagNumb_red = document.querySelector(".redflags span");
 
-let maxTags = 5,
-  tags = [];
+let maxTags_red = 5,
+  tags_red = [];
 
 countTags();
 createTag();
-   
+
 function countTags() {
-  input.focus();
-  tagNumb.innerText = maxTags - tags.length;
+  input_red.focus();
+  tagNumb_red.innerText = maxTags_red - tags_red.length;
 }
 
 function createTag() {
-  ul.querySelectorAll("li").forEach((li) => li.remove());
-  tags
+  ul_red.querySelectorAll("li").forEach((li) => li.remove());
+  tags_red
     .slice()
     .reverse()
     .forEach((tag) => {
-      let liTag = `<li class="bg-roxo-claro-1 text-white rounded-lg px-2">${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
-      ul.insertAdjacentHTML("afterbegin", liTag);
+      let liTag_red = `<li class="bg-roxo-claro-1 text-white rounded-lg px-2">${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
+      ul_red.insertAdjacentHTML("afterbegin", liTag_red);
     });
   countTags();
 }
 
 function remove(element, tag) {
-  let index = tags.indexOf(tag);
-  tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
+  let index_red = tags_red.indexOf(tag);
+  tags_red = [
+    ...tags_red.slice(0, index_red),
+    ...tags_red.slice(index_red + 1),
+  ];
   element.parentElement.remove();
   countTags();
 }
@@ -177,10 +179,10 @@ function remove(element, tag) {
 function addTag(e) {
   if (e.key == "Enter") {
     let tag = e.target.value.replace(/\s+/g, " ");
-    if (tag.length > 1 && !tags.includes(tag)) {
-      if (tags.length < 5) {
+    if (tag_red.length > 1 && !tags.includes(tag)) {
+      if (tags_red.length < 5) {
         tag.split(",").forEach((tag) => {
-          tags.push(tag);
+          tags_red.push(tag);
           createTag();
         });
       }
@@ -191,10 +193,9 @@ function addTag(e) {
 
 input.addEventListener("keyup", addTag);
 
-const removeBtn = document.querySelector(".details button");
+const removeBtn_red = document.querySelector(".details button");
 removeBtn.addEventListener("click", () => {
-  tags.length = 0;
-  ul.querySelectorAll("li").forEach((li) => li.remove());
+  tags_red.length = 0;
+  ul_red.querySelectorAll("li").forEach((li) => li.remove());
   countTags();
 });
-*/

@@ -40,9 +40,51 @@
       </div>
     </dialog>
 
-    <dialog id="modalCriacao" class="rounded-lg backdrop:bg-roxo-escuro-2/20">
-      <h2 class="m-4 text-center">CRIAR POSTAGEM</h2>
+    <dialog
+      id="modalCriacao"
+      class="rounded-lg backdrop:bg-roxo-escuro-2/20"
+      open
+    >
+      <h2 class="m-4 text-center font-semibold">CRIAR POSTAGEM</h2>
+
+      <div class="flex gap-4">
+        <div class="flex flex-col">
+          <p>Título</p>
+          <input
+            type="text"
+            spellcheck="false"
+            class="rounded-lg border-transparent bg-roxo-claro-2 text-white placeholder:text-white focus:outline-0"
+          />
+        </div>
+        <div class="flex flex-col">
+          <p>Autor</p>
+          <input
+            type="text"
+            spellcheck="false"
+            class="rounded-lg border-transparent bg-roxo-claro-2 text-white placeholder:text-white focus:outline-0"
+          />
+        </div>
+      </div>
+
       <p>Gênero</p>
+      <div class="rounded-lg bg-roxo-claro-2 p-2">
+        <ul class="flex flex-wrap gap-2">
+          <input
+            type="text"
+            spellcheck="false"
+            class="border-transparent bg-roxo-claro-2 text-white placeholder:text-white focus:outline-0"
+          />
+          <li>teste <i class="uit uit-multiply"></i></li>
+        </ul>
+      </div>
+      <div class="details flex gap-9">
+        <p class="mt-2"><span>5</span> tags faltando</p>
+        <button class="mt-2 rounded-lg bg-roxo-claro-1 px-2 text-white">
+          Remover todas
+        </button>
+      </div>
+
+      <p>Redflag</p>
       <div class="rounded-lg bg-roxo-claro-2 p-2">
         <ul class="flex flex-wrap gap-2">
           <input
@@ -75,11 +117,13 @@
     <div id="vizualisar" class=""></div>
 
     <img
-      class="mx-auto my-5"
+      class="mx-auto my-5 h-[17%] w-[17%] object-scale-down"
       src="../../../public/assets/Maristory-Navbar-Transparente.png"
       alt="logo Maristory"
     />
-    <h1 class="mb-10 text-center text-4xl text-roxo-medio-2">Lista de Posts</h1>
+    <h1 class="mb-10 text-center text-5xl font-semibold text-roxo-medio-2">
+      Lista de Posts
+    </h1>
 
     <div
       class="mx-[12.5%] flex flex-row gap-5 smartphone:flex-col smartphone:gap-2"
@@ -118,7 +162,7 @@
     </div>
 
     <table
-      class="mx-auto mt-3 w-3/4 border-separate border-spacing-0 rounded-xl border border-gray-900 bg-roxo-claro-1 text-center shadow-md shadow-roxo-medio-2"
+      class="mx-auto mt-3 w-3/4 border-separate border-spacing-0 rounded-xl border border-gray-900 bg-roxo-claro-1 text-center shadow-xl shadow-roxo-medio-2"
     >
       <tr>
         <th class="p-2">Post</th>
