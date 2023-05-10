@@ -42,7 +42,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     background-color: #240046;
     height: 8vh;
 }
@@ -59,7 +58,6 @@ nav img {
 }
 
 .nav-list li {
-    letter-spacing: 3px;
     margin-left: 32px;
 }
 
@@ -107,8 +105,7 @@ Footer:
 footer {
     bottom: 0;
     width: 100%;
-    color: #A650DF;
-    letter-spacing: 1.5px;   
+    color: #A650DF;  
 }
 
 .footer-link {
