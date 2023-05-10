@@ -74,7 +74,9 @@ modalCriacao.onclick = function (event) {
   }
 };
 
-//ammknjwabgui//
+//-------------------------------------------------------------
+
+//Modal de Gênero---------------------------------------------
 
 const ul = document.querySelector("ul"),
   input = document.querySelector("input"),
@@ -136,18 +138,18 @@ removeBtn.addEventListener("click", () => {
 
 //-------------------------------------------------------------
 
-//Modal de Gênero---------------------------------------------
+//Modal de Red flags---------------------------------------------
 /*
 const ul = document.querySelector("ul"),
   input = document.querySelector("input"),
-  tagNumb = document.querySelector(".details span");
+  tagNumb = document.querySelector(".redflags span");
 
 let maxTags = 5,
   tags = [];
 
 countTags();
 createTag();
-
+   
 function countTags() {
   input.focus();
   tagNumb.innerText = maxTags - tags.length;
@@ -159,7 +161,7 @@ function createTag() {
     .slice()
     .reverse()
     .forEach((tag) => {
-      let liTag = `<li>${tag} <span class="x" onclick="remove(this, '${tag}')"></span></li>`;
+      let liTag = `<li class="bg-roxo-claro-1 text-white rounded-lg px-2">${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
       ul.insertAdjacentHTML("afterbegin", liTag);
     });
   countTags();

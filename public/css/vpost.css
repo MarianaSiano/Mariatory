@@ -20,6 +20,11 @@
     border-radius: 5px;
 }
 
+body{
+    background: url(../assets/bg-img-crumpled-paper.jpg) repeat center;
+    background-size: calc(60%);
+}
+
 .conteudo {
     display: flex;
     margin: 5%;
@@ -154,7 +159,7 @@ body{
       margin-bottom: 10px;
       opacity: 70%;
       box-shadow: 0 0 10px 3px #46035d47;
-      height: 75vh;
+      height: 70vh;
       overflow-y: scroll;
     }
     

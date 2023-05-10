@@ -13,7 +13,8 @@
     />
     <title>Lista de Posts</title>
   </head>
-  <body>
+  <body class="bg-nuvens bg-repeat">
+    <div></div>
     <dialog
       id="myModal"
       class="rounded-lg border border-solid border-roxo-escuro-2 bg-white p-5 backdrop:bg-roxo-escuro-2/20"
@@ -39,13 +40,9 @@
       </div>
     </dialog>
 
-    <dialog
-      id="modalCriacao"
-      class="rounded-lg backdrop:bg-roxo-escuro-2/20"
-      open
-    >
-      <h2 class="m-4 text-center">Criar postagem</h2>
-
+    <dialog id="modalCriacao" class="rounded-lg backdrop:bg-roxo-escuro-2/20">
+      <h2 class="m-4 text-center">CRIAR POSTAGEM</h2>
+      <p>Gênero</p>
       <div class="rounded-lg bg-roxo-claro-2 p-2">
         <ul class="flex flex-wrap gap-2">
           <input
@@ -58,7 +55,9 @@
       </div>
       <div class="details flex gap-9">
         <p class="mt-2"><span>5</span> tags faltando</p>
-        <button class="mt-2 rounded-lg bg-roxo-claro-1">Remover todas</button>
+        <button class="mt-2 rounded-lg bg-roxo-claro-1 px-2 text-white">
+          Remover todas
+        </button>
       </div>
     </dialog>
 
@@ -96,11 +95,21 @@
           type="submit"
           class="rounded-lg bg-roxo-medio-1 px-4 py-2 text-sm font-medium text-white drop-shadow-lg hover:bg-roxo-medio-2 focus:outline-none"
         >
-          Busca
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(255, 255, 255)"
+          >
+            <path
+              d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+            ></path>
+          </svg>
         </button>
       </form>
       <button
-        class="min-w-fit rounded-lg bg-roxo-claro-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
+        class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
         id="botaoCriar"
         type="button"
       >
@@ -109,7 +118,7 @@
     </div>
 
     <table
-      class="mx-auto mt-3 w-3/4 border-separate border-spacing-0 rounded-xl border border-gray-900 bg-roxo-claro-1 text-center drop-shadow-lg"
+      class="mx-auto mt-3 w-3/4 border-separate border-spacing-0 rounded-xl border border-gray-900 bg-roxo-claro-1 text-center shadow-md shadow-roxo-medio-2"
     >
       <tr>
         <th class="p-2">Post</th>
@@ -123,21 +132,57 @@
         <td class="border border-gray-900 p-2">29/11/22</td>
         <td class="border-y border-gray-900 p-2">
           <button
+            class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255)"
+            >
+              <path
+                d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"
+              ></path>
+              <path
+                d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"
+              ></path>
+            </svg>
+          </button>
+          <button
             class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2 tablet:mb-2"
             id="botaoEditar"
           >
-            Editar
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255)"
+            >
+              <path
+                d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"
+              ></path>
+              <path
+                d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"
+              ></path>
+            </svg>
           </button>
           <button
             class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2"
             id="myBtn"
           >
-            Excluir
-          </button>
-          <button
-            class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
-          >
-            Visualizar
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255)"
+            >
+              <path
+                d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"
+              ></path>
+            </svg>
           </button>
         </td>
       </tr>
@@ -146,21 +191,57 @@
         <td class="border-x border-gray-900 p-2">03/11/22</td>
         <td class="p-2">
           <button
+            class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
+            id="botaoVisualizar"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255)"
+            >
+              <path
+                d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"
+              ></path>
+              <path
+                d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"
+              ></path>
+            </svg>
+          </button>
+          <button
             class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2 tablet:mb-2"
           >
-            Editar
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255)"
+            >
+              <path
+                d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"
+              ></path>
+              <path
+                d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"
+              ></path>
+            </svg>
           </button>
           <button
             class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2"
             id="moBtn"
           >
-            Excluir
-          </button>
-          <button
-            class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
-            id="botaoVisualizar"
-          >
-            Visualizar
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255)"
+            >
+              <path
+                d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"
+              ></path>
+            </svg>
           </button>
         </td>
       </tr>
