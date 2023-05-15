@@ -16,6 +16,7 @@
 
 body {
     background-color: #10002B;
+    font-family: sans-serif;
 }
 
 .container {
@@ -74,7 +75,7 @@ body {
     margin-bottom: 25px;
     width: 35vw;
 
-    background-color: #A650DF;
+    background-color: #C77DFF;
     color: white;
     font-size: 12px;
 
@@ -143,53 +144,12 @@ body {
     opacity: 0.7;
 }
 
-input[type=file]{
-    display: none;
-}
-
-.upload-button label{
-    border: 2px dashed #992dd7;
-    outline: none;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 40px;
-
-    padding: 5px 5px;
-    width: 80%;
-
-    background-color: #A650DF;
-    border-radius: 10px;
-    letter-spacing: 1px;
-    font-size: 20px;
-
-    color: white !important;
-}
-
-.upload{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.file-img{
-    border: 3px solid #E0AAFF;
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    background-color: #813ac466;
-}
 
 .written-content{
     vertical-align: top;
 }
 
 .written-content h1{
-    font-family: serif;
     font-weight: bold;
     font-size: 25px;
     margin-top: 15px;
@@ -247,7 +207,7 @@ input[type=file]{
 }
 
 .modal.delete {
-    height: 250px;
+    height: 230px;
     width: 500px;
 }
 
@@ -260,7 +220,7 @@ input[type=file]{
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     font-size: 15px;
-    color: #A650DF;
+    color: black;
 }
 
 textarea{
@@ -273,9 +233,9 @@ textarea{
     margin-bottom: 10px;
     padding: 1px;
 
-    background-color: #A650DF;
+    background-color: #C77DFF;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
 
     box-sizing: border-box;
 }
@@ -311,7 +271,22 @@ textarea{
 }
 
 .options button{
-    width: 30%;
+    min-width: 30%;
+    border-radius: 0.5rem;
+    background-color: rgb(157 78 211);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: rgb(255 255 255);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    margin: 10px;
+
+/* }width: 30%;
     height: 100%;
     outline: none;
     border-radius: 10px;
@@ -320,19 +295,20 @@ textarea{
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
-    background-color: #9920e9;
+    background-color: #910ce9;
     color: #fff;
     margin-left: 1rem;
     margin-right: 1rem;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .options button:hover{
-    background-color: #A650DFCC;
-    transition: all 0.3s ease;
+    background-color: rgb(123 44 191)
+    /* background-color: #A650DFCC;
+    transition: all 0.3s ease; */
 }
 
 .actived{
@@ -361,8 +337,9 @@ textarea{
 }
 
 .field label{
-    color: #A650DF;
-    margin-bottom: 5px;
+    color: #10002B;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .field input{
@@ -374,7 +351,7 @@ textarea{
     margin-bottom: 10px;
     width: 80%;
 
-    background-color: #A650DF;
+    background-color: #C77DFF;
     color: white;
     font-size: 12px;
 
@@ -384,10 +361,12 @@ textarea{
 
 .field input::placeholder{
     color: white;
+    font-weight: 600;
 } 
 
 textarea::placeholder{
     color: white;
+    font-weight: 600;
     padding: 1px;
 }
 

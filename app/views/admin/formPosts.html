@@ -56,12 +56,9 @@
                             <input type="date">
                         </div>
                         <div class="field">
-                            <label for="imagem">Imagem:</label>
-                            <div class="upload-button">
-                                <label for="arq">Anexe uma imagem</label>
-                                <input name="arq" type="file" id="up-file"  onchange="readURL(this);">
+                                <label for="form-control">Imagem:</label>
+                                <input class="form-control" type="file" id="formFile">
                             </div>
-                        </div>
                     </div>
                     <div class="container-textarea">
                         <div class="field">
@@ -101,7 +98,6 @@
                             <input type="date">
                         </div>
                         <div class="field">
-                            <label for="imagem">Imagem:</label>
                             <div class="upload-button">
                                 <label for="arq">Anexe uma imagem</label>
                                 <input name="arq" type="file" id="up-file"  onchange="readURL(this);">
@@ -155,14 +151,15 @@
             <div class="modal delete">
                 <div class="modal-header">
                     <h3>Deletar Post</h3>
+                    <i onclick="closeModalDeletar()" class='bx bx-x bx-sm'></i>
                 </div>
                 <div class="modal-content">
                     <h2>Deletar esse post ?</h2>
-                    <p>Esta ação é final e você NÃO poderá recuperar qualquer dado posteriormente</p>
+                    <p>Esta ação é final e você NÃO poderá recuperar qualquer dado posteriormente.</p>
                 </div>
                 <div class="options">
-                    <button class="option">Sim</button>
-                    <button onclick="closeModalExcluir()" class="option">Não</button>
+                    <button class="option">Confirmar</button>
+                    <button onclick="closeModalExcluir()" class="option">Cancelar</button>
                 </div>
             </div>
         </div>
