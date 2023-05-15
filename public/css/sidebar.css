@@ -12,9 +12,9 @@
 */
 
 :root{
-    --color-sidebar: #240046;
-    --color-text: #C77DFF;
-    --color-icons: #E0AAFF;
+    --color-sidebar: #E0AAFF;
+    --color-text: #240046;
+    --color-icons: #240046;
     --color-hover-links: #A650DF;
 }
 
@@ -35,7 +35,7 @@ body{
     top: 0;
     left: 0;
     background: var(--color-sidebar);
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     transition: all 1s ease;
     z-index: 100;
 }
