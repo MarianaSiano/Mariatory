@@ -1,11 +1,10 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image:linear-gradient(45deg, #240046, #A650DF);
+    font-family:  sans-serif;
+    background-image:linear-gradient(45deg, #240046, #A650DF, #240046);
 }
-
 div{
     background-color:#240046;
-    position:absolute;
+    position:fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -20,18 +19,20 @@ input{
     padding: 10px;
     border-radius: 5px;
     border:none;
-    width: 100%;
+    width: 90%;
     color:#10002B;
     background-color: #E0AAFF;
 }
 
 button{
-    padding: 10px;
-    border-radius: 50px;
-    border: none;
-    width: 110%;
-    background-color:#9D4EDD;
-    color: #E0AAFF;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: rgb(157 78 211);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top:0.75rem;
+    padding-bottom:0.75rem;
+    color: rgb(255 255 255)
 }
 
 button:hover{
@@ -42,3 +43,17 @@ button:hover{
 a{
     color: #E0AAFF;
 }
+
+#senha {
+    width: 150px;
+    padding-right: 20px;
+    width: 85%;
+  }
+
+  .olho {
+    cursor: pointer;
+    right: 108px;
+    position: fixed;
+    width: 25px;
+    margin-top: 5px;
+  }
