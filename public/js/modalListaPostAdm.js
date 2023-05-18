@@ -6,7 +6,7 @@ var obtn = document.getElementById("moBtn");
 
 var cbtn = document.getElementById("cBtn");
 var sbtn = document.getElementById("sBtn");
-var span = document.getElementsByClassName("close")[0];
+var fecharExcluir = document.getElementById("fecharExcluir");
 
 function abrirModalExcluir() {
   modal.showModal();
@@ -19,23 +19,35 @@ function fecharModalExcluir() {
 btn.onclick = abrirModalExcluir;
 obtn.onclick = abrirModalExcluir;
 
-span.onclick = fecharModalExcluir;
+fecharExcluir.onclick = fecharModalExcluir;
 cbtn.onclick = fecharModalExcluir;
 sbtn.onclick = fecharModalExcluir;
 
-modal.onclick = function (event) {
-  if (event.target == modal) {
-    modal.close();
-  }
-};
 //-------------------------------------------------------------
 
 //Modal de edição----------------------------------------------
 var modalEdicao = document.getElementById("modalEdicao");
-var botaoEditar = document.getElementById("botaoEditar");
+var fecharEditar1 = document.getElementById("fecharEditar1");
+var fecharEditar2 = document.getElementById("fecharEditar2");
+var fecharEditar3 = document.getElementById("fecharEditar3");
+var botaoEditar1 = document.getElementById("botaoEditar1");
+var botaoEditar2 = document.getElementById("botaoEditar2");
 
-botaoEditar.onclick = function () {
+botaoEditar1.onclick = function () {
   modalEdicao.showModal();
+};
+botaoEditar2.onclick = function () {
+  modalEdicao.showModal();
+};
+
+fecharEditar1.onclick = function () {
+  modalEdicao.close();
+};
+fecharEditar2.onclick = function () {
+  modalEdicao.close();
+};
+fecharEditar3.onclick = function () {
+  modalEdicao.close();
 };
 
 modalEdicao.onclick = function (event) {
@@ -45,11 +57,18 @@ modalEdicao.onclick = function (event) {
 };
 //-------------------------------------------------------------
 
-//Modal de vizualização----------------------------------------
+//Modal de vizualização ----------------------------------------
 var modalVisualizacao = document.getElementById("modalVisualizacao");
-var botaoVisualizar = document.getElementById("botaoVisualizar");
+var botaoVisualizar1 = document.getElementById("botaoVisualizar1");
+var botaoVisualizar2 = document.getElementById("botaoVisualizar2");
 
-botaoVisualizar.onclick = function () {
+var fecharVisualizacao = document.getElementById("fecharVisualizacao");
+
+botaoVisualizar1.onclick = function () {
+  modalVisualizacao.showModal();
+};
+
+botaoVisualizar2.onclick = function () {
   modalVisualizacao.showModal();
 };
 
@@ -58,14 +77,29 @@ modalVisualizacao.onclick = function (event) {
     modalVisualizacao.close();
   }
 };
+
+fecharVisualizacao.onclick = function () {
+  modalVisualizacao.close();
+};
 //-------------------------------------------------------------
 
 //Modal de Criação---------------------------------------------
-var modalVisualizacao = document.getElementById("modalCriacao");
-var botaoVisualizar = document.getElementById("botaoCriar");
+var modalCriacao = document.getElementById("modalCriacao");
+var botaoCriar = document.getElementById("botaoCriar");
+var fecharCriacao = document.getElementById("fecharCriacao");
+var fecharCriar1 = document.getElementById("fecharCriar1");
+var fecharCriar2 = document.getElementById("fecharCriar2");
 
 botaoCriar.onclick = function () {
+  closeCheckbox();
   modalCriacao.showModal();
+};
+
+fecharCriar1.onclick = function () {
+  modalCriacao.close();
+};
+fecharCriar2.onclick = function () {
+  modalCriacao.close();
 };
 
 modalCriacao.onclick = function (event) {
@@ -74,128 +108,61 @@ modalCriacao.onclick = function (event) {
   }
 };
 
+fecharCriacao.addEventListener("click", () => {
+  modalCriacao.close();
+});
+
 //-------------------------------------------------------------
 
 //Modal de Gênero---------------------------------------------
 
-const ul = document.querySelector("ul"),
-  input = document.querySelector("input"),
-  tagNumb = document.querySelector(".details span");
+var expanded = false;
 
-let maxTags = 5,
-  tags = [];
-
-countTags();
-createTag();
-
-function countTags() {
-  input.focus();
-  tagNumb.innerText = maxTags - tags.length;
-}
-
-function createTag() {
-  ul.querySelectorAll("li").forEach((li) => li.remove());
-  tags
-    .slice()
-    .reverse()
-    .forEach((tag) => {
-      let liTag = `<li class="bg-roxo-claro-1 text-white rounded-lg px-2">${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
-      ul.insertAdjacentHTML("afterbegin", liTag);
-    });
-  countTags();
-}
-
-function remove(element, tag) {
-  let index = tags.indexOf(tag);
-  tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
-  element.parentElement.remove();
-  countTags();
-}
-
-function addTag(e) {
-  if (e.key == "Enter") {
-    let tag = e.target.value.replace(/\s+/g, " ");
-    if (tag.length > 1 && !tags.includes(tag)) {
-      if (tags.length < 5) {
-        tag.split(",").forEach((tag) => {
-          tags.push(tag);
-          createTag();
-        });
-      }
-    }
-    e.target.value = "";
+function showCheckboxesGenero() {
+  var checkboxes = document.getElementById("checkboxesGenero");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
   }
 }
-
-input.addEventListener("keyup", addTag);
-
-const removeBtn = document.querySelector(".details button");
-removeBtn.addEventListener("click", () => {
-  tags.length = 0;
-  ul.querySelectorAll("li").forEach((li) => li.remove());
-  countTags();
-});
 
 //-------------------------------------------------------------
 
-//Modal de Red flags---------------------------------------------
-const ul_red = document.querySelector("ul"),
-  input_red = document.querySelector("input"),
-  tagNumb_red = document.querySelector(".redflags span");
+//Modal de Redflags---------------------------------------------
 
-let maxTags_red = 5,
-  tags_red = [];
+var expanded = false;
 
-countTags();
-createTag();
-
-function countTags() {
-  input_red.focus();
-  tagNumb_red.innerText = maxTags_red - tags_red.length;
-}
-
-function createTag() {
-  ul_red.querySelectorAll("li").forEach((li) => li.remove());
-  tags_red
-    .slice()
-    .reverse()
-    .forEach((tag) => {
-      let liTag_red = `<li class="bg-roxo-claro-1 text-white rounded-lg px-2">${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
-      ul_red.insertAdjacentHTML("afterbegin", liTag_red);
-    });
-  countTags();
-}
-
-function remove(element, tag) {
-  let index_red = tags_red.indexOf(tag);
-  tags_red = [
-    ...tags_red.slice(0, index_red),
-    ...tags_red.slice(index_red + 1),
-  ];
-  element.parentElement.remove();
-  countTags();
-}
-
-function addTag(e) {
-  if (e.key == "Enter") {
-    let tag = e.target.value.replace(/\s+/g, " ");
-    if (tag_red.length > 1 && !tags.includes(tag)) {
-      if (tags_red.length < 5) {
-        tag.split(",").forEach((tag) => {
-          tags_red.push(tag);
-          createTag();
-        });
-      }
-    }
-    e.target.value = "";
+function showCheckboxesRedflag() {
+  var checkboxes = document.getElementById("checkboxesRedflag");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
   }
 }
 
-input.addEventListener("keyup", addTag);
+//-------------------------------------------------------------
 
-const removeBtn_red = document.querySelector(".details button");
-removeBtn.addEventListener("click", () => {
-  tags_red.length = 0;
-  ul_red.querySelectorAll("li").forEach((li) => li.remove());
-  countTags();
-});
+//Modal de Fechar checkbox-------------------------------------
+
+function closeCheckbox() {
+  var expanded = false;
+
+  var checkboxes = document.getElementById("checkboxesGenero");
+  console.log(expanded);
+  if (!expanded) {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+
+  var checkboxes = document.getElementById("checkboxesRedflag");
+  if (!expanded) {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
