@@ -1,20 +1,23 @@
 .logotopo {
 
     text-align: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+
+
 }
 
 .mari {
-    border-radius: 15px;
+    width: 20%;
 }
 
 .titulo {
-    text-align: center;
-}
+    margin-bottom: 2.5rem;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
 
-h1 {
-    color: #9D4EDD;
+    text-align: center;
+    color: #7B2CBF;
 }
 
 .heading {
@@ -29,24 +32,35 @@ h1 {
 .formulario {
     display: flex;
     flex-basis: 100%;
-    gap: 0.5 rem;
+    gap: 0.5rem;
 }
 
 .procurar {
-    /* focus: ring-none; */
-    width: 60.8%;
-    margin-left: 12.5%;
-    margin-right: 0.5%;
-    border-radius: 0.5 rem;
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
     border-width: 1px;
     background-color: rgb(249 250 251);
-    padding-left: 1.5 rem;
-    font-size: 0.875 rem;
-    line-height: 1.25 rem;
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     color: rgb(17 24 39);
-    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.04));
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
     border-style: none;
+}
+
+.btnProcurar {
+    width: 100%;
+    height: min-content;
+    margin-bottom: 1px;
+    padding: 0.5px;
+    border-radius: 0.5rem;
+    background-color: rgb(191, 191, 191);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+    border-style: none;
+
 }
 
 .busca {
@@ -63,8 +77,20 @@ h1 {
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
 }
 
+.btnBusca {
+    height: 14%;
+    height: min-content;
+    margin-bottom: 1px;
+    padding: 0.5px;
+    border-radius: 0.5rem;
+    background-color: rgb(191, 191, 191);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+    border-style: none;
+}
+
 .busca:hover {
-    background-color: #7B2CBF;
+    background-color: #10002B;
     transition: 1s;
 }
 
@@ -74,6 +100,7 @@ h1 {
 }
 
 .usuario {
+    color: white;
     border-radius: 0.5rem;
     min-width: fit-content;
     background-color: #9D4EDD;
@@ -86,8 +113,19 @@ h1 {
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
 }
 
+.btnUsuario {
+    height: min-content;
+    margin-bottom: 1px;
+    padding: 0.5px;
+    border-radius: 0.5rem;
+    background-color: rgb(191, 191, 191);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+    border-style: none;
+}
+
 .usuario:hover {
-    background-color: #7B2CBF;
+    background-color: #10002B;
     transition: 1s;
 }
 
@@ -108,7 +146,7 @@ h1 {
 
 .btn1:hover {
 
-    background-color: #7B2CBF;
+    background-color: #10002B;
     transition: 1s;
 
 }
@@ -121,7 +159,7 @@ h1 {
 
 .btn2:hover {
 
-    background-color: #7B2CBF;
+    background-color: #10002B;
     transition: 1s;
 
 }
@@ -134,15 +172,14 @@ h1 {
 
 .btn3:hover {
 
-    background-color: #7B2CBF;
+    background-color: #10002B;
     transition: 1s;
 
 }
 
-body::after {
+body {
     content: "";
     background: url(../assets/fundoMariStory.png) repeat center;
-    background-size: calc(90%);
     opacity: 1;
     top: 0;
     left: 0;
@@ -157,16 +194,14 @@ body::after {
     margin-right: auto;
     margin-top: 0.75rem;
     width: 75%;
-    border-collapse: separate;
-    border-spacing: 0px 0px;
     border-radius: 0.75rem;
-    border-width: 1px;
+    border-width: 100px;
     border-color: rgb(17 24 39);
     background-color: #E0AAFF;
     text-align: center;
-    filter: drop-shadow(0px 10px 8px rgb(0 0 0 / 0.4)) drop-shadow(0px 4px 3px rgb(0 0 0 / 0.1));
+    filter: drop-shadow(0px 20px 25px -5px rgb(0 0 0 / 0.1)) drop-shadow(0px 20x 25px -5px rgb(0 0 0 / 0.1)) drop-shadow(0px 8px 10px -6px rgb(0 0 0 / 0.1));
+    margin-bottom: 100px;
     box-shadow: 1px 5px 30px #7B2CBF;
-
 }
 
 .c1 {
@@ -202,3 +237,34 @@ body::after {
     border-color: rgb(17 24 39);
     padding: 0.5rem;
 }
+
+.fade{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: #fff;
+    width: 600px;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 90vh;
+}
+
+.actived{
+    animation: modal 0.6s;
+    display: flex;
+}
+
