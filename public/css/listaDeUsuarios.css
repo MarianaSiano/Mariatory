@@ -238,7 +238,7 @@ body {
     padding: 0.5rem;
 }
 
-#modalzin{
+#modalzin {
     position: fixed;
     top: 0;
     left: 0;
@@ -248,22 +248,22 @@ body {
     z-index: 5;
 }
 
-.modalllll{
+.modalllll {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
     background-color: #fff;
-    width: 600px;
+    /* width: 600px; */
     max-width: 90%;
     padding: 1rem;
     border-radius: 1rem;
-    height: 90vh;
+    /* height: 90vh; */
     pointer-events: all;
 }
 
-.actived{
+.actived {
     animation: modal 0.6s;
     display: flex;
 }
@@ -272,4 +272,176 @@ body {
     opacity: 0%;
     pointer-events: none;
 
+}
+
+.geral {
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #10002B;
+}
+
+.headerModal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloExcluir {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.textoExcluir {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.botoesExcluir {
+    text-align: center;
+}
+
+.botaoSim {
+    background-color: #7B2CBF;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    margin-right: 8px;
+
+}
+
+.botaoNao {
+    background-color: #E0AAFF;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+
+.tituloModais {
+    font-size: 0.875rem;
+    margin-bottom: 0%;
+}
+
+.x {
+    cursor: pointer;
+}
+
+.tudo {
+    display: flex;
+}
+
+.campoPreencher {
+    flex: 65%;
+    margin-left: 10px;
+}
+
+.campoIMG {
+    flex: 30%;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 7%;
+}
+.imagem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border-width: 2px;
+    border-style: dashed;
+    cursor: pointer;
+    border-color: #9D4EDD;
+    background-color: #E0AAFF;
+
+
+}
+
+.imagem:hover {
+    background-color: #c77dff;
+}
+
+.img1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.img2 {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #10002B;
+   
+}
+.hidden{
+    display: none;
+}
+
+.meditar{
+    width: 55%;
+}
+
+.mvizualizar{
+    width: 55%;
+}
+.muser{
+    width: 55%;
+}
+
+.btnEditar {
+    display: flex;
+    justify-content: end;
+}
+
+.preencher{
+    margin-top: 0%;
+    margin-bottom: 0px;
+}
+.Nome {
+    margin-bottom: 0%;
+    background-color: #E0AAFF;
+    border-radius: 0.5rem;
+    
+}
+.Nome::placeholder{
+    color: black;
+}
+
+.email{
+    background-color: #E0AAFF;
+    border-radius: 0.5rem;
+}
+.email::placeholder{
+    color: black;
+}
+
+.senha {
+    background-color: #E0AAFF;
+    border-radius: 0.5rem;
+}
+
+.senha::placeholder{
+    color: black;
+}
+
+#nomeUsuario{
+    margin-bottom:0% ;
+    color: black;
 }
