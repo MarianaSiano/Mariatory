@@ -61,7 +61,7 @@ body
     height: 10%;
     z-index: -10;
     background: url(../assets/fundosite.png) repeat center;
-    background-size: calc(150%);
+    background-size: calc(90%);
 }
 
 @keyframes posts {
