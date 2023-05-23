@@ -3,9 +3,14 @@
         "classmap": [
             "./"
         ],
-        "files": ["core/helpers.php"]
+        "files": ["core/helpers.php"],
+        "psr-4": {
+            "TJG\\": "app/"
+        }
     },
     "require": {
-        "phpmailer/phpmailer": "^6.6"
+        "phpmailer/phpmailer": "^6.6",
+        "robmorgan/phinx": "^0.13.4",
+        "fakerphp/faker": "^1.22"
     }
 }
