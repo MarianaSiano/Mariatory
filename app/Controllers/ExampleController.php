@@ -20,7 +20,7 @@ class ExampleController
 
 
     public function login(){
-        return view('admin/login');
+        return view('site/login');
     }
 
     public function listaDeUsuarios() 

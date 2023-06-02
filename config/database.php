@@ -13,7 +13,7 @@ return [
     'prod' => [
         'driver' => 'mysql',
         'host' => 'localhost',
-        'database' => 'curso_phinx',
+        'database' => 'maristory_db',
         'user' => 'root',
         'pass' => '',
         'charset' => 'utf8',
