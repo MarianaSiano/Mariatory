@@ -6,8 +6,7 @@ use App\Core\App;
 use Exception;
 
 class ExampleController
-{
-    
+{   
     public function dashboard() 
     { 
         return view('admin/dashboard');

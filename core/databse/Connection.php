@@ -14,6 +14,7 @@ class Connection
      */
     public static function make($config)
     {
+        session_start();
         try {
             return new PDO(
                 $config['connection'] . ';dbname=' . $config['name'],

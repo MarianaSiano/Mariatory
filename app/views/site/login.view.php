@@ -14,16 +14,18 @@
     <div>
         <img src="../../../public/assets/Maristory-Navbar-Transparente.png" alt="maristory logo">
         <h1> Bem vindo(a)! </h1>
-        <input type="text" placeholder="Nome do Usuário ou Email">
-        <br><br>
-        <input type="password" placeholder="Senha" id="senha" class="password">
-        <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
-        <br><br>  
-        <button> Entrar </button>
-        <br><br>
-        <a href="#">Esqueci a senha</a>
-        <ul></ul>
-        <a href="#">Cadastrar-se</a>
+        <form action="login/logar" method="POST">
+            <input type="text" required name="email" placeholder="Nome do Usuário ou Email" autofocus>
+            <br><br>
+            <input type="password" required name="password" placeholder="Senha" id="senha" class="password">
+            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
+            <br><br>
+            <button> Entrar </button>
+            <br><br>
+            <a href="#">Esqueci a senha</a>
+            <ul></ul>
+            <a href="#">Cadastrar-se</a>
+        </form>
     </div>
 
     <script src="../../../public/js/login.js"></script>
