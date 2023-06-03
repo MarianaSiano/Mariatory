@@ -17,3 +17,7 @@ $router->get('vpost', 'ExampleController@vpost');
 //Login
 $router->post('login/logar', 'LoginController@login');
 $router->get('login', 'LoginController@view');
+
+//Add Usuário
+$router->post('users/criarUsuario', 'UsuarioController@createUsers');
+

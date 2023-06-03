@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,40 +32,40 @@
             <div class="x"><i class="bx bx-x fechar"></i></div>
         </div>
         <hr />
-
-        <div class="tudo">
-
-            <div class="campoIMG">
-                <p>Imagem de perfil:</p>
-                <label for="dropzone-file" class="imagem">
-                    <div class="img1">
-                        <svg aria-hidden="true" class="img2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
-                            </path>
-                        </svg>
-                    </div>
-                    <input id="dropzone-file" type="file" class="hidden" />
-                </label>
-            </div>
-            <div class="campoPreencher">
-                <div class="campos">
-                    <p id="nomeUsuario">Nome do usuário:</p>
-                    <input class="Nome"  placeholder="Nome do usuário" required />
-                    <p id="nomeUsuario">E-mail:</p>
-                    <input class="email" placeholder="E-mail" required />
-                    <p id="nomeUsuario">Senha:</p>
-                    <input class="senha" placeholder="Senha" required type="password"/>
+        <form action = "users/criarUsuario" method = "POST">
+            <div class="tudo">
+                <div class="campoIMG">
+                    <p>Imagem de perfil:</p>
+                    <label for="dropzone-file" class="imagem">
+                        <div class="img1">
+                            <svg aria-hidden="true" class="img2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                </path>
+                            </svg>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
                 </div>
+                <div class="campoPreencher">
+                    <div class="campos">
+                        <p id="nomeUsuario">Nome do usuário:</p>
+                        <input class="Nome" name="name" placeholder="Nome do usuário" required />
+                        <p id="nomeUsuario">E-mail:</p>
+                        <input class="email" name="email" placeholder="E-mail" required />
+                        <p id="nomeUsuario">Senha:</p>
+                        <input class="senha" name="password" placeholder="Senha" required type="password"/>
+                    </div>
+                </div>
+
             </div>
-
-        </div>
-        <div class="btnEditar">
-            <button class="botaoSim fechar">Salvar</button>
-            <button class="botaoSim fechar">Calcelar</button>
-        </div>
-
+        
+            <div class="btnEditar">
+                <button class="botaoSim fechar">Salvar</button>
+                <button class="botaoSim fechar">Calcelar</button>
+            </div>
+        </form>
     </div>
 
 

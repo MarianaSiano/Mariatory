@@ -12,7 +12,7 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function insertUser($dados){
+    public function insertUsuarios($dados){
         try{
             $res = $this->pdo->prepare("INSERT INTO users(name, email, password) VALUES ('{$dados['name']}', '{$dados['email']}', '{$dados['password']}')");
             
