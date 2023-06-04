@@ -12,6 +12,18 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
+    public function selectAll($table){
+        try{
+            $res = $this->pdo->prepare("SELECT * from {$table}");
+            
+            $res->execute();
+
+            return $res->fetchAll(PDO::FETCH_CLASS);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
     public function insertUsuarios($dados){
         try{
             $res = $this->pdo->prepare("INSERT INTO users(name, email, password) VALUES ('{$dados['name']}', '{$dados['email']}', '{$dados['password']}')");

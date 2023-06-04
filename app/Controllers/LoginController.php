@@ -21,7 +21,7 @@ class LoginController
 
             if($redirect == true){
                 if(isset($_SESSION['id'])){
-                    return view('admin/listaPostAdm');
+                    header('Location: /dashboard');
                 }else{
                     echo "Não está na sessão";
                 }

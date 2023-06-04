@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class UsuarioController{
+class PostController{
     public function view(){
         return view('admin/listaPost');
     }

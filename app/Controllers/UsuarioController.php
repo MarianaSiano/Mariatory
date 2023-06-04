@@ -11,18 +11,25 @@ class UsuarioController{
     }
 
     public function createUsers()
-        {
-            $parametros = [
-                'name' => $_POST['name'],
-                'email' => $_POST['email'],
-                'password' => hash("sha512", $_POST['password'])
-            ];
+    {
+        $parametros = [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => hash("sha512", $_POST['password'])
+        ];
 
-            App::get('database') -> insertUsuarios($parametros);
-            header('Location: /listaDeUsuarios');
-
-
-        }
+        App::get('database') -> insertUsuarios($parametros);
+        header('Location: /listaDeUsuarios');
+    }
     
+    public function show(){
+        $users = App::get('database')->selectAll('users');
+
+        $usersList = [
+            'users' => $users
+        ];
+
+        return view('admin/listaDeUsuarios', $usersList);
+    }
 
 }

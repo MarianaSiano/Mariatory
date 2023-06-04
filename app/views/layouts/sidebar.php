@@ -23,7 +23,7 @@
             <div class="logo">
 
                 <span class="img">
-                    <img src="/public/assets/Maristory-Navbar.png" alt="Logotipo do site">
+                    <img src="/public/assets/Maristory-Transparente2.png" alt="Logotipo do site">
                 </span>
 
             </div>
@@ -44,19 +44,13 @@
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bxs-user bx-sm icon'></i>
-                            <span class="nav-text text">Minha conta</span>
+                            <span class="nav-text text">Gerenciar Usuários</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-pencil bx-sm icon'></i>
-                            <span class="nav-text text">Posts</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-help-circle bx-sm icon'></i>
-                            <span class="nav-text text">Ajuda</span>
+                            <span class="nav-text text">Gerenciar Posts</span>
                         </a>
                     </li>
                     <li class="nav-link">
@@ -82,13 +76,6 @@
 
     </nav>
 
-    <section class="main">
-        <div class="text">
-            Conteúdo principal!!!
-        </div>
-    </section>
-
-    
     <script src="/public/js/sidebar.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

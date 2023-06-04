@@ -12,10 +12,10 @@
 */
 
 :root{
-    --color-sidebar: #240046;
-    --color-text: #C77DFF;
-    --color-icons: #E0AAFF;
-    --color-hover-links: #A650DF;
+    --color-sidebar: #E0AAFF;
+    --color-text: #240046;
+    --color-icons: #240046;
+    --color-hover-links: #240046;
 }
 
 *{
@@ -172,20 +172,6 @@ body{
 .sidebar.close .button-logout{
     padding-left: 8px;
     transition: all 0.6s ease;
-}
-
-.main{
-    position: relative;
-    left: 250px;
-    height: 100vh;
-    width: calc(100% - 250px);
-    transition: all 1s ease;
-}
-
-.main .text{
-    margin: 20px;
-    font-size: 30px;
-    font-weight: 500;
 }
 
 .sidebar.close ~ .main{

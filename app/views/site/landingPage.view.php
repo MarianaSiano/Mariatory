@@ -12,10 +12,10 @@
 </head>
 
 <body>
+    <!--Dar um require parecido com esse toda vez que você quiser incluir uma nav, footer ou sidebar-->  
+    <?php require('./app/views/layouts/navbar.php'); ?>
 
     <div class="paginicial">
-
-
 
         <div class="telinha">
             <img src="../../../public/assets/telinha.png" width="620">
@@ -77,9 +77,7 @@
 
 
     </div>
-
-
-
+    <?php require('./app/views/layouts/footer.php'); ?>
 </body>
 
 </html>

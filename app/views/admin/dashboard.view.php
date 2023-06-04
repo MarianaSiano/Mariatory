@@ -12,7 +12,7 @@
     <title>Maristory</title>
 </head>
 <body>
-
+    <?php require('./app/views/layouts/sidebar.php'); ?>
     <div class="container">
 
         <div class="left-container">

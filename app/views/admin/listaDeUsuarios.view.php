@@ -215,15 +215,22 @@
 
     <table class="tabela1">
         <tr>
-            <th class="c1">NOME</th>
+            <th class="c1">ID</th>
+            <th class="c2">NOME</th>
             <th class="c2">E-MAIL</th>
             <th class="c2">AÇÕES</th>
         </tr>
 
         <tr>
-            <td class="l1c1">usuario 1</td>
-            <td class="l1c2">usuario1@gmail.com</td>
-            <td class="l1c3"><button class="btn1 clique" data-modal="modalVizualizar"><svg
+            <!--For each para varrer cada usuário do banco e mostrar seus dados-->
+            <?php foreach ($users as $user) : ?>
+            <td class="l1c1"><?= $user->id?></td>
+            <td class="l1c2"><?= $user->name?></td>
+            <td class="l1c2"><?= $user->email?></td>
+            <td class="l1c3">
+                <!--Colocar nesse form o método para dar delete no usuário-->
+                <form action="">
+                <button class="btn1 clique" data-modal="modalVizualizar"><svg
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         style="fill: white;">
                         <path
@@ -250,79 +257,10 @@
                         </path>
                     </svg></button>
 
-
-
+                </form>
             </td>
         </tr>
-        <tr>
-            <td class="l1c1">usuario 2</td>
-            <td class="l1c2">usuario2@gmail.com</td>
-            <td class="l1c3"><button class="btn1 clique" data-modal="modalVizualizar"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        style="fill: white;">
-                        <path
-                            d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
-                        </path>
-                        <path d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"></path>
-                    </svg></button>
-                <button class="btn2 clique" data-modal="modalEditar"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" style="fill: white;">
-                        <path
-                            d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z">
-                        </path>
-                        <path
-                            d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z">
-                        </path>
-                    </svg></button>
-
-
-
-                <button class="btn3 clique" data-modal="modalExcluir"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" style="fill: white;">
-                        <path
-                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z">
-                        </path>
-                    </svg></button>
-
-
-
-            </td>
-        </tr>
-        <tr>
-            <td class="l1c1">usuario 3</td>
-            <td class="l1c2">usuario3@gmail.com</td>
-            <td class="l1c3"><button class="btn1 clique" data-modal="modalVizualizar"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        style="fill: white;">
-                        <path
-                            d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
-                        </path>
-                        <path d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"></path>
-                    </svg></button>
-                <button class="btn2 clique" data-modal="modalEditar"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" style="fill: white;">
-                        <path
-                            d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z">
-                        </path>
-                        <path
-                            d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z">
-                        </path>
-                    </svg></button>
-
-
-
-                <button class="btn3 clique" data-modal="modalExcluir"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" style="fill: white;">
-                        <path
-                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z">
-                        </path>
-                    </svg></button>
-
-
-
-            </td>
-        </tr>
-
+        <?php endforeach;?>
     </table>
 
     <script>

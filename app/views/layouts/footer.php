@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/navFooter.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -15,31 +15,6 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <a class="logo" href="#"><img src="/public/assets/Maristory-Navbar-Transparente.png" alt="Maristory logo"></a>
-
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-
-            <ul class="nav-list">
-                <li><a href="#">Página Inicial</a></li>
-                <li><a href="#">Posts</a></li>
-                <li><a href="#">Login / Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!--FIM HEADER-->
-
-    <main>
-
-    </main>
-
     <footer>
         <div class="footer-content">
 
