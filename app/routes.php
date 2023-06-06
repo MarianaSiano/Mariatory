@@ -25,3 +25,7 @@ $router->get('login', 'LoginController@view');
 $router->post('users/criarUsuario', 'UsuarioController@createUsers');
 //-> Exibir todos os usuários
 $router->get('listaDeUsuarios', 'UsuarioController@show');
+//-> Deletar
+$router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
+//-> Editar
+$router->post('users/editarUsuario', 'UsuarioController@editUsers');
