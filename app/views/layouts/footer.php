@@ -59,9 +59,8 @@
         <div class="footer-copyright">
             <p>&copy <span id="currentYear">2023</span> All rights reserved.</p>
         </div>
-    </footer>
+    </footer> <!--FIM FOOTER-->
 
-    <!--FIM FOOTER-->
 
     <script src="/public/js/navFooter.js"></script>
 

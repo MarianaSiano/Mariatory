@@ -23,7 +23,7 @@
 
         <h1>Olá, leitor(a)!</h1>
         <h2>Somos maristory,<br> um site de feedbacks de livros.</h2>
-        <h3>Aqui você pode avaliar os livros, fazer resumos, dar sua opinião,<br> deixar suas recomendações e ainda ver
+        <h3 class="pagina-inicial">Aqui você pode avaliar os livros, fazer resumos, dar sua opinião,<br> deixar suas recomendações e ainda ver
             o feedback de outros leitores.</h3>
 
         <a href="####">

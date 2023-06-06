@@ -84,6 +84,11 @@ footer {
     color: white;
 }
 
+.footer-mission h3 {
+    color: #A650DF;
+    margin: 0px;
+}
+
 .footer-developed {
     display: flex;
     margin-top: 20px;
@@ -96,6 +101,10 @@ footer {
 .footer-developed img{
     width: 156.25px;
     height: 35px;
+}
+
+.footer-developed h3{
+    color: #A650DF;
 }
 
 .footer-copyright {
@@ -177,16 +186,5 @@ footer {
 
     .footer-social-media{
         margin-top: 0px;
-    }
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
     }
 }
