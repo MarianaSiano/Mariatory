@@ -52,7 +52,6 @@
                 <h3>Desenvolvido por</h3>
 
                 <a href="https://codejr.com.br/" target="_blank"><img src="/public/assets/code-logo.png" alt="Code Jr. logo"></a>
-            
             </div>
         </div>
 

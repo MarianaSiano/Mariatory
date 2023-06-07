@@ -11,6 +11,24 @@ nav {
     height: 8vh;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #240046;
+    height: 8vh;
+}
+
+nav a {
+    color: #C77DFF;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
 nav img {
     height:8vh;
     width: 12vh;
@@ -39,7 +57,7 @@ nav img {
     width: 32px;
     height: 2px;
     background: #C77DFF;
-    margin: 0px;
+    margin: 8px;
     transition: 0.3s;
 }
 
@@ -61,17 +79,6 @@ Main:
 
 main {
     min-height: calc(100% - 8vh - 240px);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
 }
 
 @media screen and (max-width: 999px) {
@@ -96,6 +103,7 @@ main {
 
     .nav-list li {
         margin-left: 0;
+        margin-right: 0;
         opacity: 0;
     }
 
@@ -106,12 +114,35 @@ main {
     main {
         min-height: calc(100% - 8vh - 330px);
     }
+    
 }
 
+@media screen and (max-width: 713px) {
+    
+    main {
+        min-height: calc(100% - 8vh - 333px);
+    }
+}
 
 @media screen and (max-width: 426px) {
 
     body {
         overflow-x: hidden;
+    }
+
+    main {
+        min-height: calc(100% - 8vh - 539px);
+    }
+
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
