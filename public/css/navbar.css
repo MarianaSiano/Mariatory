@@ -1,17 +1,7 @@
-/*
-#10002B
-#240046
-#3C096C
-#7B2CBF
-#9D4EDD
-#A650DF
-#C77DFF
-#E0AAFF
-*/
-
-/*
-Navbar:
-*/
+*{
+    margin: 0;
+    padding: 0;
+}
 
 nav {
     display: flex;
@@ -73,6 +63,17 @@ main {
     min-height: calc(100% - 8vh - 240px);
 }
 
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 @media screen and (max-width: 999px) {
 
     body {
@@ -107,27 +108,10 @@ main {
     }
 }
 
-@media screen and (max-width: 713px) {
-    
-    main {
-        min-height: calc(100% - 8vh - 333px);
-    }
-}
 
 @media screen and (max-width: 426px) {
 
     body {
         overflow-x: hidden;
-    }
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
     }
 }
