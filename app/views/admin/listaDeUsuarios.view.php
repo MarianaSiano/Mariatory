@@ -171,8 +171,8 @@
 
         <tr>
             <!--For each para varrer cada usuário do banco e mostrar seus dados-->
-            <?php foreach ($users as $user) : ?>
-                <td class="l1c1"><?= $user->id ?></td>
+            <?php foreach($users as $key => $user): ?>
+                <td class="l1c1"><?= $key + 1 ?></td>
                 <td class="l1c2"><?= $user->name ?></td>
                 <td class="l1c2"><?= $user->email ?></td>
                 <td class="l1c3">
@@ -356,6 +356,14 @@
                 fade.classList.remove('actived');
             }
         })
+
+        window.onload = function() {
+            <?php if(isset($_SESSION['email_error'])): ?>
+                alert(<?php echo json_encode($_SESSION['email_error']) ?>);
+                <?php unset($_SESSION['email_error']) ?>
+            <?php endif ?>
+        };
+       
     </script>
 
 </body>

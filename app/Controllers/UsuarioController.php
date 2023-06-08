@@ -7,6 +7,14 @@ use Exception;
 
 class UsuarioController
 {
+    public function __construct()
+    {
+        if(!isset($_SESSION)) {
+            session_start();
+        }
+       
+    }
+
     public function view()
     {
         return view('admin/listaDeUsuarios');
@@ -14,6 +22,12 @@ class UsuarioController
 
     public function createUsers()
     {
+        if($this->verifiesIfEmailAlreadyExists($_POST['email'])) {
+            $_SESSION['email_error'] = 'O email enviado já existe';
+            header('Location: /listaDeUsuarios');
+            exit();
+        }
+
         $parametros = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
@@ -53,4 +67,10 @@ class UsuarioController
         App::get('database')->editUsers($parametros);
         header('Location: /listaDeUsuarios');
     }
+
+    private function verifiesIfEmailAlreadyExists($emailDoUsuario)
+    {
+        return App::get('database')->search('users', 'email', $emailDoUsuario);
+    }
+
 }

@@ -29,7 +29,17 @@ class QueryBuilder
     public function insertUsuarios($dados)
     {
         try {
-            $res = $this->pdo->prepare("INSERT INTO users(name, email, password) VALUES ('{$dados['name']}', '{$dados['email']}', '{$dados['password']}')");
+            $res = $this->pdo->prepare(
+                "INSERT INTO users(
+                    name, 
+                    email, 
+                    password
+                ) VALUES (
+                    '{$dados['name']}', 
+                    '{$dados['email']}', 
+                    '{$dados['password']}'
+                )"
+            );
 
             $res->execute();
         } catch (Exception $e) {
@@ -48,7 +58,11 @@ class QueryBuilder
 
         $id = $dados["id"];
 
-        $con = "UPDATE `users` SET `name` = '{$dados['name']}', `email` = '{$dados['email']}', `password` = '{$dados['password']}' WHERE `users`.`id` = $id";
+        $con = "UPDATE `users` 
+            SET `name` = '{$dados['name']}', 
+                `email` = '{$dados['email']}', 
+                `password` = '{$dados['password']}' 
+            WHERE `users`.`id` = $id";
 
         try {
             $res = $this->pdo->prepare($con);
@@ -87,5 +101,15 @@ class QueryBuilder
             }
         } catch (Exception $e) {
         }
+    }
+
+    public function search(
+        string $tabela, 
+        string $campoParaPesquisar, 
+        string $valorParaBuscar
+    ) {
+        $register = $this->pdo->prepare("SELECT * FROM $tabela WHERE $campoParaPesquisar = :valueToSearch limit 1");
+        $register->execute([':valueToSearch' => $valorParaBuscar]);
+        return $register->rowCount();
     }
 }
