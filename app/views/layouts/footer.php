@@ -52,16 +52,14 @@
                 <h3>Desenvolvido por</h3>
 
                 <a href="https://codejr.com.br/" target="_blank"><img src="/public/assets/code-logo.png" alt="Code Jr. logo"></a>
-            
             </div>
         </div>
 
         <div class="footer-copyright">
             <p>&copy <span id="currentYear">2023</span> All rights reserved.</p>
         </div>
-    </footer>
+    </footer> <!--FIM FOOTER-->
 
-    <!--FIM FOOTER-->
 
     <script src="/public/js/navFooter.js"></script>
 

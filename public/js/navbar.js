@@ -41,8 +41,3 @@ const mobileNavBar = new MobileNavBar(
     ".nav-list li",
 );
 mobileNavBar.init();
-
-//Footer:
-const yearSpan = document.querySelector('#currentYear');
-const currentYear = new Date();
-yearSpan.innerText = currentYear.getFullYear();

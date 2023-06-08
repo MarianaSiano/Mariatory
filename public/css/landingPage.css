@@ -1,14 +1,25 @@
-.paginicial .telinha {
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* .paginicial .telinha {
 
     float: right;
     margin-left: 4%;
     margin-right: 4%;
     margin-top: -4%;
 
+} */
+
+.upper-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px; /* Esta margin é para a animação dos post não invadir o upper-content*/
 }
 
 h1 {
-
     font-size: 300%;
     margin-top: 4%;
     margin-left: 5%;
@@ -27,28 +38,27 @@ h2 {
 h3 {
     font-size: 150%;
     color: #240046;
-
     margin-left: 5%;
     margin-right: 0%;
     margin-bottom: 9%;
+}
 
+li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .post {
-
-    display: inline-block;
-    margin-left: 5%;
-    margin-right: 2, 5%;
-    margin-top: -5%;
-    margin-bottom: 1%;
-
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 0;
+    margin-bottom: 5%;
     animation-name: posts;
     animation-duration: 2s;
-
 }
 
 body {
-
     right: 0;
     bottom: 0;
     min-width: 10%;
@@ -59,6 +69,7 @@ body {
     background: url(../assets/fundoMariStory.png) repeat center;
     background-size: calc(90%);
 }
+
 @keyframes posts {
 
     0% {
@@ -68,24 +79,19 @@ body {
     100% {
         transform: translate(0%, 0%);
     }
-
 }
-
 
 @media (max-width: 1000px) {
     body {
         background-size: calc(700%);
-
     }
-    h1 {
 
+    h1 {
         font-size: 200%;
         margin-top: 2%;
         margin-left: 31%;
         margin-right: 0%;
         color: #7B2CBF;
-        
-
     }
 
     h2 {
@@ -98,33 +104,27 @@ body {
     h3 {
         font-size: 100%;
         color: #240046;
-
         margin-left: 31%;
         margin-right: 0%;
         margin-bottom: 30%;
-
     }
     
-    
-    .telinha {
-        width: 100%;
-        margin-top: 0%;
-        margin-bottom: 0%;
-        float: left;
-
+    .upper-content {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .post {
-
         clear: left;
         display: flex;
         margin-left: 31%;
         margin-right: 0%;
         margin-top: 10%;
         margin-bottom: 0%;
-
         animation-name: posts;
         animation-duration: 2s;
     }
-
 }
