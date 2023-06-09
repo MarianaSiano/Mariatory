@@ -8,7 +8,11 @@ use Exception;
 class LoginController
 {
     public function view(){
-        return view('site/login');
+        if(isset($_SESSION['id'])){
+            return view('admin/dashboard');
+        }else{
+            return view('site/login');
+        }
     }
 
     public function login(){
@@ -35,6 +39,12 @@ class LoginController
     }
 
     public function logout(){
-        //Fazer a lógica para desautenticar 
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        
+        session_destroy();
+
+        header('Location: /login');
     }
 }

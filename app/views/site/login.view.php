@@ -22,13 +22,13 @@
             <br><br>
             <button> Entrar </button>
             <br><br>
-            <a href="#">Esqueci a senha</a>
-            <ul></ul>
-            <a href="#">Cadastrar-se</a>
         </form>
     </div>
 
     <script src="../../../public/js/login.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire('Any fool can use a computer')
+    </script>
 </body>
 </html>
