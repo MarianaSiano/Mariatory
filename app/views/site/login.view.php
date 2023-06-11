@@ -22,13 +22,18 @@
             <br><br>
             <button> Entrar </button>
             <br><br>
+            <p class="error"></p>
         </form>
     </div>
 
     <script src="../../../public/js/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        Swal.fire('Any fool can use a computer')
+        window.onload = function() {
+            <?php if(isset($_SESSION['login_error'])): ?>
+                alert(<?php echo json_encode($_SESSION['login_error']) ?>);
+                <?php unset($_SESSION['login_error']) ?>
+            <?php endif ?>
+        };
     </script>
 </body>
 </html>

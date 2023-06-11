@@ -27,13 +27,16 @@ class LoginController
                 if(isset($_SESSION['id'])){
                     header('Location: /dashboard');
                 }else{
-                    echo "Não está na sessão";
+                    $_SESSION['login_error'] = "Não está na sessão";
+                    header('Location: /login');
                 }
             }else{
-                echo "Não tem no banco";
+                $_SESSION['login_error'] = 'E-mail ou senha incorretos. Digite novamente!';
+                header('Location: /login');
             }
         }else{
-            echo "E-mail ou senha vazios";
+            $_SESSION['login_error'] = "Campos e-mail e/ou senha vazios";
+            header('Location: /login');
         }
         
     }

@@ -6,7 +6,8 @@ if(!isset($_SESSION)){
 }
 
 if(!isset($_SESSION['id'])){
-    die('Você não pode acessar esta página sem estar logado!');
+    header('Location: /login');
+    $_SESSION['login_error'] = 'Você precisa estar logado para acessar a página!';
 }
 
 ?>
