@@ -54,16 +54,66 @@
                                 <h3 class="titulosesquerda"> Gênero </h3>
                                 <div class="classificacao">
                                     <p class="elementos">Romance</p>
-                                    <p class="elementos">Psicológico</p>
-                                    <p class="elementos">Ficção</p>
                                 </div>
                             </div>
+                            
                             <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Redflags </h3>
+                                <h3 class="titulosesquerda"> Avaliação </h3>
+                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="post">
+                    <div class="centralizar">
+                        <div class="todosAlinhamentos">
+                            <div class="imagem">
+                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
+                            </div>
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Título </h3>
+                                <p> Os 7 maridos de Evelyn Hugo </p>
+                            </div>
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Autor </h3>
+                                <p> Taylor Jenkins Reid </p>
+                            </div>
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Gênero </h3>
                                 <div class="classificacao">
-                                    <p class="elementos">cc</p>
-                                    <p class="elementos">bb</p>
-                                    <p class="elementos">aa</p>
+                                    <p class="elementos">Romance</p>
+                                </div>
+                            </div>
+                    
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Avaliação </h3>
+                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="post">
+                    <div class="centralizar">
+                        <div class="todosAlinhamentos">
+                            <div class="imagem">
+                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
+                            </div>
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Título </h3>
+                                <p> Os 7 maridos de Evelyn Hugo </p>
+                            </div>
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Autor </h3>
+                                <p> Taylor Jenkins Reid </p>
+                            </div>
+                            <div class="alinhamento">
+                                <h3 class="titulosesquerda"> Gênero </h3>
+                                <div class="classificacao">
+                                    <p class="elementos">Romance</p>
                                 </div>
                             </div>
                             <div class="alinhamento">
@@ -93,16 +143,6 @@
                                 <h3 class="titulosesquerda"> Gênero </h3>
                                 <div class="classificacao">
                                     <p class="elementos">Romance</p>
-                                    <p class="elementos">Psicológico</p>
-                                    <p class="elementos">Ficção</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Redflags </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">cc</p>
-                                    <p class="elementos">bb</p>
-                                    <p class="elementos">aa</p>
                                 </div>
                             </div>
                             <div class="alinhamento">
@@ -132,96 +172,7 @@
                                 <h3 class="titulosesquerda"> Gênero </h3>
                                 <div class="classificacao">
                                     <p class="elementos">Romance</p>
-                                    <p class="elementos">Psicológico</p>
-                                    <p class="elementos">Ficção</p>
                                 </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Redflags </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">cc</p>
-                                    <p class="elementos">bb</p>
-                                    <p class="elementos">aa</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                    <p class="elementos">Psicológico</p>
-                                    <p class="elementos">Ficção</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Redflags </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">cc</p>
-                                    <p class="elementos">bb</p>
-                                    <p class="elementos">aa</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                    <p class="elementos">Psicológico</p>
-                                    <p class="elementos">Ficção</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Redflags </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">cc</p>
-                                    <p class="elementos">bb</p>
-                                    <p class="elementos">aa</p>
-                                </div>
-                            </div>
                             <div class="alinhamento">
                                 <h3 class="titulosesquerda"> Avaliação </h3>
                                 <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
