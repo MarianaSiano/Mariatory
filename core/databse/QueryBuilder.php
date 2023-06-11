@@ -47,9 +47,23 @@ class QueryBuilder
         }
     }
 
-    public function editPosts($dados)
+    public function editPost($dados)
     {
-        //nada
+        $con = "UPDATE `posts` 
+            SET `title` = '{$dados['title']}', 
+                `synopsis` = '{$dados['synopsis']}', 
+                `review` = '{$dados['review']}',
+                `rating` = '{$dados['rating']}',
+                `image` = '{$dados['imagem']}'
+            WHERE `id` = {$dados['post_id']}";
+
+        try {
+            $res = $this->pdo->prepare($con);
+
+            $res->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function editUsers($dados)
@@ -140,5 +154,14 @@ class QueryBuilder
         }
     }
     
+    public function destroy(
+        string $tabela, 
+        string $campoParaPesquisar, 
+        string $valorParaBuscar
+    ) {
+        $register = $this->pdo->prepare("DELETE FROM $tabela WHERE $campoParaPesquisar = :valueToSearch");
+        $register->execute([':valueToSearch' => $valorParaBuscar]);
+        return $register->rowCount();
+    }
 
 }

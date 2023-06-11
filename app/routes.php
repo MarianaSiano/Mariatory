@@ -37,6 +37,8 @@ $router->post('users/editarUsuario', 'UsuarioController@editUsers');
 $router->get('listaPostAdm', 'PostController@view');
 $router->post('post/criarPost', 'PostController@create');
 $router->get('teste', 'PostController@show');
+$router->get('post/excluir', 'PostController@excluir');
+$router->post('post/editar', 'PostController@editar');
 /*
 //-> Exibir todos os usuários
 $router->get('listaDeUsuarios', 'UsuarioController@show');

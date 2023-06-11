@@ -47,8 +47,39 @@ class PostController {
         $idPost = $_GET['post_id'];
         $post = App::get('database')->search('posts', 'id', $idPost);
     
+        $numeroDeEstrelasPreenchidas = '';
+        for($contadora = 1; $contadora <= 5; $contadora++) { 
+            if($post->rating >= $contadora) { 
+                $numeroDeEstrelasPreenchidas .= '&starf;';
+            } else {
+                 $numeroDeEstrelasPreenchidas .= '&star;'; 
+            }
+        }        
+        $post->rating = $numeroDeEstrelasPreenchidas;
+        $post->author = $this->recuperaDadosDoAutor($post->user_id);
         return view('site/vpost', compact('post'));
     }
-    
+
+    public function excluir()
+    {
+        $idPost = $_GET['post_id'];
+        $post = App::get('database')->destroy('posts', 'id', $idPost);
+        header('Location: /listaPostAdm');
+    }
+
+    public function editar()
+    {
+        $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem']['name']);
+        if(move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath)) {
+            $_POST['imagem'] = $imagePath;
+            App::get('database')->editPost($_POST);
+            header('Location: /listaPostAdm');
+        }
+    }
+
+    public function recuperaDadosDoAutor(int $idDoUsuario)
+    {
+       return $user = App::get('database')->search('users', 'id', $idDoUsuario);
+    }
 
 }

@@ -43,7 +43,7 @@
       <div class="text-center">
         <button
           class="mt-4 rounded-lg bg-roxo-medio-2 px-2 py-1 text-white drop-shadow-lg"
-          id="sBtn"
+          id="sBtn" 
         >
           sim
         </button>
@@ -330,245 +330,251 @@
       </div>
       <hr class="my-4" />
 
-      <div class="grid grid-cols-3 gap-5">
-        <div class="flex flex-col">
-          <p class="font-semibold">Imagem</p>
-          <div class="flex h-full w-full items-center justify-center">
-            <label
-              for="dropzone-file"
-              class="dark:hover:bg-bray-800 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-roxo-medio-1 bg-roxo-claro-1 hover:bg-roxo-claro-2"
-            >
-              <div class="items-center justify-center">
-                <svg
-                  aria-hidden="true"
-                  class="h-10 w-10 text-roxo-escuro-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                  ></path>
-                </svg>
-              </div>
-              <input id="dropzone-file" type="file" class="hidden" />
-            </label>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <p class="font-semibold">Título:</p>
-          <input
-            class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-            type="text"
-            for="titulo"
-            placeholder="Título..."
-          />
-
-          <p class="font-semibold">Gênero:</p>
-          <form>
-            <div
-              class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-            >
-              <div class="selectBox" onclick="showCheckboxesGenero()">
-                <option>Selecione os gêneros</option>
-                <select class="bg-roxo-claro-1"></select>
-                <div class="overSelect"></div>
-              </div>
-              <div class="flex flex-col" id="checkboxesGenero">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Romance</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Ficção</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Psicológico</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Autoajuda</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Terror</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Guia</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Infantil</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </form>
-
-          <p class="font-semibold">Data de Criação:</p>
-          <div class="rounded-lg bg-roxo-claro-1 p-2 text-roxo-escuro-2">
-            <p>15/05/23</p>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <p>Autor</p>
-          <input
-            class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:outline-0"
-            type="text"
-            for="autor"
-            placeholder="Autor..."
-          />
-          <p class="font-semibold">Redflag:</p>
-          <form>
-            <div
-              class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-            >
-              <div class="selectBox" onclick="showCheckboxesRedflag()">
-                <option>Selecione as Redflags</option>
-                <select class="bg-roxo-claro-1"></select>
-                <div class="overSelect"></div>
-              </div>
-              <div class="flex flex-col" id="checkboxesRedflag">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Disturbio Alimentar</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Violência</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Abuso de substâncias Psicoativas</span>
-                  </label>
-                </div>
-
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Doença psiquiátrica</span>
-                  </label>
-                </div>
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="form-checkbox text-indigo-600"
-                    />
-                    <span class="ml-2">Violência Sexual</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </form>
-          <p class="font-semibold">Avaliação:</p>
-          <div class="rounded-lg bg-roxo-claro-1 p-2">
-            <select
-              id="countries"
-              class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0"
-            >
-              <option selected>&star;&star;&star;&star;&star; (0/5)</option>
-              <option value="1">&starf;&star;&star;&star;&star; (1/5)</option>
-              <option value="2">
-                &starf;&starf;&star;&star;&star; (2/5)
-              </option>
-              <option value="3">
-                &starf;&starf;&starf;&star;&star; (3/5)
-              </option>
-              <option value="4">
-                &starf;&starf;&starf;&starf;&star; (4/5)
-              </option>
-              <option value="5">
-                &starf;&starf;&starf;&starf;&starf; (5/5)
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <p class="font-semibold">Sinopse</p>
-      <textarea
-        rows="4"
-        class="cor block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm text-black placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-        placeholder="Escreva a sinopse aqui"
-      ></textarea>
-      <p class="font-semibold">Resenha</p>
-      <textarea
-        rows="4"
-        class="block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-        placeholder="Escreva a resenha aqui"
-      ></textarea>
-      <div class="mt-4 flex justify-end gap-4">
-        <button
-          id="fecharEditar2"
-          class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
-        >
-          Cancelar
-        </button>
-        <button
-          id="fecharEditar3"
-          class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
-        >
-          Postar
-        </button>
-      </div>
+			<form id="formEdit" action="" method="POST" enctype="multipart/form-data">
+			  <input type="hidden" value="" id="id_post" name='post_id'>
+				<div class="grid grid-cols-3 gap-5">
+					<div class="flex flex-col">
+						<p class="font-semibold">Imagem</p>
+						<div class="flex h-full w-full items-center justify-center">
+							<label
+								for="dropzone-file1"
+								class="dark:hover:bg-bray-800 flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-roxo-medio-1 bg-roxo-claro-1 hover:bg-roxo-claro-2"
+							>
+								<div class="items-center justify-center">
+									<svg
+										aria-hidden="true"
+										class="h-10 w-10 text-roxo-escuro-2"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+										></path>
+									</svg>
+								</div>
+							</label>
+							<input name="imagem" id="dropzone-file1" type="file" class="hidden" />
+						</div>
+					</div>
+					<div class="flex flex-col">
+						<p class="font-semibold">Título:</p>
+						<input
+							class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+							type="text"
+							for="titulo"
+							placeholder="Título..."
+							name='title'
+						/>
+	
+						<p class="font-semibold">Gênero:</p>
+	
+							<div
+								class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+							>
+								<div class="selectBox" onclick="showCheckboxesGenero()">
+									<option>Selecione os gêneros</option>
+									<select class="bg-roxo-claro-1"></select>
+									<div class="overSelect"></div>
+								</div>
+								<div class="flex flex-col" id="checkboxesGenero">
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Romance</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Ficção</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Psicológico</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Autoajuda</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Terror</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Guia</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Infantil</span>
+										</label>
+									</div>
+								</div>
+							</div>
+	
+						<p class="font-semibold">Data de Criação:</p>
+						<div class="rounded-lg bg-roxo-claro-1 p-2 text-roxo-escuro-2">
+							<p>15/05/23</p>
+						</div>
+					</div>
+					<div class="flex flex-col">
+						<p>Autor</p>
+						<input
+							class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:outline-0"
+							type="text"
+							for="autor"
+							placeholder="Autor..."
+						/>
+						<p class="font-semibold">Redflag:</p>
+						
+							<div
+								class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+							>
+								<div class="selectBox" onclick="showCheckboxesRedflag()">
+									<option>Selecione as Redflags</option>
+									<select class="bg-roxo-claro-1"></select>
+									<div class="overSelect"></div>
+								</div>
+								<div class="flex flex-col" id="checkboxesRedflag">
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Disturbio Alimentar</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Violência</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Abuso de substâncias Psicoativas</span>
+										</label>
+									</div>
+	
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Doença psiquiátrica</span>
+										</label>
+									</div>
+									<div>
+										<label class="inline-flex items-center">
+											<input
+												type="checkbox"
+												class="form-checkbox text-indigo-600"
+											/>
+											<span class="ml-2">Violência Sexual</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						<p class="font-semibold">Avaliação:</p>
+						<div class="rounded-lg bg-roxo-claro-1 p-2">
+							<select
+								id="countries"
+								class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0"
+							  name='rating'
+							>
+								<option selected>&star;&star;&star;&star;&star; (0/5)</option>
+								<option value="1">&starf;&star;&star;&star;&star; (1/5)</option>
+								<option value="2">
+									&starf;&starf;&star;&star;&star; (2/5)
+								</option>
+								<option value="3">
+									&starf;&starf;&starf;&star;&star; (3/5)
+								</option>
+								<option value="4">
+									&starf;&starf;&starf;&starf;&star; (4/5)
+								</option>
+								<option value="5">
+									&starf;&starf;&starf;&starf;&starf; (5/5)
+								</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<p class="font-semibold">Sinopse</p>
+				<textarea
+					rows="4"
+					class="cor block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm text-black placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+					placeholder="Escreva a sinopse aqui"
+					name='synopsis'
+				></textarea>
+				<p class="font-semibold">Resenha</p>
+				<textarea
+					rows="4"
+					class="block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+					placeholder="Escreva a resenha aqui"
+					name='review'
+				></textarea>
+				<div class="mt-4 flex justify-end gap-4">
+					<button
+						id="fecharEditar2"
+						class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
+					>
+						Cancelar
+					</button>
+					<button
+						type = 'submit'
+						id="fecharEditar3"
+						class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
+					>
+						Postar
+					</button>
+				</div>
+			</form>
     </dialog>
 
     <dialog
@@ -667,7 +673,8 @@
             </button>
             <button
               class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2 tablet:mb-2"
-              id="botaoEditar1"
+              id="botaoEditar1" 
+							id-post="<?= $post->id ?>"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -686,7 +693,7 @@
             </button>
             <button
               class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2"
-              id="myBtn"
+              id="myBtn" id-post=<?= $post->id ?>
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -778,11 +785,34 @@
 
 			botaoVisualizar = document.getElementById('botaoVisualizar1');
 			modalVisualizar = document.getElementById('visualizar_post');
-			botaoVisualizar.addEventListener('click', function () {
-				alert('entrou');
-				modalVisualizar.src = '/teste?post_id=' + botaoVisualizar.getAttribute('id-post');
-				alert(modalVisualizar.src);
-			});
+			if(botaoVisualizar) {
+				botaoVisualizar.addEventListener('click', function () {
+					modalVisualizar.src = '/teste?post_id=' + botaoVisualizar.getAttribute('id-post');
+			  });
+			}
+			
+			botaoExcluir = document.getElementById('myBtn');
+			modalExcluir = document.getElementById('sBtn');
+			if(botaoExcluir){
+				botaoExcluir.addEventListener('click', function () {
+					modalExcluir.src = '/post/excluir?post_id=' + botaoExcluir.getAttribute('id-post');
+				});
+				modalExcluir.addEventListener('click', function () {
+					window.location.href = modalExcluir.src;
+				});
+			}
+			
+			botaoEditar = document.getElementById('botaoEditar1');
+			//modalEditar = document.getElementById('fecharEditar3');
+			modalEditar = document.getElementById('formEdit');
+			if(botaoEditar) {
+				botaoEditar.addEventListener('click', function () {
+					modalEditar.action = '/post/editar';
+					document.getElementById('id_post').value = botaoEditar.getAttribute('id-post');
+			  });
+			}
+
+
     </script>
   </body>
 </html>
