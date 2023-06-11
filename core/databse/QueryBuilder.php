@@ -110,6 +110,35 @@ class QueryBuilder
     ) {
         $register = $this->pdo->prepare("SELECT * FROM $tabela WHERE $campoParaPesquisar = :valueToSearch limit 1");
         $register->execute([':valueToSearch' => $valorParaBuscar]);
-        return $register->rowCount();
+        return $register->fetch(PDO::FETCH_OBJ);
     }
+
+    public function createPost(mixed $dadosDoPost)
+    {
+        try {
+            $res = $this->pdo->prepare(
+                "INSERT INTO posts(
+                    user_id, 
+                    title, 
+                    synopsis,
+                    review,
+                    rating,
+                    image
+                ) VALUES (
+                    '8', 
+                    '{$dadosDoPost['titulo']}', 
+                    '{$dadosDoPost['sinopse']}',
+                    '{$dadosDoPost['resenha']}', 
+                    '{$dadosDoPost['avaliacao']}', 
+                    '{$dadosDoPost['imagem']}'
+                )"
+            );
+
+            $res->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+
 }

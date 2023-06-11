@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    <?php die(var_dump($post)) ?>
     <div class = "tudo">
         <div class="conteudo">
             <div class = "esquerda">
