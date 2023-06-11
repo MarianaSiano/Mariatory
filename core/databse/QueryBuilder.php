@@ -47,9 +47,51 @@ class QueryBuilder
         }
     }
 
+    public function insertPosts($dados)
+    {
+        try {
+            $res = $this->pdo->prepare(
+                "INSERT INTO posts(
+                    title, 
+                    synopsis,
+                    review,
+                    rating,
+                    image 
+                    
+                ) VALUES (
+                    '{$dados['title']}', 
+                    '{$dados['synopsis']}', 
+                    '{$dados['review']}'
+                    '{$dados['rating']}'
+                    '{$dados['image']}'
+                )"
+            );
+
+            $res->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function editPosts($dados)
     {
-        //nada
+        $id = $dados["id"];
+
+        $con = "UPDATE `posts` 
+            SET `title` = '{$dados['title']}', 
+                `synopsis` = '{$dados['synopsis']}', 
+                `review` = '{$dados['review']}' 
+                `rating` = '{$dados['rating']}'
+                `image` = '{$dados['image']}'
+            WHERE `posts`.`id` = $id";
+
+        try {
+            $res = $this->pdo->prepare($con);
+
+            $res->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function editUsers($dados)

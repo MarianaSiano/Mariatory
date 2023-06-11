@@ -21,10 +21,41 @@ class PostController{
 
             ];
 
-            App::get('database') -> insertUsuarios($parametros);
+            App::get('database') -> insertPosts($parametros);
             header('Location: /listaPost');
 
 
+        }
+        public function deletePosts()
+        {
+            App::get('database')->delete('users', $_POST['id']);
+            header('Location: /listaPost');
+        }
+        
+        public function showPosts()
+    {
+        $users = App::get('database')->selectAll('posts');
+
+        $usersList = [
+            'posts' => $users
+        ];
+
+        return view('admin/listaPostAdm', $usersList);
+    }
+    
+        public function editPosts()
+        {
+            $parametros = [
+                'title' => $_POST['title'],
+                'author' => $_POST['author'],
+                'sinopsis' => $_POST['sinopsis'],
+                'review' => $_POST['review'],
+                'rating' => $_POST['rating'],
+
+            ];
+    
+            App::get('database')->editPosts($parametros);
+            header('Location: /listaPost');
         }
     
 

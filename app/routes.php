@@ -29,3 +29,14 @@ $router->get('listaDeUsuarios', 'UsuarioController@show');
 $router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
 //-> Editar
 $router->post('users/editarUsuario', 'UsuarioController@editUsers');
+
+
+/*Posts*/
+//-> Criação
+$router->post('posts/criarPost', 'PostController@createPosts');
+//-> Exibir todos os usuários
+$router->get('listaDePosts', 'PostController@showPosts');
+//-> Deletar
+$router->post('posts/deletarPost', 'PostController@deletePosts');
+//-> Editar
+$router->post('posts/editarPost', 'PostController@editPosts');
