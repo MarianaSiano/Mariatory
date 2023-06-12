@@ -18,6 +18,8 @@ $router->get('vpost', 'ExampleController@vpost');
 $router->post('login/logar', 'LoginController@login');
 //-> Retorna a página de login
 $router->get('login', 'LoginController@view');
+//-> Processo para deslogar
+$router->get('login/logout', 'LoginController@logout');
 
 /*Usuários*/
 

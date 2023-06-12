@@ -31,7 +31,7 @@ class UsuarioController
         $parametros = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
-            'password' => hash("sha512", $_POST['password'])
+            'password' => $_POST['password']
         ];
 
         App::get('database')->insertUsuarios($parametros);
