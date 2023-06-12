@@ -31,7 +31,7 @@
             </div>
 
 
-        </div> <!--FIM upper-content-->
+        </div>
 
 
         <ul>
