@@ -13,6 +13,10 @@
 </head>
 
 <body>
+
+    <!--import da navbar-->
+    <?php require('./app/views/layouts/navbar.php'); ?>
+    
     <div class="tudo">
         <div class="conteudo">
             <div class="esquerda">
@@ -62,6 +66,9 @@
             </div>
         </div>
     </div>
+
+    <!--import do footer-->
+    <?php require('./app/views/layouts/footer.php'); ?>
 </body>
 
 </html>
