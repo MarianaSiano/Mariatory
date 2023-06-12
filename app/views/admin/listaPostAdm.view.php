@@ -59,88 +59,68 @@
         <p class="font-semibold">Título:</p>
         <input class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none" type="text" for="titulo" placeholder="Título..." />
 
+
         <p class="font-semibold">Gênero:</p>
-        <form>
-          <div class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none">
-            <div class="selectBox" onclick="showCheckboxesGenero()">
-              <option>Selecione os gêneros</option>
-              <select class="bg-roxo-claro-1"></select>
-              <div class="overSelect"></div>
-            </div>
-            <div class="flex flex-col" id="checkboxesGenero">
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Romance</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Ficção</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Psicológico</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Autoajuda</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Terror</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Guia</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Infantil</span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
-
-      </div>
-      <div class="flex flex-col">
-        <p>Autor</p>
-        <input class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:outline-0" type="text" for="autor" placeholder="Autor..." />
-
-
-        <p class="font-semibold">Avaliação:</p>
         <div class="rounded-lg bg-roxo-claro-1 p-2">
           <select id="countries" class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0">
-            <option selected>&star;&star;&star;&star;&star; (0/5)</option>
-            <option value="uma">&starf;&star;&star;&star;&star; (1/5)</option>
-            <option value="duas">
-              &starf;&starf;&star;&star;&star; (2/5)
+            <option selected>Romance</option>
+            <option value="a">Romance </option>
+            <option value="b">Ficção </option>
+            <option value="c">
+              Psicológico
             </option>
-            <option value="tres">
-              &starf;&starf;&starf;&star;&star; (3/5)
+            <option value="d">
+              Autoajuda
             </option>
-            <option value="quatro">
-              &starf;&starf;&starf;&starf;&star; (4/5)
+            <option value="e">
+              Terror
             </option>
-            <option value="cinco">
-              &starf;&starf;&starf;&starf;&starf; (5/5)
+            <option value="f">
+              Guia
+            </option>
+            <option value="g">
+              Infantil
+            </option>
+            <option value="h">
+              Aventura
             </option>
           </select>
         </div>
+
+
+
+
       </div>
     </div>
+
+
+    </div>
+    <div class="flex flex-col">
+      <p>Autor</p>
+      <input class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:outline-0" type="text" for="autor" placeholder="Autor..." />
+
+
+      <p class="font-semibold">Avaliação:</p>
+      <div class="rounded-lg bg-roxo-claro-1 p-2">
+        <select id="countries" class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0">
+          <option selected>&star;&star;&star;&star;&star; (0/5)</option>
+          <option value="uma">&starf;&star;&star;&star;&star; (1/5)</option>
+          <option value="duas">
+            &starf;&starf;&star;&star;&star; (2/5)
+          </option>
+          <option value="tres">
+            &starf;&starf;&starf;&star;&star; (3/5)
+          </option>
+          <option value="quatro">
+            &starf;&starf;&starf;&starf;&star; (4/5)
+          </option>
+          <option value="cinco">
+            &starf;&starf;&starf;&starf;&starf; (5/5)
+          </option>
+        </select>
+      </div>
+    </div>
+
     <p class="font-semibold">Sinopse</p>
     <textarea rows="4" class="cor block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm text-roxo-medio-1 placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none" placeholder="Escreva a sinopse aqui"></textarea>
     <p class="font-semibold">Resenha</p>
@@ -180,60 +160,37 @@
         <p class="font-semibold">Título:</p>
         <input class="rounded-lg border-transparent bg-roxo-claro-1 p-2 text-black placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none" type="text" for="titulo" placeholder="Título..." />
 
+
         <p class="font-semibold">Gênero:</p>
-        <form>
-          <div class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none">
-            <div class="selectBox" onclick="showCheckboxesGenero()">
-              <option>Selecione os gêneros</option>
-              <select class="bg-roxo-claro-1"></select>
-              <div class="overSelect"></div>
-            </div>
-            <div class="flex flex-col" id="checkboxesGenero">
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Romance</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Ficção</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Psicológico</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Autoajuda</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Terror</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Guia</span>
-                </label>
-              </div>
-              <div>
-                <label class="inline-flex items-center">
-                  <input type="checkbox" class="form-checkbox text-indigo-600" />
-                  <span class="ml-2">Infantil</span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
+        <div class="rounded-lg bg-roxo-claro-1 p-2">
+          <select id="countries" class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0">
+            <option selected>Romance</option>
+            <option value="a">Romance </option>
+            <option value="b">Ficção </option>
+            <option value="c">
+              Psicológico
+            </option>
+            <option value="d">
+              Autoajuda
+            </option>
+            <option value="e">
+              Terror
+            </option>
+            <option value="f">
+              Guia
+            </option>
+            <option value="g">
+              Infantil
+            </option>
+            <option value="h">
+              Aventura
+            </option>
+          </select>
+        </div>
+
+
+
+
       </div>
       <div class="flex flex-col">
         <p>Autor</p>
@@ -241,26 +198,27 @@
 
         <div class="flex flex-col" id="checkboxesRedflag">
         </div>
-      </div>
 
-      <p class="font-semibold">Avaliação:</p>
-      <div class="rounded-lg bg-roxo-claro-1 p-2">
-        <select id="countries" class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0">
-          <option selected>&star;&star;&star;&star;&star; (0/5)</option>
-          <option value="uma">&starf;&star;&star;&star;&star; (1/5)</option>
-          <option value="duas">
-            &starf;&starf;&star;&star;&star; (2/5)
-          </option>
-          <option value="tres">
-            &starf;&starf;&starf;&star;&star; (3/5)
-          </option>
-          <option value="quatro">
-            &starf;&starf;&starf;&starf;&star; (4/5)
-          </option>
-          <option value="cinco">
-            &starf;&starf;&starf;&starf;&starf; (5/5)
-          </option>
-        </select>
+
+        <p class="font-semibold">Avaliação:</p>
+        <div class="rounded-lg bg-roxo-claro-1 p-2">
+          <select id="countries" class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0">
+            <option selected>&star;&star;&star;&star;&star; (0/5)</option>
+            <option value="uma">&starf;&star;&star;&star;&star; (1/5)</option>
+            <option value="duas">
+              &starf;&starf;&star;&star;&star; (2/5)
+            </option>
+            <option value="tres">
+              &starf;&starf;&starf;&star;&star; (3/5)
+            </option>
+            <option value="quatro">
+              &starf;&starf;&starf;&starf;&star; (4/5)
+            </option>
+            <option value="cinco">
+              &starf;&starf;&starf;&starf;&starf; (5/5)
+            </option>
+          </select>
+        </div>
       </div>
     </div>
     </div>
