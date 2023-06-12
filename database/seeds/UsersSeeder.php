@@ -22,8 +22,7 @@ class UsersSeeder extends AbstractSeed
             $data[] = [
                 'name' => $faker->userName(),
                 'email' => $faker->email(),
-                'password' => $faker->password(),
-                'updated_at' => date('Y-m-d H:i:s')
+                'password' => $faker->password()
             ];
         }
 

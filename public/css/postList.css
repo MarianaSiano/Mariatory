@@ -24,8 +24,44 @@ body{
     display: flex;
 }
 
-.btnProcurar{
+.heading {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+
+.formulario {
+    display: flex;
+    flex-basis: 100%;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.procurar {
     width: 100%;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    background-color: rgb(249 250 251);
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(17 24 39);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+    border-style: none;
+}
+
+.procurar::placeholder{
+    font-style: italic;
+}
+
+.btnProcurar {
+    width: 30%;
     height: min-content;
     margin-bottom: 1px;
     padding: 0.5px;
@@ -35,35 +71,64 @@ body{
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
     border-style: none;
 }
-.formulario {
-    display: flex;
-    flex-basis: 80%;
-    gap: 0.5rem;
-    width: 60rem;
-    justify-items: center;
-    background-color: white;
+
+.error-emoji[_ngcontent-ng-c2168645827] {
+    color: black;
+    font: 200px/1.25 Google Sans,Helvetica Neue,sans-serif;
+    margin-bottom: 24px;
 }
+
+.error-msg{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.error-msg span{
+    font-weight: 700;
+}
+
+.error-search{
+   text-align: center;
+}
+
+.busca {
+    margin-right: 0.5%;
+    border-radius: 0.5rem;
+    background-color: #9D4EDD;
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.04));
+    filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
+}
+
 .btnBusca {
     height: 14%;
     height: min-content;
     margin-bottom: 1px;
     padding: 0.5px;
     border-radius: 0.5rem;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(191, 191, 191);
     filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
     border-style: none;
 }
 
-.breadcrumb{
-    padding: 20px 0px 20px 20px;
-    animation-name: breacrumb-desloc;
-    animation-duration: 3s;
+.busca:hover {
+    background-color: #10002B;
+    transition: 1s;
 }
 
-.breadcrumb a{
-    color: #7b2cbf;
+.busca:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
+
 
 .content-image{
     width: 330px;

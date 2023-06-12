@@ -26,6 +26,20 @@ class QueryBuilder
         }
     }
 
+    public function selectUserName($id){
+        try{
+            $res = $this->pdo->prepare("SELECT name from users WHERE id = {$id}");
+            
+            $res->execute();
+
+            return $res->fetch()[0];
+        }catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    
+
     public function insertUsuarios($dados)
     {
         try {
@@ -100,6 +114,21 @@ class QueryBuilder
                 return false;
             }
         } catch (Exception $e) {
+        }
+    }
+
+    public function searchPost($title){
+        $sql = "SELECT * FROM posts WHERE title LIKE '%{$title}%'";
+
+        try {
+            $stnt = $this->pdo->prepare($sql);
+            $stnt->execute();
+
+
+            return $stnt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+
+            die($e->getMessage());
         }
     }
 
