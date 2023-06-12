@@ -61,7 +61,7 @@
     </footer> <!--FIM FOOTER-->
 
 
-    <script src="/public/js/navFooter.js"></script>
+    <script src="/public/js/footer.js"></script>
 
 </body>
 

@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
 
 </head>
 
@@ -16,7 +17,7 @@
 
     <!--import da navbar-->
     <?php require('./app/views/layouts/navbar.php'); ?>
-    
+
     <div class="tudo">
         <div class="conteudo">
             <div class="esquerda">
