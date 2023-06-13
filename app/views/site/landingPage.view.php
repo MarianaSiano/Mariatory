@@ -194,9 +194,9 @@
     <?php require('./app/views/layouts/footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+    <!-- <script>
         Swal.fire('Any fool can use a computer')
-    </script>
+    </script> -->
 </body>
 
 </html>

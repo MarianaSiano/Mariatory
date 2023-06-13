@@ -19,7 +19,7 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="./landingPage" class="nav-link">Página Inicial</a></li>
+                    <li class="nav-item"><a href="./" class="nav-link">Página Inicial</a></li>
                     <li class="nav-item"><a href="./postList" class="nav-link">Posts</a></li>
                     <li class="nav-item"><a href="./login" class="nav-link">Login</a></li>
                 </ul>
@@ -31,7 +31,7 @@
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="./landingPage" class="nav-link">Página Inicial</a></li>
+                <li class="nav-item"><a href="./" class="nav-link">Página Inicial</a></li>
                 <li class="nav-item"><a href="./postList" class="nav-link">Posts</a></li>
                 <li class="nav-item"><a href="./login" class="nav-link">Login</a></li>
             </ul>
