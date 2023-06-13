@@ -8,6 +8,7 @@
     <title>Maristory</title>
 
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
+    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
 
 </head>
 
