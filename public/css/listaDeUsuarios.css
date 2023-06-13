@@ -40,7 +40,7 @@
     padding: 0.6rem;
     border-radius: 0.5rem;
     border-width: 1px;
-    background-color: rgb(249 250 251);
+    background-color: rgb(251, 249, 249);
     padding-left: 1.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -133,10 +133,17 @@
 
 @media(max-width: 472px) {
     .heading {
-        flex-direction: column;
+        flex-direction:column ;
         gap: 0.5rem
     }
 }
+
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+  }
 
 .btn1 {
     background-color: #9D4EDD;
@@ -236,6 +243,7 @@ body {
     border-bottom-width: 1px;
     border-color: rgb(17 24 39);
     padding: 0.5rem;
+    
 }
 
 #modalzin {

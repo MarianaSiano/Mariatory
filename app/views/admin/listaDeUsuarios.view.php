@@ -178,7 +178,7 @@
                 <td class="l1c3">
 
                     <!--Colocar nesse form o método para dar delete no usuário-->
-
+                    <div class="flex-container">
                     <button class="btn1 clique" data-modal="modalVizualizar-<?= $user->id ?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;">
                             <path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
                             </path>
@@ -279,6 +279,7 @@
                             <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z">
                             </path>
                         </svg></button>
+            </div>
 
                     <form action="users/deletarUsuario" method="POST">
                         <input hidden value="<?= $user->id ?>" name="id">
