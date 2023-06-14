@@ -24,7 +24,7 @@
 
     <div class="modalllll hide muser" id="modalAddUser">
         <div class="headerModal">
-            <h2 class="tituloModais">Criar novo Usuário</h2>
+            <h2 class="tituloModais">Criar novo Usuário!</h2>
 
             <div class="x"><i class="bx bx-x fechar"></i></div>
         </div>
