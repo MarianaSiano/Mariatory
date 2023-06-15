@@ -13,6 +13,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unicons.iconscout.com/release/v4.0.0/css/thinline.css' rel='stylesheet'>
 
+    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
+
 
 
 </head>
@@ -62,7 +64,6 @@
             </div>
         </form>
     </div>
-
 
 
 
@@ -137,9 +138,9 @@
     </div>
 
     <div class="heading">
-        <form class="formulario">
+        <form action = "buscar" class="formulario" method="GET">
             <div class="btnProcurar">
-                <input type="search" class="procurar" placeholder="Procurar usuário" required />
+                <input name = "search" type="search" class="procurar" placeholder="Procurar usuário" required />
             </div>
 
             <div class="btnBusca">

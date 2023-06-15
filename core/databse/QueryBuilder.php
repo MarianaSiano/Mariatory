@@ -112,4 +112,21 @@ class QueryBuilder
         $register->execute([':valueToSearch' => $valorParaBuscar]);
         return $register->rowCount();
     }
+
+    public function searchUsers($name){
+        $sql = "SELECT * FROM users WHERE name LIKE '%{$name}%'";
+
+        try {
+            $sql = $this->pdo->prepare($sql);
+
+            $sql->execute();
+
+            return $sql->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    
+
 }

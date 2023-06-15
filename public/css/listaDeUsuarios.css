@@ -130,13 +130,13 @@
 }
 
 
-
-@media(max-width: 472px) {
+ @media(max-width: 472px) {
     .heading {
         flex-direction:column ;
         gap: 0.5rem;
     }
 }
+
 
 .flex-container {
     display: flex;

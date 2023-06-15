@@ -29,3 +29,5 @@ $router->get('listaDeUsuarios', 'UsuarioController@show');
 $router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
 //-> Editar
 $router->post('users/editarUsuario', 'UsuarioController@editUsers');
+//->BUSCAR USUARIO
+$router->get('buscar', 'UsuarioController@search');
