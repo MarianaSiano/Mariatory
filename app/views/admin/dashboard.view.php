@@ -1,7 +1,3 @@
-<?php 
-include('./app/views/site/protectLogin.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +27,11 @@ include('./app/views/site/protectLogin.php');
             <button class="formPosts"><i class="fa-regular fa-clipboard"></i></i><a href="#">Form de Posts</a></button>
             <button class="listUser"><i class="fa-regular fa-user"></i><a href="#">Lista de Usuários</a></button>
             <button class="formUser"><i class="fa-regular fa-id-badge"></i><a href="#">Form de Usuários</a></button>
-            <button class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="login/logout">Logout</a></button>
+            <button class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="#">Logout</a></button>
 
         </div>
 
     </div>
-    
+
 <body>
 </html>

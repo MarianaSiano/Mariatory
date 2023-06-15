@@ -16,142 +16,134 @@
 
 <body>
 
-    <?php require('./app/views/layouts/navbar.php'); ?>
-
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Posts</li>
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Posts</li>
         </ol>
-    </nav>
-    <div class="formulario">
-        <div class="btnProcurar">
-            <input type="search" class="procurar" placeholder="Procurar usuário" required />
-        </div>
+      </nav>
 
-        <div class="btnBusca">
-            <button type="submit" class="busca"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
-                    <path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z">
-                    </path>
-                </svg>
-            </button>
-        </div>
-    </div>
 
     <div class="container overflow-hidden">
-        <div class="main">
-            <div class="posts">
-                <div class="row row-cols-3">
+        <div class="row g-4 ">
 
-                    <div class="col-sm-4 col-md-4">
+            <div class="col-sm-6 col-md-8">
+
+                <div class="main">
+
+                    <div class="posts">
+
                         <div class="individual-post">
 
-                            <div class="row row-cols-1">
+                            <div class="row gx-4">
 
                                 <div class="content-image">
 
                                     <img src="https://poltronanerd.com.br/wp-content/uploads/2017/12/81cAEHClU4L.jpg" alt="Imagem ilustrativa">
 
                                 </div>
-                                <div class="written-content">
+                                <div class="written-content col-6">
 
                                     <div class="markers">
                                         <span class="bg-blue">Fantasia</span>
+                                        <span class="bg-red">Romance</span>
+                                        <span class="bg-green">Best-Sellers</span>
                                     </div>
 
                                     <h1>Corte de Espinhos e Rosas, uma adorável fantasia de Sarah J. Maas</h1>
-                                    <p class="lh-sm">Corte de Espinhos e Rosas é um romance de fantasia best-seller da autora Sarah6Maas, que conta a história de Feyre, uma humana capturada por um feérico e envolvida em uma trama que ameaça a paz entre humanos e seres feéricos.</p>
+
+                                    <p>Corte de Espinhos e Rosas é um romance de fantasia best-seller da autora Sarah J. Maas, que conta a história de Feyre, uma humana capturada por um feérico e envolvida em uma trama que ameaça a paz entre humanos e seres feéricos.</p>
+
                                     <ul class="post-datas">
                                         <li>Por <span>Alisson dos Santos</span></li>
                                         <li><i class='bx bx-calendar'></i>12 de janeiro, 2023</li>
+                                        <li><i class='bx bx-chat'></i>0 comentários</li>
+                                        <li><i class='bx bx-timer'></i>14 minutos de leitura</li>
                                     </ul>
 
+                                    <a href=""><button>Saber mais</button></a>
+
                                 </div>
-                                <a href=""><button>Saber mais</button></a>
                             </div>
+
                         </div>
-                    </div>
 
-
-                    <div class="col-sm-4 col-md-4">
                         <div class="individual-post">
 
-                            <div class="row row-cols-1">
-
-                                <div class="content-image">
-
-                                    <img src="https://poltronanerd.com.br/wp-content/uploads/2017/12/81cAEHClU4L.jpg" alt="Imagem ilustrativa">
-
-                                </div>
-                                <div class="written-content">
-
-                                    <div class="markers">
-                                        <span class="bg-blue">Fantasia</span>
-                                    </div>
-
-                                    <h1>Corte de Espinhos e Rosas, uma adorável fantasia de Sarah J. Maas</h1>
-                                    <p class="lh-sm">Corte de Espinhos e Rosas é um romance de fantasia best-seller da autora Sarah6Maas, que conta a história de Feyre, uma humana capturada por um feérico e envolvida em uma trama que ameaça a paz entre humanos e seres feéricos.</p>
-                                    <ul class="post-datas">
-                                        <li>Por <span>Alisson dos Santos</span></li>
-                                        <li><i class='bx bx-calendar'></i>12 de janeiro, 2023</li>
-                                    </ul>
-
-                                </div>
-                                <a href=""><button>Saber mais</button></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-4 col-md-4">
-                        <div class="individual-post">
-
-                            <div class="row row-cols-1">
+                            <div class="row gx-4">
 
                                 <div class="content-image">
 
                                     <img src="https://img.freepik.com/fotos-premium/conceito-de-design-criativo-de-ano-novo-2023-com-livros-imagem-renderizada-em-3d_702650-16.jpg?w=2000" alt="Imagem ilustrativa">
 
                                 </div>
-                                <div class="written-content">
+                                <div class="written-content col-6">
 
                                     <div class="markers">
                                         <span class="bg-purple">Artigo</span>
-
+                                        <span class="bg-aqua">Populares</span>
                                     </div>
 
                                     <h1>Guia Supremo: Melhores ideias de livros para ler em 2023</h1>
 
-                                    <p class="lh-sm">A leitura é uma atividade enriquecedora que pode nos transportar para diferentes tempos e realidades.Existem inúmeros livros no mercado, cada um com sua própria história, tornando a escolha de qual livro ler muitas vezes difícil. Para ajudar nisso, compilamos uma lista dos melhores livros em diferentes categorias.</p>
+                                    <p>A leitura é uma atividade enriquecedora que pode nos transportar para diferentes tempos e realidades. Existem inúmeros livros no mercado, cada um com sua própria história, tornando a escolha de qual livro ler muitas vezes difícil. Para ajudar nisso, compilamos uma lista dos melhores livros em diferentes categorias.</p>
 
-                                    <ul class=" post-datas">
+                                    <ul class="post-datas">
                                         <li>Por <span>Rebecca Medeiros</span></li>
                                         <li><i class='bx bx-calendar'></i>21 de janeiro, 2023</li>
+                                        <li><i class='bx bx-chat'></i>12 comentários</li>
+                                        <li><i class='bx bx-timer'></i>7 minutos de leitura</li>
                                     </ul>
 
-
+                                    <a href=""><button>Saber mais</button></a>
 
                                 </div>
-                                <a href=""><button>Saber mais</button></a>
                             </div>
 
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
+            <div class="col-6 col-md-4">
+
+                <aside class="sidebar">
+
+                    <div class="search-bar">
+                        <input type="search" class="form-control" placeholder="Buscar..."/>
+                        <button>
+                            <i class='bx bx-search-alt'></i>
+                        </button>
+                    </div>
+
+                    <h3>Postagens recentes</h3>
+                    <hr>
+
+                    <div class="reviews-recent">
+                        <div class="recent-review">
+                            <div class="img-recent-review">
+                                <img src="https://cdn.shopify.com/s/files/1/0326/2935/8724/files/Hirohiko_Araki_2_medium.jpg?v=1583884410" alt="Imagem ilustrativa">
+                            </div>
+                            <h4>A evolução artística do autor de JoJo's Hirochiko Araki</h4>
+                        </div>
+                    </div>
+                    <div class="reviews-recent">
+                        <div class="recent-review">
+                            <div class="img-recent-review">
+                                <img src="https://www.changefactory.com.au/wp-content/uploads/2010/09/article-fact-or-opinion.jpg" alt="">
+                            </div>
+                            <h4>Fatos estranhos sobre livos que você nunca ouviu antes</h4>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+
         </div>
-
-    </div>
-
-
-
-
-    </div>
-    </div>
-
-    <?php require('./app/views/layouts/footer.php'); ?>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 

@@ -8,22 +8,17 @@
     <title>Maristory</title>
 
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
-    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
 
 </head>
 
 <body>
-
-    <!--import da navbar-->
+    <!--Dar um require parecido com esse toda vez que você quiser incluir uma nav, footer ou sidebar-->
     <?php require('./app/views/layouts/navbar.php'); ?>
 
     <div class="paginicial">
 
         <div class="upper-content">
 
-            <div class="telinha">
-                <img src="../../../public/assets/telinha.png" width="620">
-            </div>
             <div class="upper-content-text">
 
                 <h1>Olá, leitor(a)!</h1>
@@ -32,171 +27,57 @@
                     o feedback de outros leitores.</h3>
             </div>
 
-
-        </div>
+            <div class="telinha">
+                <img src="../../../public/assets/telinha.png" width="620">
+            </div>
+        </div> <!--FIM upper-content-->
 
 
         <ul>
             <li>
                 <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#">
+                        <img src="../../../public/assets/livro1.png" alt="Livro O pequeno principe" width="210" ;>
+                    </a>
                 </div>
             </li>
+
             <li>
                 <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#">
+                        <img src="../../../public/assets/livro2.png" alt="Livro Harry Potter e a pedra filosofal" width="210">
+                    </a>
                 </div>
             </li>
+
             <li>
                 <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#">
+                        <img src="../../../public/assets/livro3.png" alt="Livro Outros jeitos de usar a boca" width="210">
+                    </a>
                 </div>
             </li>
+
             <li>
                 <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#">
+                        <img src="../../../public/assets/livro4.png" alt="Livro Percy jackson e os olimpianos" width="210">
+                    </a>
                 </div>
             </li>
+
             <li>
                 <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                                <div class="alinhamento">
-                                    <h3 class="titulosesquerda"> Avaliação </h3>
-                                    <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#">
+                        <img src="../../../public/assets/livro5.png" alt="Livro frenesi historias de duplo terror" width="210">
+                    </a>
+                </div>
             </li>
-
-
         </ul>
 
 
     </div>
-
-    <!--import do footer-->
     <?php require('./app/views/layouts/footer.php'); ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script>
-        Swal.fire('Any fool can use a computer')
-    </script> -->
 </body>
 
 </html>

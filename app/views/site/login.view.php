@@ -22,18 +22,13 @@
             <br><br>
             <button> Entrar </button>
             <br><br>
-            <p class="error"></p>
+            <a href="#">Esqueci a senha</a>
+            <ul></ul>
+            <a href="#">Cadastrar-se</a>
         </form>
     </div>
 
     <script src="../../../public/js/login.js"></script>
-    <script>
-        window.onload = function() {
-            <?php if(isset($_SESSION['login_error'])): ?>
-                alert(<?php echo json_encode($_SESSION['login_error']) ?>);
-                <?php unset($_SESSION['login_error']) ?>
-            <?php endif ?>
-        };
-    </script>
+
 </body>
 </html>

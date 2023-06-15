@@ -8,11 +8,7 @@ use Exception;
 class LoginController
 {
     public function view(){
-        if(isset($_SESSION['id'])){
-            return view('admin/dashboard');
-        }else{
-            return view('site/login');
-        }
+        return view('site/login');
     }
 
     public function login(){
@@ -27,27 +23,18 @@ class LoginController
                 if(isset($_SESSION['id'])){
                     header('Location: /dashboard');
                 }else{
-                    $_SESSION['login_error'] = "Não está na sessão";
-                    header('Location: /login');
+                    echo "Não está na sessão";
                 }
             }else{
-                $_SESSION['login_error'] = 'E-mail ou senha incorretos. Digite novamente!';
-                header('Location: /login');
+                echo "Não tem no banco";
             }
         }else{
-            $_SESSION['login_error'] = "Campos e-mail e/ou senha vazios";
-            header('Location: /login');
+            echo "E-mail ou senha vazios";
         }
         
     }
 
     public function logout(){
-        if(!isset($_SESSION)){
-            session_start();
-        }
-        
-        session_destroy();
-
-        header('Location: /login');
+        //Fazer a lógica para desautenticar 
     }
 }

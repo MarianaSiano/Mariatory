@@ -65,7 +65,7 @@
 
             <div class="button-logout">
                 <li class="">
-                    <a href="login/logout">
+                    <a href="#">
                         <i class='bx bx-log-out bx-sm icon'></i>
                         <span class="nav-text text">Sair</span>
                     </a>

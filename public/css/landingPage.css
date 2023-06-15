@@ -14,107 +14,44 @@
 
 .upper-content {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px; /* Esta margin é para a animação dos post não invadir o upper-content*/
-    margin-top: 50px;
+    margin-bottom: 100px; /* Esta margin é para a animação dos post não invadir o upper-content*/
 }
 
 h1 {
     font-size: 300%;
     margin-top: 4%;
-    /* margin-left: 5%;
-    margin-right: 0%; */
+    margin-left: 5%;
+    margin-right: 0%;
     color: #7B2CBF;
+
 }
 
 h2 {
     font-size: 200%;
     color: #3C096C;
-    /* margin-left: 5%;
-    margin-right: 0%; */
+    margin-left: 5%;
+    margin-right: 0%;
 }
 
 h3 {
     font-size: 150%;
     color: #240046;
-    /* margin-left: 5%; */
-    /* margin-right: 0%;
-    margin-bottom: 9%; */
-}
-
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: max-content;
+    margin-left: 5%;
+    margin-right: 0%;
+    margin-bottom: 9%;
 }
 
 li {
-    margin-left: 10px;
-    margin-right: 10px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
 }
 
-.centralizar{
-    border-radius: 10px;
-    padding: 20px 10%;
-    background-color: #E0AAFF;
-    display: flex;
-    border: 2px solid #C77DFF;
-    box-shadow: 0 0 10px 3px #46035d47;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-}
-
-.centralizar > .todosAlinhamentos > .imagem{
-    width: 150px; 
-   ;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    display: block;
-    border-radius: 10px;
-}
-
-.classificacao {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.elementos {
-    flex-basis: min-content;
-    background-color: #5A189A;
-    font-size: 13px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-right: 10px;
-    margin: 0px 10px 10px 0px;
-    color: azure;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 3px #46035d47;
-}
-
-.todosAlinhamentos{
-    flex-direction: row;
-}
-
-.titulosesquerda{
-    margin: 5px 0px;
-    color:#5A189A;
-    font-size:larger;
-}
-
 .post {
-    /* margin-left: 2.5%;
-    margin-right: 2.5%; */
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     margin-top: 0;
     margin-bottom: 5%;
     animation-name: posts;
@@ -131,13 +68,14 @@ body {
     z-index: -10;
     background: url(../assets/fundoMariStory.png) repeat center;
     background-size: calc(90%);
-    font-family: sans-serif;
 }
 
 @keyframes posts {
+
     0% {
-        transform: translate(0%, 5%);
+        transform: translate(0%, 20%);
     }
+
     100% {
         transform: translate(0%, 0%);
     }
@@ -145,36 +83,37 @@ body {
 
 @media (max-width: 1000px) {
     body {
-        background-size: calc(90%);
+        background-size: calc(700%);
     }
 
     h1 {
         font-size: 200%;
         margin-top: 2%;
-        /* margin-left: 31%;
-        margin-right: 0%; */
+        margin-left: 31%;
+        margin-right: 0%;
         color: #7B2CBF;
     }
 
     h2 {
         font-size: 150%;
         color: #3C096C;
-        /* margin-left: 31%;
-        margin-right: 0%; */
+        margin-left: 31%;
+        margin-right: 0%;
     }
 
     h3 {
         font-size: 100%;
         color: #240046;
-        /* margin-left: 31%;
-        margin-right: 0%; */
+        margin-left: 31%;
+        margin-right: 0%;
         margin-bottom: 30%;
     }
     
     .upper-content {
+        background-color: black;
         display: flex;
         flex-direction: column;
-        justify-content:center;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -184,7 +123,7 @@ body {
         margin-left: 31%;
         margin-right: 0%;
         margin-top: 10%;
-        margin-bottom: 5%;
+        margin-bottom: 0%;
         animation-name: posts;
         animation-duration: 2s;
     }
