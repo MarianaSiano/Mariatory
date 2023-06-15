@@ -30,18 +30,10 @@
                             <h3 class = "titulosesquerda"> Gênero </h3>
                             <div class="classificacao">
                                 <p class="elementos">Romance</p>
-                                <p class="elementos">Psicológico</p>
-                                <p class="elementos">Ficção</p>
+                                
                             </div>
                         </div>
-                        <div class = "alinhamento">
-                            <h3 class = "titulosesquerda"> Redflags </h3>
-                            <div class = "classificacao">
-                                <p class="elementos">cc</p>
-                                <p class="elementos">bb</p>
-                                <p class="elementos">aa</p>
-                            </div>
-                        </div>
+                        
                         <div class="alinhamento">
                             <h3 class = "titulosesquerda"> Avaliação </h3>
                             <p class="textinhoesquerda" id="estrelas"><?= $post->rating ?? '' ?></p>

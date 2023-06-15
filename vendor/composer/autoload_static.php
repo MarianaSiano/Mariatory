@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3
+class ComposerStaticInitcb50e83295d00a72269c361d1e40f82f
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -338,9 +338,9 @@ class ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3
         'Cake\\Utility\\Xml' => __DIR__ . '/..' . '/cakephp/utility/Xml.php',
         'ChangeColumnRegression' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121223011817_change_column_regression.php',
         'ChangeFkRegression' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121223011816_change_fk_regression.php',
-        'ComposerAutoloaderInit923eb3a0329ae0b121d5f41b1eeb79b3' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'ComposerAutoloaderInitcb50e83295d00a72269c361d1e40f82f' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Composer\\Autoload\\ComposerStaticInitcb50e83295d00a72269c361d1e40f82f' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'CreateComment' => __DIR__ . '/../..' . '/database/migrations/20230523155740_create_comment.php',
         'CreateDropFkInitialSchema' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121213232502_create_drop_fk_initial_schema.php',
@@ -1496,9 +1496,9 @@ class ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit923eb3a0329ae0b121d5f41b1eeb79b3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcb50e83295d00a72269c361d1e40f82f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcb50e83295d00a72269c361d1e40f82f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitcb50e83295d00a72269c361d1e40f82f::$classMap;
 
         }, null, ClassLoader::class);
     }
