@@ -138,13 +138,6 @@
 }
 
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-
 .btn1 {
     background-color: #9D4EDD;
     border: 0;
