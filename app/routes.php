@@ -6,7 +6,7 @@ use App\Controllers\PostController;
 use App\Core\Router;
 
 //--------------------------Rotas-------------------------------//
-
+//
 $router->get('dashboard', 'ExampleController@dashboard');
 $router->get('landingPage', 'ExampleController@landingPage');
 $router->get('postList', 'ExampleController@postList');
