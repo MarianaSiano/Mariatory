@@ -26,7 +26,6 @@ h1 {
     /* margin-left: 5%;
     margin-right: 0%; */
     color: #7B2CBF;
-
 }
 
 h2 {
@@ -49,6 +48,7 @@ ul {
     flex-wrap: wrap;
     flex-basis: max-content;
 }
+
 li {
     margin-left: 10px;
     margin-right: 10px;
@@ -56,8 +56,6 @@ li {
     display: flex;
     flex-direction: row;
 }
-
-
 
 .centralizar{
     border-radius: 10px;
@@ -75,6 +73,7 @@ li {
     width: 150px; 
    ;
 }
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -82,24 +81,25 @@ img {
     display: block;
     border-radius: 10px;
 }
+
 .classificacao {
     display: flex;
     flex-wrap: wrap;
 }
 
 .elementos {
-flex-basis: min-content;
-background-color: #5A189A;
-font-size: 13px;
-padding-top: 7px;
-padding-bottom: 7px;
-padding-left: 5px;
-padding-right: 5px;
-margin-right: 10px;
-margin: 0px 10px 10px 0px;
-color: azure;
-border-radius: 5px;
-box-shadow: 0 0 10px 3px #46035d47;
+    flex-basis: min-content;
+    background-color: #5A189A;
+    font-size: 13px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+    margin: 0px 10px 10px 0px;
+    color: azure;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 3px #46035d47;
 }
 
 .todosAlinhamentos{
@@ -110,7 +110,6 @@ box-shadow: 0 0 10px 3px #46035d47;
     margin: 5px 0px;
     color:#5A189A;
     font-size:larger;
-    
 }
 
 .post {
@@ -133,15 +132,12 @@ body {
     background: url(../assets/fundoMariStory.png) repeat center;
     background-size: calc(90%);
     font-family: sans-serif;
-    
 }
 
 @keyframes posts {
-
     0% {
         transform: translate(0%, 5%);
     }
-
     100% {
         transform: translate(0%, 0%);
     }
@@ -149,7 +145,7 @@ body {
 
 @media (max-width: 1000px) {
     body {
-        background-size: calc(700%);
+        background-size: calc(90%);
     }
 
     h1 {
@@ -176,7 +172,6 @@ body {
     }
     
     .upper-content {
-        background-color: black;
         display: flex;
         flex-direction: column;
         justify-content:center;
