@@ -13,18 +13,38 @@ class PostListController{
 
     public function show()
     {
-        $posts = App::get('database')->selectAll('posts');
-        
-        //Troco o id que está lá pelo nome do autor
-        foreach($posts as $post){
-            $post->author_post = App::get('database')->selectUserName($post->author_post);
+        if(isset($_GET['pagina'])){
+            $page = $_GET['pagina'] ?? 1;
+
+            if(intval($_GET['pagina']) <= 0){
+                $page = 1;
+            }
+        }else{
+            $page = 1;
         }
         
-        $postsList = [
-            'posts' => $posts
-        ];
 
-        return view('site/postList', $postsList);
+        $qtd_posts = 9;
+        //Operador de colascência nula para caso o GET['pagina'] seja NULL. 
+
+        $start = $page - 1;
+        $start *= $qtd_posts;
+
+        $posts = App::get('database')->selectAll('posts');
+        $total_posts = count($posts);
+
+        //Pegar o teto da divisão  
+        $total_pages = ceil($total_posts/$qtd_posts);
+
+        $posts_pagination = App::get('database')->pagination('posts', $start, $qtd_posts);
+        // var_dump($posts_pagination[0]["author_post"]);
+        // die();
+        //Troco o id que está lá pelo nome do autor
+        foreach($posts_pagination as $post){
+            $post["author_post"] = App::get('database')->selectUserName($post["author_post"]);
+        }
+        
+        return view('site/postList', compact('posts', 'total_pages', 'qtd_posts', 'total_posts', 'start', 'posts_pagination', 'page'));
     }
 
     public function search(){

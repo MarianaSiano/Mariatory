@@ -32,6 +32,7 @@
             </div>
         </form>
     </div>
+
     <?php if (count($posts) != 0) : ?>
         <div class="container overflow-hidden">
             <div class="main">
@@ -39,7 +40,7 @@
                 <div class="posts">
                     <div class="row row-cols-3">
 
-                        <?php foreach ($posts as $post) : ?>
+                        <?php foreach ($posts_pagination as $post) : ?>
                             <div class="col-sm-4 col-md-4">
                                 <div class="individual-post">
                                     <div class="row row-cols-1">
@@ -52,15 +53,15 @@
                                         <div class="written-content">
 
                                             <div class="markers">
-                                                <span class="bg-blue"><?= $post->gender ?></span>
+                                                <span class="bg-blue"><?= $post["gender"] ?></span>
                                             </div>
 
-                                            <h1><?= $post->title ?></h1>
-                                            <p class="lh-sm"><?= $post->synopsis ?></p>
+                                            <h1><?= $post["title"] ?></h1>
+                                            <p class="lh-sm"><?= $post["synopsis"] ?></p>
                                             <ul class="post-datas">
-                                                <li>Por <span><?= $post->author_post ?></span></li>
+                                                <li>Por <span><?= $post["author_post"] ?></span></li>
                                                 <br>
-                                                <li><i class='bx bx-calendar'></i><?= explode(' ', $post->created_at)[0] ?></li>
+                                                <li><i class='bx bx-calendar'></i><?= explode(' ', $post["created_at"])[0] ?></li>
                                             </ul>
 
                                         </div>
@@ -78,21 +79,47 @@
         </div>
     <?php else : ?>
         <div class="error-search">
-            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)</div>
-            <div _ngcontent-ng-c2168645827 class="error-msg">Não foi possível encontrar o post com o título <span>"<?=$_GET['search']?></span>"</div>
+            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)< /div>
+                    <div _ngcontent-ng-c2168645827 class="error-msg">Não foi possível encontrar o post com o título <span>"<?= $_GET['search'] ?></span>"</div>
+            </div>
         </div>
     <?php endif; ?>
+    </div>
 
+    <nav aria-label="Page navigation example" class="paginacao">
+        <ul class="pagination justify-content-center">
 
+            <?php
+            $previous_page = $page - 1;
+            $next_page = $page + 1;
+            ?>
 
-        </div>
-        </div>
+            <li class="page-item">
+                <a class="page-link link-pagina" href="/postList?pagina=<?php echo $previous_page ?>" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+            </li>   
 
-        <?php require('./app/views/layouts/footer.php'); ?>
+            <?php for ($i = 1; $i < $total_pages + 1; $i++) { ?>
+                <li class="page-item <?php if ($i == $page) : ?> active <?php else : ?> <?php endif; ?>"> <a class="page-link link-pagina" href="/postList?pagina=<?php echo $i ?>"> <?php echo $i ?> </a></li>
+            <?php } ?>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <li class="page-item">
+                <a class="page-link link-pagina" href="/postList?pagina=<?php echo $next_page ?>" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Próxima</span>
+                </a>
+            </li>
 
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        </ul>
+    </nav>
+
+    <?php require('./app/views/layouts/footer.php'); ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>
 

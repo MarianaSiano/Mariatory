@@ -314,6 +314,14 @@ div.row >a>button{
     cursor: pointer;
 }
 
+/*paginacao*/
+
+.paginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @keyframes posts-desloc {
     0% {
         opacity: 0;

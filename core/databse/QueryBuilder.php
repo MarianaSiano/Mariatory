@@ -132,6 +132,23 @@ class QueryBuilder
         }
     }
 
+    public function pagination($table, $start, $limit){
+        if($table == 'posts'){
+            $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
+        }else{
+            $res = "SELECT * FROM users ORDER BY name ASC LIMIT {$start}, {$limit}";
+        }
+        
+        try{
+            $res = $this->pdo->prepare($res);
+            $res->execute();
+
+            return $res->fetchAll();
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
     public function search(
         string $tabela, 
         string $campoParaPesquisar, 
