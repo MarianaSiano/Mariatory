@@ -54,12 +54,13 @@
     width: 100%;
     height: min-content;
     margin-bottom: 1px;
-    padding: 0.5px;
+    padding: 0px;
     border-radius: 0.5rem;
     background-color: rgb(191, 191, 191);
     filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
     border-style: none;
+    margin-left: 10px;
 
 }
 
@@ -87,6 +88,7 @@
     filter: drop-shadow(0px 10px 8px rgb(0 0 0/0.1));
     filter: drop-shadow(0px 4px 3px rgb(0 0 0/0.1));
     border-style: none;
+    margin-left: 10px;
 }
 
 .busca:hover {
@@ -232,6 +234,9 @@ body {
 }
 
 .l1c3 {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-color: rgb(17 24 39);
@@ -302,7 +307,7 @@ body {
 }
 
 .botoesExcluir {
-    text-align: center;
+    text-align: center;   
 }
 
 .botaoSim {
@@ -408,6 +413,7 @@ body {
 .btnEditar {
     display: flex;
     justify-content: end;
+    margin-left: 10px
 }
 
 .preencher{

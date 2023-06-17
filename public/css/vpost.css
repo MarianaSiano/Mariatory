@@ -25,6 +25,21 @@
     margin: 5%;
 }
 
+button{
+    background-color: #5A189A;
+        font-size: 10px;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        width: fit-content;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-right: 10px;
+        margin: 0px 10px 10px 0px;
+        color: azure;
+        border-radius: 5px;
+}
+
 .centralizar{
     border-radius: 10px;
     padding: 20px 10%;
@@ -68,7 +83,7 @@
 .espacocomentarios{
     border-radius: 10px;
     background-color: #fae1f9;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     color: #240046;
     opacity: 80%;
     padding: 12px 0 12px 10px;
@@ -106,8 +121,7 @@ body{
 
 .titulo {
     font-size: 30px;
-    color: white;
-    background-color: #E0AAFF;
+    color: #5A189A;
     margin: 0px 0px;
     text-align: right;
     text-transform: uppercase;
@@ -123,11 +137,15 @@ body{
         max-width: 195px;
         position: sticky;
         top: 5%;
-        height: 90vh;
+        height: fit-content;
+        
+    }
+    .direita{
+        gap: 50px
     }
     .textodireita {
         padding: 0 10%;
-        width: 100%;
+        width:40vw;
     }
 }
 
@@ -136,7 +154,7 @@ body{
     .espacocomentarios{
         border-radius: 10px;
         background-color: #fae1f9;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         color: #240046;
         opacity: 80%;
         padding: 12px 0 12px 10px;
@@ -351,5 +369,19 @@ body{
     .classificacao {
         display: flex;
         flex-wrap: wrap;
+    }
+    .outroscomentarios {
+        font-size: 13px;
+        background-color: #fae1f9;
+        border-radius: 10px;
+        padding-top: 0.2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0.5px;
+        margin-bottom: 10px;
+        opacity: 70%;
+        box-shadow: 0 0 10px 3px #46035d47;
+        height: 300px;
+        overflow-y: scroll;
     }
 }
