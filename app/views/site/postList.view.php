@@ -33,7 +33,7 @@
         </form>
     </div>
 
-    <?php if (count($posts) != 0) : ?>
+    <?php if (count($posts_pagination) != 0) : ?>
         <div class="container overflow-hidden">
             <div class="main">
 
@@ -53,15 +53,15 @@
                                         <div class="written-content">
 
                                             <div class="markers">
-                                                <span class="bg-blue"><?= $post["gender"] ?></span>
+                                                <span class="bg-blue"><?= $post->gender ?></span>
                                             </div>
 
-                                            <h1><?= $post["title"] ?></h1>
-                                            <p class="lh-sm"><?= $post["synopsis"] ?></p>
+                                            <h1><?= $post->title ?></h1>
+                                            <p class="lh-sm"><?= $post->synopsis ?></p>
                                             <ul class="post-datas">
-                                                <li>Por <span><?= $post["author_post"] ?></span></li>
+                                                <li>Por <span><?= $post->author_post ?></span></li>
                                                 <br>
-                                                <li><i class='bx bx-calendar'></i><?= explode(' ', $post["created_at"])[0] ?></li>
+                                                <li><i class='bx bx-calendar'></i><?= explode(' ', $post->created_at)[0] ?></li>
                                             </ul>
 
                                         </div>
@@ -79,7 +79,7 @@
         </div>
     <?php else : ?>
         <div class="error-search">
-            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)< /div>
+            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)</div>
                     <div _ngcontent-ng-c2168645827 class="error-msg">Não foi possível encontrar o post com o título <span>"<?= $_GET['search'] ?></span>"</div>
             </div>
         </div>
@@ -88,30 +88,33 @@
 
     <nav aria-label="Page navigation example" class="paginacao">
         <ul class="pagination justify-content-center">
-
+            
             <?php
             $previous_page = $page - 1;
             $next_page = $page + 1;
             ?>
 
+            <?php if($page > 1): ?>
             <li class="page-item">
                 <a class="page-link link-pagina" href="/postList?pagina=<?php echo $previous_page ?>" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                     <span class="sr-only">Anterior</span>
                 </a>
-            </li>   
+            </li> 
+            <?php endif; ?> 
 
             <?php for ($i = 1; $i < $total_pages + 1; $i++) { ?>
                 <li class="page-item <?php if ($i == $page) : ?> active <?php else : ?> <?php endif; ?>"> <a class="page-link link-pagina" href="/postList?pagina=<?php echo $i ?>"> <?php echo $i ?> </a></li>
             <?php } ?>
-
+            
+            <?php if($page < $total_pages): ?>
             <li class="page-item">
                 <a class="page-link link-pagina" href="/postList?pagina=<?php echo $next_page ?>" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">Próxima</span>
                 </a>
             </li>
-
+            <?php endif; ?>
         </ul>
     </nav>
 

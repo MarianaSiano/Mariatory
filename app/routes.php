@@ -10,7 +10,6 @@ $router->get('dashboard', 'ExampleController@dashboard');
 $router->get('listaPostAdm', 'ExampleController@listaPostAdm');
 
 $router->get('', 'ExampleController@landingPage');
-$router->get('postList', 'ExampleController@postList');
 $router->get('vpost', 'ExampleController@vpost');
 
 /*Login*/

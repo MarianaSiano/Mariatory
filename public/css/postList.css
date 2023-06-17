@@ -12,12 +12,25 @@
 
 body{
     font-family: sans-serif;
-    background-image: url('../assets/bg-img-crumpled-paper.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-image: url('../assets/fundosite.png');
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-position: center center; */
     box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-    
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #9D4EDD;
+    border-color: #10002B;
+}
+
+.page-link{
+    color: #10002B;
+}
+
+.page-link:hover{
+    color: #10002B;
+    background-color: #c77dff;
 }
 
 .container{

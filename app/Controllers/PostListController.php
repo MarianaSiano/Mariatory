@@ -41,7 +41,9 @@ class PostListController{
         // die();
         //Troco o id que está lá pelo nome do autor
         foreach($posts_pagination as $post){
-            $post["author_post"] = App::get('database')->selectUserName($post["author_post"]);
+            $aux = App::get('database')->selectUserName($post->author_post);
+
+            $post->author_post = $aux;        
         }
         
         return view('site/postList', compact('posts', 'total_pages', 'qtd_posts', 'total_posts', 'start', 'posts_pagination', 'page'));

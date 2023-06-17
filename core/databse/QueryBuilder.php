@@ -143,7 +143,7 @@ class QueryBuilder
             $res = $this->pdo->prepare($res);
             $res->execute();
 
-            return $res->fetchAll();
+            return $res->fetchAll(PDO::FETCH_CLASS);
         }catch(Exception $e){
             die($e->getMessage());
         }
@@ -157,5 +157,21 @@ class QueryBuilder
         $register = $this->pdo->prepare("SELECT * FROM $tabela WHERE $campoParaPesquisar = :valueToSearch limit 1");
         $register->execute([':valueToSearch' => $valorParaBuscar]);
         return $register->rowCount();
+    }
+
+    public function countAll($table)
+    {
+
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 }
