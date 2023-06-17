@@ -45,8 +45,10 @@ class PostListController{
 
             $post->author_post = $aux;        
         }
+
+        $identificador = 'postList';
         
-        return view('site/postList', compact('posts', 'total_pages', 'qtd_posts', 'total_posts', 'start', 'posts_pagination', 'page'));
+        return view('site/postList', compact('posts', 'total_pages', 'qtd_posts', 'total_posts', 'start', 'posts_pagination', 'page', 'identificador'));
     }
 
     public function search(){

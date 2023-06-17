@@ -263,7 +263,7 @@ div.row >a>button{
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.text-bg-primary{background-color: #c77dff !important; font-size: 12px !important;}
+.text-bg-primary{background-color: #c77dff !important; font-size: 14px !important; font-weight: 800 !important;}
 
 .post-datas{
     width: 100%;
@@ -423,6 +423,12 @@ div.row >a>button{
     100% {
         opacity: 1;
         transform: translate(0px, 0px);
+    }
+}
+
+@media screen and (max-width: 840px){
+    .procurar::placeholder{
+        font-size: 12px;
     }
 }
 

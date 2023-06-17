@@ -78,44 +78,33 @@
     <?php endif; ?>
     </div>
 
-    <nav aria-label="Page navigation example" class="paginacao">
-        <ul class="pagination justify-content-center">
-
-            <?php
-            $previous_page = $page - 1;
-            $next_page = $page + 1;
-            ?>
-
-            <?php if ($page > 1) : ?>
-                <li class="page-item">
-                    <a class="page-link link-pagina" href="/postList?pagina=<?php echo $previous_page ?>" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                </li>
-            <?php endif; ?>
-
-            <?php for ($i = 1; $i < $total_pages + 1; $i++) { ?>
-                <li class="page-item <?php if ($i == $page) : ?> active <?php else : ?> <?php endif; ?>"> <a class="page-link link-pagina" href="/postList?pagina=<?php echo $i ?>"> <?php echo $i ?> </a></li>
-            <?php } ?>
-
-            <?php if ($page < $total_pages) : ?>
-                <li class="page-item">
-                    <a class="page-link link-pagina" href="/postList?pagina=<?php echo $next_page ?>" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Próxima</span>
-                    </a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </nav>
-
+    <?php require('./app/views/layouts/pagination.php'); ?>
     <?php require('./app/views/layouts/footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+    <script>
+        const input = document.querySelector('.procurar');
+
+        function changeContent(){
+            const screenWidth = window.innerWidth;
+
+            if(screenWidth >= 580 && screenWidth < 760){
+                input.placeholder = "Nome do post";
+            }else if(screenWidth < 580){
+                input.placeholder = "Título post";
+            }
+            else{
+                input.placeholder = "Digite o nome do post";
+            }
+        }
+
+        changeContent();
+
+        window.addEventListener('resize', changeContent);
+    </script>
 </body>
 
 </html>

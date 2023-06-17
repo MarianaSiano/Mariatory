@@ -136,7 +136,7 @@ class QueryBuilder
         if($table == 'posts'){
             $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
         }else{
-            $res = "SELECT * FROM users ORDER BY name ASC LIMIT {$start}, {$limit}";
+            $res = "SELECT * FROM users ORDER BY id ASC LIMIT {$start}, {$limit}";
         }
         
         try{

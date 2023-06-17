@@ -231,11 +231,26 @@ body {
     padding: 0.5rem;
 }
 
-.l1c3 {
+.l1c3 { 
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-color: rgb(17 24 39);
     padding: 0.5rem;
+}
+
+
+.active>.page-link, .page-link.active {
+    background-color: #9D4EDD !important;
+    border-color: #10002B !important;
+}
+
+.page-link{
+    color: #10002B !important;
+}
+
+.page-link:hover{
+    color: #10002B !important;
+    background-color: #c77dff !important;
 }
 
 #modalzin {

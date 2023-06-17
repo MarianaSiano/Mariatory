@@ -40,13 +40,35 @@ class UsuarioController
 
     public function show()
     {
+        if(isset($_GET['pagina'])){
+            $page = $_GET['pagina'] ?? 1;
+
+            if(intval($_GET['pagina']) <= 0){
+                $page = 1;
+            }
+        }else{
+            $page = 1;
+        }
+
+        $qtd_users = 6;
+        //Operador de colascência nula para caso o GET['pagina'] seja NULL. 
+
+        $start = $page - 1;
+        $start *= $qtd_users;
+
         $users = App::get('database')->selectAll('users');
+        $total_users = count($users);
 
-        $usersList = [
-            'users' => $users
-        ];
+        //Pegar o teto da divisão  
+        $total_pages = ceil($total_users/$qtd_users);
 
-        return view('admin/listaDeUsuarios', $usersList);
+        $users = App::get('database')->pagination('users', $start, $qtd_users);
+
+        $identificador = 'listaDeUsuarios';
+        
+        return view('admin/listaDeUsuarios', compact('users', 'total_pages', 'qtd_users', 'total_users', 'start', 'page', 'identificador'));
+
+        // return view('admin/listaDeUsuarios', $usersList);
     }
 
     public function deleteUsers()
