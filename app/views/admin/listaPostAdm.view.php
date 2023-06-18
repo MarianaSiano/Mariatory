@@ -829,7 +829,6 @@
           element.addEventListener('click', function () {
             botaoOriginalClicado = false;
             modalVisualizar.src = '/teste?post_id=' + element.getAttribute('id-post');
-            alert(modalVisualizar.src);
             botaoVisualizar.click();
           });
         }
