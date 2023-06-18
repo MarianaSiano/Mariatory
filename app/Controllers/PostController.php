@@ -24,6 +24,12 @@ class PostController {
 
     public function create()
     {
+        $generos = $_POST['genero'];
+        $stringGeneros = "";
+        foreach($generos as $item) {
+            $stringGeneros .= $item.",";
+        }
+
         $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem_post']['name']);
         if(move_uploaded_file($_FILES['imagem_post']['tmp_name'], $imagePath)) {
             $dadosDoPost = [
@@ -32,6 +38,7 @@ class PostController {
                 'sinopse' => $_POST['sinopse'],
                 'resenha' => $_POST['resenha'],
                 'avaliacao' => $_POST['avaliacao'],
+                'gender' => $stringGeneros,
                 'imagem' => $imagePath
             ];
             
@@ -53,7 +60,9 @@ class PostController {
             } else {
                  $numeroDeEstrelasPreenchidas .= '&star;'; 
             }
-        }        
+        }
+        $post->gender = explode(",", $post->gender);
+        array_pop($post->gender);
         $post->rating = $numeroDeEstrelasPreenchidas;
         $post->author = $this->recuperaDadosDoAutor($post->user_id);
         return view('site/vpost', compact('post'));
@@ -68,10 +77,17 @@ class PostController {
 
     public function editar()
     {
+        $generos = $_POST['genero'];
+        $stringGeneros = "";
+        foreach($generos as $item) {
+            $stringGeneros .= $item.",";
+        }
+        $valoresParaPost = $_POST;
+        $valoresParaPost['genero'] = $stringGeneros;
         $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem']['name']);
         if(move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath)) {
-            $_POST['imagem'] = $imagePath;
-            App::get('database')->editPost($_POST);
+            $valoresParaPost['imagem'] = $imagePath;
+            App::get('database')->editPost($valoresParaPost);
             header('Location: /listaPostAdm');
         }
     }

@@ -108,82 +108,101 @@
               <div
                 class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
               >
-                <div class="selectBox" onclick="showCheckboxesGenero()">
-                  <option>Selecione os gêneros</option>
-                  <select class="bg-roxo-claro-1"></select>
-                  <div class="overSelect"></div>
-                </div>
-                <div class="flex flex-col" id="checkboxesGenero">
+                <div class="selectBox">
+                  <label>Selecione os gêneros</label>
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Romance"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Romance</span>
                     </label>
                   </div>
+
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Ficção"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Ficção</span>
                     </label>
                   </div>
+
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Psicológico"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Psicológico</span>
                     </label>
                   </div>
+
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Autoajuda"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Autoajuda</span>
                     </label>
                   </div>
+
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Terror"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Terror</span>
                     </label>
                   </div>
+
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Guia"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Guia</span>
                     </label>
                   </div>
+
                   <div>
                     <label class="inline-flex items-center">
                       <input
-                        name="genero"
+                        value="Infantil"
+                        name="genero[]"
                         type="checkbox"
                         class="form-checkbox text-indigo-600"
                       />
                       <span class="ml-2">Infantil</span>
                     </label>
                   </div>
+
+                  <!-- <select name="genero[]" class="bg-roxo-claro-1" multiple>
+                    <option value="Romance">Romance</option>
+                    <option value="Ficção">Ficção</option>
+                    <option value="Psicológico">Psicológico</option>
+                    <option value="Autoajuda">Autoajuda</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Guia">Guia</option>
+                    <option value="Infantil">Infantil</option>
+                  </select> -->
                 </div>
               </div>
             
@@ -382,9 +401,12 @@
 									<div class="overSelect"></div>
 								</div>
 								<div class="flex flex-col" id="checkboxesGenero">
+                  
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Romance"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -394,6 +416,8 @@
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Ficção"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -403,6 +427,8 @@
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Psicológico"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -412,6 +438,8 @@
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Autoajuda"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -421,6 +449,8 @@
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Terror"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -430,6 +460,8 @@
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Guia"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -439,6 +471,8 @@
 									<div>
 										<label class="inline-flex items-center">
 											<input
+                        value="Infantil"
+                        name="genero[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>

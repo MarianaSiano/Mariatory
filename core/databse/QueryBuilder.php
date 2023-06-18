@@ -54,7 +54,8 @@ class QueryBuilder
                 `synopsis` = '{$dados['synopsis']}', 
                 `review` = '{$dados['review']}',
                 `rating` = '{$dados['rating']}',
-                `image` = '{$dados['imagem']}'
+                `image` = '{$dados['imagem']}',
+                `gender` = '{$dados['genero']}'
             WHERE `id` = {$dados['post_id']}";
 
         try {
@@ -137,6 +138,7 @@ class QueryBuilder
                     synopsis,
                     review,
                     rating,
+                    gender,
                     image
                 ) VALUES (
                     '8', 
@@ -144,6 +146,7 @@ class QueryBuilder
                     '{$dadosDoPost['sinopse']}',
                     '{$dadosDoPost['resenha']}', 
                     '{$dadosDoPost['avaliacao']}', 
+                    '{$dadosDoPost['gender']}',
                     '{$dadosDoPost['imagem']}'
                 )"
             );
