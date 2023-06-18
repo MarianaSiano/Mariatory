@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php 
-        if(isset($post) || empty($post)) {
+        if(!isset($post) || empty($post)) {
             $post = new stdclass();
         }
     ?>

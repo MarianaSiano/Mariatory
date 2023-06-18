@@ -46,7 +46,6 @@ class PostController {
     {
         $idPost = $_GET['post_id'];
         $post = App::get('database')->search('posts', 'id', $idPost);
-    
         $numeroDeEstrelasPreenchidas = '';
         for($contadora = 1; $contadora <= 5; $contadora++) { 
             if($post->rating >= $contadora) { 

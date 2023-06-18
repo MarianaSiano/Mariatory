@@ -645,7 +645,7 @@
         <th class="border-x border-gray-900 p-2">Data</th>
         <th class="p-2">Edição</th>
       </tr>
-      <?php foreach($posts as $post): ?>
+      <?php foreach($posts as $key => $post): ?>
         <tr>
           <td class="border-y border-gray-900 p-2">
            <?= $post->title; ?> 
@@ -653,8 +653,10 @@
           <td class="border border-gray-900 p-2"> <?= date('d/m/y', strtotime($post->created_at)) ?> </td>
           <td class="border-y border-gray-900 p-2">
             <button
-              class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
-              id="botaoVisualizar1" id-post=<?= $post->id ?>
+              class="botao_visualizar bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none"
+              <?php if($key === 0) {echo "id=botaoVisualizar1"; } ?>
+              id-post = <?= $post->id ?>
+              id-element = <?= $key ?>
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -672,8 +674,8 @@
               </svg>
             </button>
             <button
-              class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2 tablet:mb-2"
-              id="botaoEditar1" 
+              class="botoesEditar bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2 tablet:mb-2"
+              <?php if($key === 0) { echo "id='botaoEditar1'";} ?>  
 							id-post="<?= $post->id ?>"
             >
               <svg
@@ -692,8 +694,8 @@
               </svg>
             </button>
             <button
-              class="bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2"
-              id="myBtn" id-post=<?= $post->id ?>
+              class="excluirPost bottom-1 rounded-lg bg-roxo-medio-1 px-2 py-1 text-sm font-medium text-white hover:bg-roxo-medio-2 focus:outline-none smartphone:mb-2"
+              <?php if($key === 0) { echo "id='myBtn'";} ?> id-post=<?= $post->id ?>
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -783,33 +785,89 @@
         <?php endif ?>
       };
 
-			botaoVisualizar = document.getElementById('botaoVisualizar1');
+      botaoOriginalClicado = true;
+			botaoVisualizar = document.querySelector('[id-element="0"]');
+      botoesVisualizar = document.getElementsByClassName("botao_visualizar");
 			modalVisualizar = document.getElementById('visualizar_post');
-			if(botaoVisualizar) {
-				botaoVisualizar.addEventListener('click', function () {
-					modalVisualizar.src = '/teste?post_id=' + botaoVisualizar.getAttribute('id-post');
-			  });
+			if(botoesVisualizar.length) {
+        for(let i = 1; i < botoesVisualizar.length; i++) {
+          const element = botoesVisualizar[i];
+          element.addEventListener('click', function () {
+            botaoOriginalClicado = false;
+            modalVisualizar.src = '/teste?post_id=' + element.getAttribute('id-post');
+            alert(modalVisualizar.src);
+            botaoVisualizar.click();
+          });
+        }
 			}
 			
+      if(botaoVisualizar) {
+				botaoVisualizar.addEventListener('click', function () {
+          if(botaoOriginalClicado) {
+            modalVisualizar.src = '/teste?post_id=' + botaoVisualizar.getAttribute('id-post');
+          }
+          botaoOriginalClicado = true;
+			  });
+      }
+
+      botaoOriginalExcluirClicado = true;
+      botoesExcluir = document.getElementsByClassName("excluirPost");
 			botaoExcluir = document.getElementById('myBtn');
 			modalExcluir = document.getElementById('sBtn');
+      id_post = '';
+
+      if(botoesExcluir.length) {
+        for(let i = 1; i < botoesExcluir.length; i++) {
+          const elementExcluir = botoesExcluir[i];
+          elementExcluir.addEventListener('click', function () {
+            botaoOriginalExcluirClicado = false;
+            modalExcluir.src = '/post/excluir?post_id=' + elementExcluir.getAttribute('id-post');
+            modalExcluir.addEventListener('click', function () {
+              window.location.href = modalExcluir.src;
+            });
+            botaoExcluir.click();
+          });
+        }
+			}
+
 			if(botaoExcluir){
-				botaoExcluir.addEventListener('click', function () {
-					modalExcluir.src = '/post/excluir?post_id=' + botaoExcluir.getAttribute('id-post');
-				});
-				modalExcluir.addEventListener('click', function () {
-					window.location.href = modalExcluir.src;
-				});
+        botaoExcluir.addEventListener('click', function () {
+          if(botaoOriginalExcluirClicado) {
+            modalExcluir.src = '/post/excluir?post_id=' + botaoExcluir.getAttribute('id-post');
+          } 
+        });
+        botaoOriginalExcluirClicado = true;
+        modalExcluir.addEventListener('click', function () {
+          window.location.href = modalExcluir.src;
+        });
 			}
 			
+      botaoOriginalEditarClicado = true;
+      botoesEditar = document.getElementsByClassName("botoesEditar");
 			botaoEditar = document.getElementById('botaoEditar1');
 			//modalEditar = document.getElementById('fecharEditar3');
 			modalEditar = document.getElementById('formEdit');
+
+      if(botoesEditar.length) {
+        for(let i = 1; i < botoesEditar.length; i++) {
+          const elementEditar = botoesEditar[i];
+          elementEditar.addEventListener('click', function () {
+            botaoOriginalEditarClicado = false;
+            document.getElementById('id_post').value = elementEditar.getAttribute('id-post');
+            botaoEditar.click();
+            botaoOriginalEditarClicado = true;
+          });
+        }
+			}
+
 			if(botaoEditar) {
 				botaoEditar.addEventListener('click', function () {
 					modalEditar.action = '/post/editar';
-					document.getElementById('id_post').value = botaoEditar.getAttribute('id-post');
+          if(botaoOriginalEditarClicado) {
+            document.getElementById('id_post').value = botaoEditar.getAttribute('id-post');
+          }
 			  });
+        botaoOriginalEditarClicado = true;
 			}
 
 
