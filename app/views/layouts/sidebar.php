@@ -36,27 +36,21 @@
             <div class="itens">
                 <ul class="links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="dashboard">
                             <i class='bx bxs-dashboard bx-sm icon'></i>
                             <span class="nav-text text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="listaDeUsuarios">
                             <i class='bx bxs-user bx-sm icon'></i>
-                            <span class="nav-text text">Gerenciar Usuários</span>
+                            <span class="nav-text text">Lista de Usuários</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-pencil bx-sm icon'></i>
-                            <span class="nav-text text">Gerenciar Posts</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-cog bx-sm icon'></i>
-                            <span class="nav-text text">Configurações</span>
+                        <a href="listaPostAdm">
+                            <i class='bx bx-book-alt bx-sm icon'></i>
+                            <span class="nav-text text">Lista de Posts</span>
                         </a>
                     </li>
                     

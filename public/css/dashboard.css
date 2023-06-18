@@ -36,16 +36,6 @@ body::after {
     margin: 10vh 10vw;
     display: flex;
     flex-direction: row;
-
-    position: relative;
-    left: 250px;
-    width: calc(100% - 250px);
-    transition: all 1s ease;
-}
-
-.sidebar.close ~ .container{
-    left: 80px;
-    width: calc(100% - 80px);
 }
 
 .left-container {
