@@ -29,7 +29,7 @@ class PostController {
         foreach($generos as $item) {
             $stringGeneros .= $item.",";
         }
-
+        //die(var_dump($_POST));
         $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem_post']['name']);
         if(move_uploaded_file($_FILES['imagem_post']['tmp_name'], $imagePath)) {
             $dadosDoPost = [

@@ -141,7 +141,7 @@ class QueryBuilder
                     gender,
                     image
                 ) VALUES (
-                    '8', 
+                    '{$_SESSION['id']}', 
                     '{$dadosDoPost['titulo']}', 
                     '{$dadosDoPost['sinopse']}',
                     '{$dadosDoPost['resenha']}', 

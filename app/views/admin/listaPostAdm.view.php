@@ -294,17 +294,17 @@
                 class="p-1.8 block w-full border-none bg-roxo-claro-1 text-sm text-black focus:border-roxo-claro-2 focus:shadow-none focus:outline-0"
               >
                 <option selected>&star;&star;&star;&star;&star; (0/5)</option>
-                <option value="uma">&starf;&star;&star;&star;&star; (1/5)</option>
-                <option value="duas">
+                <option value="1">&starf;&star;&star;&star;&star; (1/5)</option>
+                <option value="2">
                   &starf;&starf;&star;&star;&star; (2/5)
                 </option>
-                <option value="tres">
+                <option value="3">
                   &starf;&starf;&starf;&star;&star; (3/5)
                 </option>
-                <option value="quatro">
+                <option value="4">
                   &starf;&starf;&starf;&starf;&star; (4/5)
                 </option>
-                <option value="cinco">
+                <option value="5">
                   &starf;&starf;&starf;&starf;&starf; (5/5)
                 </option>
               </select>

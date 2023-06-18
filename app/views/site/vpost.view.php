@@ -29,7 +29,7 @@
                         <div class="alinhamento">
                             <h3 class = "titulosesquerda"> Gênero </h3>
                             <div class="classificacao">
-                                <?php foreach($post->gender as $gender): ?> 
+                                <?php foreach($post->gender ?? [] as $gender): ?> 
                                     <p class="elementos"> <?= $gender ?> </p>
                                 <?php endforeach; ?>
                             </div>
