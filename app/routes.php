@@ -10,7 +10,7 @@ use App\Core\Router;
 $router->get('dashboard', 'ExampleController@dashboard');
 $router->get('landingPage', 'ExampleController@landingPage');
 $router->get('postList', 'ExampleController@postList');
-$router->get('vpost', 'ExampleController@vpost');
+$router->get('vpost', 'CommentController@show');
 
 /*Login*/
 //-> Processo para logar
@@ -29,6 +29,8 @@ $router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
 //-> Editar
 $router->post('users/editarUsuario', 'UsuarioController@editUsers');
 
+/*Comentários*/
+$router->post('comment/criarComentario', 'CommentController@createComments');
 
 
 /*posts*/

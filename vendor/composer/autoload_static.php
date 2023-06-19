@@ -143,6 +143,7 @@ class ComposerStaticInitcb50e83295d00a72269c361d1e40f82f
         'AddColumnIndexFk' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/reversiblemigrations/20190928220334_add_column_index_fk.php',
         'AddColumnWithCustomType' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/custom_column_types/20221214154118_add_column_with_custom_type.php',
         'AddRegressionDropFk' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121223011815_add_regression_drop_fk.php',
+        'App\\Controllers\\CommentController' => __DIR__ . '/../..' . '/app/Controllers/CommentController.php',
         'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController.php',
         'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Controllers/LoginController.php',
         'App\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Controllers/PostController.php',

@@ -171,7 +171,7 @@
 
         <tr>
             <!--For each para varrer cada usuário do banco e mostrar seus dados-->
-            <?php foreach($users as $key => $user): ?>
+              <?php foreach($users as $key => $user): ?>
                 <td class="l1c1"><?= $key + 1 ?></td>
                 <td class="l1c2"><?= $user->name ?></td>
                 <td class="l1c2"><?= $user->email ?></td>

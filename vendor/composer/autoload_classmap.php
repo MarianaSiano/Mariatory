@@ -9,6 +9,7 @@ return array(
     'AddColumnIndexFk' => $vendorDir . '/robmorgan/phinx/tests/Phinx/Migration/_files/reversiblemigrations/20190928220334_add_column_index_fk.php',
     'AddColumnWithCustomType' => $vendorDir . '/robmorgan/phinx/tests/Phinx/Migration/_files/custom_column_types/20221214154118_add_column_with_custom_type.php',
     'AddRegressionDropFk' => $vendorDir . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121223011815_add_regression_drop_fk.php',
+    'App\\Controllers\\CommentController' => $baseDir . '/app/Controllers/CommentController.php',
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
     'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/LoginController.php',
     'App\\Controllers\\PostController' => $baseDir . '/app/Controllers/PostController.php',

@@ -118,8 +118,8 @@ class QueryBuilder
     }
 
     public function search(
-        string $tabela, 
-        string $campoParaPesquisar, 
+        string $tabela,
+        string $campoParaPesquisar,
         string $valorParaBuscar
     ) {
         $register = $this->pdo->prepare("SELECT * FROM $tabela WHERE $campoParaPesquisar = :valueToSearch limit 1");
@@ -153,10 +153,10 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    
+
     public function destroy(
-        string $tabela, 
-        string $campoParaPesquisar, 
+        string $tabela,
+        string $campoParaPesquisar,
         string $valorParaBuscar
     ) {
         $register = $this->pdo->prepare("DELETE FROM $tabela WHERE $campoParaPesquisar = :valueToSearch");
@@ -164,4 +164,24 @@ class QueryBuilder
         return $register->rowCount();
     }
 
+    //criar comentarios
+
+    public function insertComments($dados)
+    {
+        try {
+            $res = $this->pdo->prepare(
+                "INSERT INTO comments(
+                    username, 
+                    comment_text
+                ) VALUES (
+                    '{$dados['username']}', 
+                    '{$dados['comment_text']}'
+                )"
+            );
+
+            $res->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
