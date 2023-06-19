@@ -40,7 +40,7 @@
     padding: 0.6rem;
     border-radius: 0.5rem;
     border-width: 1px;
-    background-color: rgb(249 250 251);
+    background-color: rgb(251, 249, 249);
     padding-left: 1.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -129,14 +129,6 @@
     transition: 1s;
 }
 
-
-
-@media(max-width: 472px) {
-    .heading {
-        flex-direction: column;
-        gap: 0.5rem
-    }
-}
 
 .btn1 {
     background-color: #9D4EDD;
@@ -232,10 +224,16 @@ body {
 }
 
 .l1c3 {
+    display: flex;
+    justify-content: center;
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-color: rgb(17 24 39);
     padding: 0.5rem;
+}
+
+.l1c3 button{
+    margin: 0 1px;
 }
 
 #modalzin {
@@ -316,8 +314,8 @@ body {
     border-radius: 0.5rem;
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
     margin-right: 8px;
-
 }
+
 
 .botaoNao {
     background-color: #E0AAFF;

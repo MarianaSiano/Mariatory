@@ -13,6 +13,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unicons.iconscout.com/release/v4.0.0/css/thinline.css' rel='stylesheet'>
 
+    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
+
 
 
 </head>
@@ -62,7 +64,6 @@
             </div>
         </form>
     </div>
-
 
 
 
@@ -137,9 +138,9 @@
     </div>
 
     <div class="heading">
-        <form class="formulario">
+        <form action = "buscar" class="formulario" method="GET">
             <div class="btnProcurar">
-                <input type="search" class="procurar" placeholder="Procurar usuário" required />
+                <input name = "search" type="search" class="procurar" placeholder="Procurar usuário" required />
             </div>
 
             <div class="btnBusca">
@@ -178,7 +179,8 @@
                 <td class="l1c3">
 
                     <!--Colocar nesse form o método para dar delete no usuário-->
-
+                    
+        
                     <button class="btn1 clique" data-modal="modalVizualizar-<?= $user->id ?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;">
                             <path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
                             </path>
@@ -270,15 +272,17 @@
                             </div>
                             <div class="btnEditar">
                                 <button type="submit" class="botaoSim fechar">Salvar</button>
-                                <button class="botaoSim fechar">Calcelar</button>
+                                <a style="text-decoration: none"  href="/listaDeUsuarios" class="botaoSim fechar">Calcelar</a>
                             </div>
                         </div>
                     </form>
+                    
 
                     <button class="btn3 clique" data-modal="modalExcluir-<?= $user->id ?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;">
                             <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z">
                             </path>
                         </svg></button>
+        
 
                     <form action="users/deletarUsuario" method="POST">
                         <input hidden value="<?= $user->id ?>" name="id">
@@ -292,14 +296,13 @@
                                 Tem certeza que deseja excluir este usuário <?= $user->name ?> ? 
                             </p>
                             <div class="botoesExcluir">
-                                <button class="botaoSim fechar" type="submit">
-                                    sim
-                                </button>
-                                <button class="botaoNao fechar">
-                                    não
-                                </button>
+                                <button class="botaoSim fechar" type="submit">sim</button>
+                                <a style="text-decoration: none" href="/listaDeUsuarios" class="botaoSim fechar">não</a>
+                        
                             </div>
-                        </div>
+                            </div>
+            
+                        
                     </form>
 
 
@@ -320,7 +323,6 @@
 
         function modaAberto() {
             const modalllll = document.getElementsByClassName('modalllll');
-
             const close = [...modalllll].filter((elemento) => {
                 return !elemento.classList.contains("hide");
             })

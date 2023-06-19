@@ -63,7 +63,7 @@ class PostController {
         $post->gender = explode(",", $post->gender);
         array_pop($post->gender);
         $post->rating = $numeroDeEstrelasPreenchidas;
-        $post->author = $this->recuperaDadosDoAutor($post->user_id);
+        $post->author = $this->recuperaDadosDoAutor($post->author_post);
         return view('site/vpost', compact('post'));
     }
 
