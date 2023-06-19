@@ -207,8 +207,8 @@
               </div>
             
 
-            <p class="font-semibold">Data de Criação:</p>
-            <div class="rounded-lg bg-roxo-claro-1 p-2 text-roxo-escuro-2">
+            <p style="display:none;" class="font-semibold">Data de Criação:</p>
+            <div style="display: none;" class="rounded-lg bg-roxo-claro-1 p-2 text-roxo-escuro-2">
               <p>15/05/23</p>
             </div>
           </div>
@@ -220,72 +220,73 @@
               type="text"
               for="autor"
               placeholder="Autor..."
-            />
-            <p class="font-semibold">Redflag:</p>
-            
-              <div
-                class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-              >
-                <div class="selectBox" onclick="showCheckboxesRedflag()">
-                  <option>Selecione as Redflags</option>
-                  <select class="bg-roxo-claro-1"></select>
-                  <div class="overSelect"></div>
+            /><div style="display:none;" class="esconder">
+              
+              <p class="font-semibold">Redflag:</p>
+              
+                <div
+                  class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+                >
+                  <div class="selectBox" onclick="showCheckboxesRedflag()">
+                    <option>Selecione as Redflags</option>
+                    <select class="bg-roxo-claro-1"></select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div class="flex flex-col" id="checkboxesRedflag">
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          name="redflag"
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Disturbio Alimentar</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          name="redflag"
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Violência</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          name="redflag"
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Abuso de substâncias Psicoativas</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          name="redflag"
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Doença psiquiátrica</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          name="redflag"
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Violência Sexual</span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div class="flex flex-col" id="checkboxesRedflag">
-                  <div>
-                    <label class="inline-flex items-center">
-                      <input
-                        name="redflag"
-                        type="checkbox"
-                        class="form-checkbox text-indigo-600"
-                      />
-                      <span class="ml-2">Disturbio Alimentar</span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="inline-flex items-center">
-                      <input
-                        name="redflag"
-                        type="checkbox"
-                        class="form-checkbox text-indigo-600"
-                      />
-                      <span class="ml-2">Violência</span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="inline-flex items-center">
-                      <input
-                        name="redflag"
-                        type="checkbox"
-                        class="form-checkbox text-indigo-600"
-                      />
-                      <span class="ml-2">Abuso de substâncias Psicoativas</span>
-                    </label>
-                  </div>
-
-                  <div>
-                    <label class="inline-flex items-center">
-                      <input
-                        name="redflag"
-                        type="checkbox"
-                        class="form-checkbox text-indigo-600"
-                      />
-                      <span class="ml-2">Doença psiquiátrica</span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="inline-flex items-center">
-                      <input
-                        name="redflag"
-                        type="checkbox"
-                        class="form-checkbox text-indigo-600"
-                      />
-                      <span class="ml-2">Violência Sexual</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            
+              
+            </div>
             <p class="font-semibold">Avaliação:</p>
             <div class="rounded-lg bg-roxo-claro-1 p-2">
               <select
@@ -336,7 +337,7 @@
             class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
             id="fecharCriar2" type="submit"
           >
-            Postar SZ
+            Postar
           </button>
         </div>
       </form>
@@ -482,8 +483,8 @@
 								</div>
 							</div>
 	
-						<p class="font-semibold">Data de Criação:</p>
-						<div class="rounded-lg bg-roxo-claro-1 p-2 text-roxo-escuro-2">
+						<p style="display: none;" class="font-semibold">Data de Criação:</p>
+						<div style="display: none;" class="rounded-lg bg-roxo-claro-1 p-2 text-roxo-escuro-2">
 							<p>15/05/23</p>
 						</div>
 					</div>
@@ -495,45 +496,46 @@
 							for="autor"
 							placeholder="Autor..."
 						/>
-						<p class="font-semibold">Redflag:</p>
-						
-							<div
-								class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
-							>
-								<div class="selectBox" onclick="showCheckboxesRedflag()">
-									<option>Selecione as Redflags</option>
-									<select class="bg-roxo-claro-1"></select>
-									<div class="overSelect"></div>
-								</div>
-								<div class="flex flex-col" id="checkboxesRedflag">
-									<div>
-										<label class="inline-flex items-center">
-											<input
-												type="checkbox"
-												class="form-checkbox text-indigo-600"
-											/>
-											<span class="ml-2">Disturbio Alimentar</span>
-										</label>
-									</div>
-									<div>
-										<label class="inline-flex items-center">
-											<input
-												type="checkbox"
-												class="form-checkbox text-indigo-600"
-											/>
-											<span class="ml-2">Violência</span>
-										</label>
-									</div>
-									<div>
-										<label class="inline-flex items-center">
-											<input
-												type="checkbox"
-												class="form-checkbox text-indigo-600"
-											/>
-											<span class="ml-2">Abuso de substâncias Psicoativas</span>
-										</label>
-									</div>
-	
+						<div style="display:none;" class="esconder">
+              <p class="font-semibold">Redflag:</p>
+              
+                <div
+                  class="multiselect rounded-lg border-transparent bg-roxo-claro-1 p-2 text-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+                >
+                  <div class="selectBox" onclick="showCheckboxesRedflag()">
+                    <option>Selecione as Redflags</option>
+                    <select class="bg-roxo-claro-1"></select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div class="flex flex-col" id="checkboxesRedflag">
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Disturbio Alimentar</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Violência</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          class="form-checkbox text-indigo-600"
+                        />
+                        <span class="ml-2">Abuso de substâncias Psicoativas</span>
+                      </label>
+                    </div>
+            </div>
 									<div>
 										<label class="inline-flex items-center">
 											<input
@@ -605,7 +607,7 @@
 						id="fecharEditar3"
 						class="min-w-fit rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2"
 					>
-						Postar
+						Editar
 					</button>
 				</div>
 			</form>
@@ -628,7 +630,7 @@
 
     <img
       class="mx-auto my-5 h-[17%] w-[17%] object-scale-down"
-      src="../../../public/assets/Maristory-Navbar-Transparente.png"
+      src="../../../public/assets/logoMaristori.png"
       alt="logo Maristory"
     />
     <h1 class="mb-10 text-center text-5xl font-semibold text-roxo-medio-2">
@@ -642,7 +644,7 @@
         <input
           type="search"
           class="focus:ring-none w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-6 text-sm text-gray-900 drop-shadow-lg focus:border-none"
-          placeholder="Procurar artigo"
+          placeholder="Procurar post"
           required
         />
         <button
@@ -675,9 +677,9 @@
       class="mx-auto mt-3 w-3/4 border-separate border-spacing-0 rounded-xl border border-gray-900 bg-roxo-claro-1 text-center shadow-xl shadow-roxo-medio-2"
     >
       <tr>
-        <th class="p-2">Post</th>
-        <th class="border-x border-gray-900 p-2">Data</th>
-        <th class="p-2">Edição</th>
+        <th class="p-2">TÍTULO DO POST</th>
+        <th class="border-x border-gray-900 p-2">DATA</th>
+        <th class="p-2">AÇÕES</th>
       </tr>
       <?php foreach($posts as $key => $post): ?>
         <tr>

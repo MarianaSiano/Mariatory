@@ -141,7 +141,7 @@ class QueryBuilder
         try {
             $res = $this->pdo->prepare(
                 "INSERT INTO posts(
-                    user_id, 
+                    author_post, 
                     title, 
                     synopsis,
                     review,
