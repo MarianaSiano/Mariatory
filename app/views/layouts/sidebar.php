@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/sidebar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Maristory</title>
 </head>
 
@@ -36,27 +36,21 @@
             <div class="itens">
                 <ul class="links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="dashboard">
                             <i class='bx bxs-dashboard bx-sm icon'></i>
                             <span class="nav-text text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-user bx-sm icon'></i>
+                        <a href="listaDeUsuarios">
+                            <i class='bx bx-user bx-sm icon'></i>
                             <span class="nav-text text">Gerenciar Usuários</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-pencil bx-sm icon'></i>
+                        <a href="listaPostAdm">
+                            <i class='bx bx-note bx-sm icon'></i>
                             <span class="nav-text text">Gerenciar Posts</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-cog bx-sm icon'></i>
-                            <span class="nav-text text">Configurações</span>
                         </a>
                     </li>
                     
@@ -66,7 +60,7 @@
             <div class="button-logout">
                 <li class="">
                     <a href="login/logout">
-                        <i class='bx bx-log-out bx-sm icon'></i>
+                        <i class='bx bx-log-in bx-sm icon'></i>
                         <span class="nav-text text">Sair</span>
                     </a>
                 </li>

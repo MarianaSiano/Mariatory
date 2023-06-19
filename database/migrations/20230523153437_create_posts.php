@@ -19,14 +19,16 @@ final class CreatePosts extends AbstractMigration
     public function up(): void
     {
         $tab = $this->table('posts');
-        $tab->addColumn('user_id', 'integer', ['signed' => false])
+        $tab->addColumn('author_post', 'integer', ['signed' => false])
             ->addColumn('title', 'string')
             ->addColumn('synopsis', 'text')
             ->addColumn('review', 'text')
             ->addColumn('rating', 'enum', ['values' => ['1', '2', '3', '4', '5']])
             ->addColumn('image', 'string')
+            ->addColumn('author_book', 'string')
+            ->addColumn('gender', 'string')
             ->addTimestamps()
-            ->addForeignKey('user_id', 'users', 'id', ['delete' => 'RESTRICT', 'update' => 'NO_ACTION', 'constraint' => 'fk_posts_user_id_users'])
+            ->addForeignKey('author_post', 'users', 'id', ['delete' => 'RESTRICT', 'update' => 'NO_ACTION', 'constraint' => 'fk_posts_user_id_users'])
             ->save();
     }
 
