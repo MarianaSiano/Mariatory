@@ -5,11 +5,11 @@ use App\Controllers\LoginController;
 use App\Core\Router;
 
 //--------------------------Rotas-------------------------------//
-
+//
 $router->get('dashboard', 'ExampleController@dashboard');
 $router->get('listaPostAdm', 'ExampleController@listaPostAdm');
 
-$router->get('landingPage', 'ExampleController@landingPage');
+$router->get('', 'ExampleController@landingPage');
 $router->get('postList', 'ExampleController@postList');
 $router->get('vpost', 'ExampleController@vpost');
 
@@ -18,6 +18,8 @@ $router->get('vpost', 'ExampleController@vpost');
 $router->post('login/logar', 'LoginController@login');
 //-> Retorna a página de login
 $router->get('login', 'LoginController@view');
+//-> Processo para deslogar
+$router->get('login/logout', 'LoginController@logout');
 
 /*Usuários*/
 
@@ -31,3 +33,15 @@ $router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
 $router->post('users/editarUsuario', 'UsuarioController@editUsers');
 //->BUSCAR USUARIO
 $router->get('buscar', 'UsuarioController@search');
+
+//posts
+
+//-> Criação
+$router->get('listaPostAdm', 'PostController@view');
+$router->post('post/criarPost', 'PostController@create');
+$router->get('teste', 'PostController@show');
+$router->get('post/excluir', 'PostController@excluir');
+$router->post('post/editar', 'PostController@editar');
+
+//posts
+

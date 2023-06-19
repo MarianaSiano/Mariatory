@@ -293,7 +293,7 @@
                             </div>
                             <hr />
                             <p class="textoExcluir">
-                                Tem certeza que deseja excluir este usuário <?= $user->id ?> ?
+                                Tem certeza que deseja excluir este usuário <?= $user->name ?> ? 
                             </p>
                             <div class="botoesExcluir">
                                 <button class="botaoSim fechar" type="submit">sim</button>

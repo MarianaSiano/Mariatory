@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitac04f978b8b00c82d76696664de50784
+class ComposerStaticInit97b21caa13237df99a416b17c1d138a8
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -338,9 +338,6 @@ class ComposerStaticInitac04f978b8b00c82d76696664de50784
         'Cake\\Utility\\Xml' => __DIR__ . '/..' . '/cakephp/utility/Xml.php',
         'ChangeColumnRegression' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121223011817_change_column_regression.php',
         'ChangeFkRegression' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121223011816_change_fk_regression.php',
-        'ComposerAutoloaderInitac04f978b8b00c82d76696664de50784' => __DIR__ . '/..' . '/composer/autoload_real.php',
-        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInitac04f978b8b00c82d76696664de50784' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'CreateComment' => __DIR__ . '/../..' . '/database/migrations/20230523155740_create_comment.php',
         'CreateDropFkInitialSchema' => __DIR__ . '/..' . '/robmorgan/phinx/tests/Phinx/Migration/_files/drop_index_regression/20121213232502_create_drop_fk_initial_schema.php',
@@ -1496,9 +1493,9 @@ class ComposerStaticInitac04f978b8b00c82d76696664de50784
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitac04f978b8b00c82d76696664de50784::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitac04f978b8b00c82d76696664de50784::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitac04f978b8b00c82d76696664de50784::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit97b21caa13237df99a416b17c1d138a8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit97b21caa13237df99a416b17c1d138a8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit97b21caa13237df99a416b17c1d138a8::$classMap;
 
         }, null, ClassLoader::class);
     }
