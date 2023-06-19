@@ -39,3 +39,11 @@ $router->get('postList', 'PostListController@show');
 //-> Busca de Posts
 $router->get('buscar', 'PostListController@search');
 
+//posts
+
+//-> Criação
+$router->get('listaPostAdm', 'PostController@view');
+$router->post('post/criarPost', 'PostController@create');
+$router->get('teste', 'PostController@show');
+$router->get('post/excluir', 'PostController@excluir');
+$router->post('post/editar', 'PostController@editar');

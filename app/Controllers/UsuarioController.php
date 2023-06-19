@@ -96,4 +96,14 @@ class UsuarioController
         return App::get('database')->search('users', 'email', $emailDoUsuario);
     }
 
+    public function search(){
+        $valor_buscado = $_GET['search'];
+        $users = App::get('database')->searchUsers($valor_buscado);
+
+        $usersList = [
+            'users' => $users
+        ];
+
+        return view('admin/listaDeUsuarios', $usersList);
+    }
 }
