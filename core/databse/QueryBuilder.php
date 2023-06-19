@@ -138,6 +138,7 @@ class QueryBuilder
 
     public function createPost(mixed $dadosDoPost)
     {
+       //die(var_dump($_SESSION));
         try {
             $res = $this->pdo->prepare(
                 "INSERT INTO posts(

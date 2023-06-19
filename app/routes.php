@@ -31,8 +31,6 @@ $router->get('listaDeUsuarios', 'UsuarioController@show');
 $router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
 //-> Editar
 $router->post('users/editarUsuario', 'UsuarioController@editUsers');
-//->BUSCAR USUARIO
-$router->get('buscar', 'UsuarioController@search');
 
 //posts
 
@@ -42,6 +40,3 @@ $router->post('post/criarPost', 'PostController@create');
 $router->get('teste', 'PostController@show');
 $router->get('post/excluir', 'PostController@excluir');
 $router->post('post/editar', 'PostController@editar');
-
-//posts
-
