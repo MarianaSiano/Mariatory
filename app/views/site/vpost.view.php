@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Resenha - Nome Livro</title>
 
     <link rel="stylesheet" href="../../../public/css/vpost.css">
-
+   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
 
 </head>
-
 <body>
-
-    <!--import da navbar-->
-    <?php require('./app/views/layouts/navbar.php'); ?>
-
-    <div class="tudo">
+    <?php 
+        if(!isset($post) || empty($post)) {
+            $post = new stdclass();
+        }
+    ?>
+    <div class = "tudo">
         <div class="conteudo">
-            <div class="esquerda">
+            <div class = "esquerda">
                 <div class="centralizar">
-                    <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
+                    <img src=<?= '../../../' . ($post->image ?? 'public/images/posts/comprovante.png') ?> alt="capa do livro">
                     <div class="todosAlinhamentos">
-                        <div class="alinhamento">
-                            <h3 class="titulosesquerda"> Autor </h3>
-                            <p class="textinhoesquerda"> Taylor Jenkins Reid </p>
+                        <div class = "alinhamento" > 
+                            <h3 class = "titulosesquerda"> Autor </h3>
+                            <p class="textinhoesquerda"> <?= $post->author->name ?? '' ?> </p>
                         </div>
                         <div class="alinhamento">
-                            <h3 class="titulosesquerda"> Gênero </h3>
+                            <h3 class = "titulosesquerda"> Gênero </h3>
                             <div class="classificacao">
-                                <p class="elementos">Romance</p>
+                                <?php foreach($post->gender ?? [] as $gender): ?> 
+                                    <p class="elementos"> <?= $gender ?> </p>
+                                <?php endforeach; ?>
                             </div>
                         </div>
-
+                        <div class = "alinhamento">
+                            <h3 class = "titulosesquerda"> Redflags </h3>
+                            <div class = "classificacao">
+                                <p class="elementos">cc</p>
+                                <p class="elementos">bb</p>
+                                <p class="elementos">aa</p>
+                            </div>
+                        </div>
                         <div class="alinhamento">
-                            <h3 class="titulosesquerda"> Avaliação </h3>
-                            <p class="textinhoesquerda" id="estrelas">&starf;&starf;&starf;&star;&star;</p>
+                            <h3 class = "titulosesquerda"> Avaliação </h3>
+                            <p class="textinhoesquerda" id="estrelas"><?= $post->rating ?? '' ?></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="direita">
+            <div class = "direita">
                 <div class="textodireita">
-                    <h1 class="titulo">os sete maridos de evelyn hugo</h1>
-                    <hr />
+                    <h1 class="titulo"><?= $post->title ?? '' ?></h1> 
+                    <hr/>
                     <h2 class="h2">Sinopse</h2>
-                    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p class="texto"><?= $post->synopsis ?? '' ?></p>    
                     <h2 class="h2">Resenha</h2>
-                    <p class="texto">Sed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metusSed posuere sit amet mi ac rhoncus. Donec ac pretium nibh. Curabitur id nisi et lorem efficitur molestie. Quisque diam nulla, pulvinar sit amet porttitor id, mollis viverra leo. Fusce in tellus porttitor, suscipit turpis et, faucibus dui. Donec sit amet magna id nunc bibendum fermentum. Praesent quam odio, venenatis non tellus eu, molestie luctus erat. Mauris eu ultricies metus</p>
+                    <p class="texto"><?= $post->review ?? '' ?></p>  
                 </div>
-                <div class="comentarios">
+                <div class = "comentarios">
                     <h2 id="titulocomentarios"> Comentários </h2>
-                    <div class="espacocomentarios">
-                        <input type="text" class="text" placeholder="Comente aqui" />
+                    <div class = "espacocomentarios">
+                        <input type="text" class="text" placeholder="Comente aqui"/>
                     </div>
-                    <div class="outroscomentarios">
+                    <div class = "outroscomentarios">
                         <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                         <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                         <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -67,9 +74,5 @@
             </div>
         </div>
     </div>
-
-    <!--import do footer-->
-    <?php require('./app/views/layouts/footer.php'); ?>
 </body>
-
 </html>
