@@ -129,6 +129,7 @@
     transition: 1s;
 }
 
+
 .btn1 {
     background-color: #9D4EDD;
     border: 0;
@@ -313,8 +314,8 @@ body {
     border-radius: 0.5rem;
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
     margin-right: 8px;
-
 }
+
 
 .botaoNao {
     background-color: #E0AAFF;
