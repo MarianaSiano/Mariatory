@@ -47,6 +47,8 @@ class PostListController{
             $post->author_post = $aux;        
         }
 
+        // die(var_dump($posts_pagination));
+
         $identificador = 'postList';
         
         return view('site/postList', compact('posts', 'total_pages', 'qtd_posts', 'total_posts', 'start', 'posts_pagination', 'page', 'identificador'));
@@ -55,6 +57,12 @@ class PostListController{
     public function search(){
         $valor_buscado = $_GET['search'];
         $posts_pagination = App::get('database')->searchPost($valor_buscado);
+
+        foreach($posts_pagination as $post){
+            $aux = App::get('database')->selectUserName($post->author_post);
+
+            $post->author_post = $aux;        
+        }
 
         return view('site/postList', compact('posts_pagination'));
     }

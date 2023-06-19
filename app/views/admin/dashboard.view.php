@@ -13,7 +13,8 @@ include('./app/views/site/protectLogin.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
 
-    <title>Maristory</title>
+
+    <title>Dashboard</title>
 </head>
 <body>
     <?php require('./app/views/layouts/sidebar.php'); ?>

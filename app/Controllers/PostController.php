@@ -26,8 +26,11 @@ class PostController {
     {
         $generos = $_POST['genero'];
         $stringGeneros = "";
-        foreach($generos as $item) {
-            $stringGeneros .= $item.",";
+        foreach($generos as $index => $item) {
+            if($index < count($generos)-1)
+                $stringGeneros .= $item.",";
+            else
+                $stringGeneros .= $item;
         }
         $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem_post']['name']);
         if(move_uploaded_file($_FILES['imagem_post']['tmp_name'], $imagePath)) {

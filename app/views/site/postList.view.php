@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/public/assets/Maristory - Navbar.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/postList.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Maristory</title>
+    <title>Listagem de Posts</title>
 </head>
 
 <body>
@@ -56,7 +57,9 @@
                             <ul class="post-datas">
                                 <li>Por <span><?= $post->author_post ?></span></li>
                                 <br>
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <?php if($post->updated_at): ?>
+                                <small class="text-muted">Atualizado em <?= date('d/m/Y', strtotime(explode(' ', $post->updated_at)[0]))?> às <?= explode(' ', date('Y-m-d H:i:s', strtotime($post->updated_at)))[1]?></small>
+                                <?php endif; ?>
                             </ul>
 
                             <a href=""><button class="button-card" role="button">Saber Mais</button></a>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maristory</title>
+    <title>Bem-vinde!</title>
 
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
