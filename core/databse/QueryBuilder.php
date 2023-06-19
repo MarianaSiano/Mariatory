@@ -47,9 +47,32 @@ class QueryBuilder
         }
     }
 
-    public function editPosts($dados)
+    public function editPost($dados)
     {
-        //nada
+        $query = "";
+        $numeros = ['1', '2', '3', '4', '5'];
+        if(!in_array($dados['rating'], $numeros)) { 
+            unset($dados['rating']); 
+        }
+        
+        foreach($dados as $key => $dado) { 
+            if(!empty($dado) && $key != 'post_id') { 
+                $query .= "{$key} = '{$dados[$key]}',";
+            }  
+        }
+        $query = substr($query, 0, -1);
+        $con = "UPDATE `posts` 
+            SET {$query}
+            WHERE `id` = {$dados['post_id']}";
+        //die(var_dump($con));
+
+        try {
+            $res = $this->pdo->prepare($con);
+
+            $res->execute();
+        } catch (Exception $e) {
+            die(var_dump($e->getMessage()));
+        }
     }
 
     public function editUsers($dados)
@@ -76,7 +99,7 @@ class QueryBuilder
     public function delete($table, $id)
     {
         try {
-            $res = $this->pdo->prepare("DELETE FROM $table WHERE $table.id = $id");
+            $res = $this->pdo->prepare("DELETE FROM $table WHERE id = $id");
             $res->execute();
         } catch (Exception $e) {
             die($e->getMessage());
@@ -110,6 +133,46 @@ class QueryBuilder
     ) {
         $register = $this->pdo->prepare("SELECT * FROM $tabela WHERE $campoParaPesquisar = :valueToSearch limit 1");
         $register->execute([':valueToSearch' => $valorParaBuscar]);
+        return $register->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function createPost(mixed $dadosDoPost)
+    {
+        try {
+            $res = $this->pdo->prepare(
+                "INSERT INTO posts(
+                    user_id, 
+                    title, 
+                    synopsis,
+                    review,
+                    rating,
+                    gender,
+                    image
+                ) VALUES (
+                    '{$_SESSION['id']}', 
+                    '{$dadosDoPost['titulo']}', 
+                    '{$dadosDoPost['sinopse']}',
+                    '{$dadosDoPost['resenha']}', 
+                    '{$dadosDoPost['avaliacao']}', 
+                    '{$dadosDoPost['gender']}',
+                    '{$dadosDoPost['imagem']}'
+                )"
+            );
+
+            $res->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function destroy(
+        string $tabela, 
+        string $campoParaPesquisar, 
+        string $valorParaBuscar
+    ) {
+        $register = $this->pdo->prepare("DELETE FROM $tabela WHERE $campoParaPesquisar = :valueToSearch");
+        $register->execute([':valueToSearch' => $valorParaBuscar]);
         return $register->rowCount();
     }
+
 }
