@@ -62,7 +62,7 @@
                                 <?php endif; ?>
                             </ul>
 
-                            <a href=""><button class="button-card" role="button">Saber Mais</button></a>
+                            <a href="/vpost2?id=<?php echo $post->id?>"><button class="button-card" role="button">Saber Mais</button></a>
 
                             <div class="card-footer">
                                 <i class='bx bx-calendar'></i> Criado em <?= date('d/m/Y', strtotime(explode(' ', $post->created_at)[0]))?>

@@ -251,7 +251,17 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    
-    
 
+    public function viewPost($id){
+        $sql = "SELECT * FROM posts WHERE id = '{$id}'";
+
+        try {
+            $sql = $this->pdo->prepare($sql);
+
+            $sql->execute();
+            return $sql->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

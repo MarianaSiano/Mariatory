@@ -36,8 +36,22 @@ class ExampleController
         return view('site/landingPage');
     }
 
-    public function vpost() 
-    { 
+    public function vpost(){
         return view('site/vpost');
+    }
+
+    public function vpost2() 
+    {
+        $id = ($_GET['id']);
+
+        $post = App::get('database')->viewPost($id);
+
+        // die(var_dump($post));
+
+        $aux = App::get('database')->selectUserName($post[0]->author_post);
+
+        $post[0]->author_post = $aux;
+
+        return view('site/vpost2', compact('post'));
     }
 }

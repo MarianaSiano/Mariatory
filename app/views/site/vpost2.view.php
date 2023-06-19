@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Resenha - Nome Livro</title>
+    <title>Resenha - TÍTULO DO LIVRO AQUI</title>
 
     <link rel="stylesheet" href="../../../public/css/vpost.css">
 
@@ -14,15 +14,15 @@
 </head>
 
 <body>
-
-    <!--import da navbar-->
-    <?php require('./app/views/layouts/navbar.php'); ?>
-
     <?php
     if (!isset($post) || empty($post)) {
         $post = new stdclass();
     }
     ?>
+
+    <!--import da navbar-->
+    <?php require('./app/views/layouts/navbar.php'); ?>
+
     <div class="tudo">
         <div class="conteudo">
             <div class="esquerda">
@@ -31,39 +31,46 @@
                     <div class="todosAlinhamentos">
                         <div class="alinhamento">
                             <h3 class="titulosesquerda"> Autor </h3>
-                            <p class="textinhoesquerda"> <?= $post->author->name ?? '' ?> </p>
+                            <p class="textinhoesquerda"> <?php echo $post[0]->author_post ?? ''; ?> </p>
                         </div>
                         <div class="alinhamento">
                             <h3 class="titulosesquerda"> Gênero </h3>
                             <div class="classificacao">
-                                <?php foreach ($post->gender ?? [] as $gender) : ?>
-                                    <p class="elementos"> <?= $gender ?> </p>
+
+                                <?php foreach (explode(',', $post[0]->gender) ?? [] as $gender) : ?>
+                                    <p class="elementos"> <?php echo $gender; ?> </p>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                         <div class="alinhamento">
-                            <h3 class="titulosesquerda"> Redflags </h3>
-                            <div class="classificacao">
-                                <p class="elementos">cc</p>
-                                <p class="elementos">bb</p>
-                                <p class="elementos">aa</p>
-                            </div>
-                        </div>
-                        <div class="alinhamento">
                             <h3 class="titulosesquerda"> Avaliação </h3>
-                            <p class="textinhoesquerda" id="estrelas"><?= $post->rating ?? '' ?></p>
+                            <p class="textinhoesquerda" id="estrelas">
+                                <?php if ($post[0]->rating == 0) : ?>
+                                    &star;&star;&star;&star;&star;
+                                <?php elseif ($post[0]->rating == 1) : ?>
+                                    &starf;&star;&star;&star;&star;
+                                <?php elseif ($post[0]->rating == 2) : ?>
+                                    &starf;&starf;&star;&star;&star;
+                                <?php elseif ($post[0]->rating == 3) : ?>
+                                    &starf;&starf;&starf;&star;&star;
+                                <?php elseif ($post[0]->rating == 4) : ?>
+                                    &starf;&starf;&starf;&starf;&star;
+                                <?php elseif ($post[0]->rating == 5) : ?>
+                                    &starf;&starf;&starf;&starf;&starf;
+                                <?php endif; ?>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="direita">
                 <div class="textodireita">
-                    <h1 class="titulo"><?= $post->title ?? '' ?></h1>
+                    <h1 class="titulo"><?= $post[0]->title ?? '' ?></h1>
                     <hr />
                     <h2 class="h2">Sinopse</h2>
-                    <p class="texto"><?= $post->synopsis ?? '' ?></p>
+                    <p class="texto"><?= $post[0]->synopsis ?? '' ?></p>
                     <h2 class="h2">Resenha</h2>
-                    <p class="texto"><?= $post->review ?? '' ?></p>
+                    <p class="texto"><?= $post[0]->review ?? '' ?></p>
                 </div>
                 <div class="comentarios">
                     <h2 id="titulocomentarios"> Comentários </h2>
@@ -84,6 +91,7 @@
 
     <!--import do footer-->
     <?php require('./app/views/layouts/footer.php'); ?>
+
 </body>
 
 </html>

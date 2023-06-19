@@ -11,6 +11,7 @@ $router->get('listaPostAdm', 'ExampleController@listaPostAdm');
 
 $router->get('', 'ExampleController@landingPage');
 $router->get('vpost', 'ExampleController@vpost');
+$router->get('vpost2', 'ExampleController@vpost2');
 
 /*Login*/
 
