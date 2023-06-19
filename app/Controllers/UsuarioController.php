@@ -47,6 +47,7 @@ class UsuarioController
                 $page = 1;
             }
         }else{
+            $_GET['pagina'] = 1;
             $page = 1;
         }
 

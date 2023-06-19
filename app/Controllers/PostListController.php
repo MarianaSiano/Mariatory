@@ -20,6 +20,7 @@ class PostListController{
                 $page = 1;
             }
         }else{
+            $_GET['pagina'] = 1;
             $page = 1;
         }
         
