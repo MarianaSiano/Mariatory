@@ -29,7 +29,6 @@ class PostController {
         foreach($generos as $item) {
             $stringGeneros .= $item.",";
         }
-        //die(var_dump($_POST));
         $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem_post']['name']);
         if(move_uploaded_file($_FILES['imagem_post']['tmp_name'], $imagePath)) {
             $dadosDoPost = [
@@ -77,19 +76,26 @@ class PostController {
 
     public function editar()
     {
-        $generos = $_POST['genero'];
+        $generos = $_POST['gender'] ?? [];
         $stringGeneros = "";
         foreach($generos as $item) {
             $stringGeneros .= $item.",";
         }
         $valoresParaPost = $_POST;
-        $valoresParaPost['genero'] = $stringGeneros;
-        $imagePath = self::UPLOAD_PATH . basename($_FILES['imagem']['name']);
-        if(move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath)) {
-            $valoresParaPost['imagem'] = $imagePath;
-            App::get('database')->editPost($valoresParaPost);
-            header('Location: /listaPostAdm');
+        if(isset($valoresParaPost['gender'])) {
+            $valoresParaPost['gender'] = $stringGeneros;
         }
+        if(isset($valoresParaPost['image'])) {
+            $imagePath = self::UPLOAD_PATH . basename($_FILES['image']['name']);
+            if(move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
+                $valoresParaPost['image'] = $imagePath;
+                App::get('database')->editPost($valoresParaPost);
+                header('Location: /listaPostAdm');
+                exit();
+            }
+        }
+        App::get('database')->editPost($valoresParaPost);
+        header('Location: /listaPostAdm');
     }
 
     public function recuperaDadosDoAutor(int $idDoUsuario)

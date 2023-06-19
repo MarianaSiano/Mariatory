@@ -377,7 +377,7 @@
 									</svg>
 								</div>
 							</label>
-							<input name="imagem" id="dropzone-file1" type="file" class="hidden" />
+							<input name="image" id="dropzone-file1" type="file" class="hidden" />
 						</div>
 					</div>
 					<div class="flex flex-col">
@@ -406,7 +406,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Romance"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -417,7 +417,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Ficção"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -428,7 +428,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Psicológico"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -439,7 +439,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Autoajuda"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -450,7 +450,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Terror"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -461,7 +461,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Guia"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>
@@ -472,7 +472,7 @@
 										<label class="inline-flex items-center">
 											<input
                         value="Infantil"
-                        name="genero[]"
+                        name="gender[]"
 												type="checkbox"
 												class="form-checkbox text-indigo-600"
 											/>

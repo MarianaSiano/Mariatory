@@ -49,21 +49,29 @@ class QueryBuilder
 
     public function editPost($dados)
     {
+        $query = "";
+        $numeros = ['1', '2', '3', '4', '5'];
+        if(!in_array($dados['rating'], $numeros)) { 
+            unset($dados['rating']); 
+        }
+        
+        foreach($dados as $key => $dado) { 
+            if(!empty($dado) && $key != 'post_id') { 
+                $query .= "{$key} = '{$dados[$key]}',";
+            }  
+        }
+        $query = substr($query, 0, -1);
         $con = "UPDATE `posts` 
-            SET `title` = '{$dados['title']}', 
-                `synopsis` = '{$dados['synopsis']}', 
-                `review` = '{$dados['review']}',
-                `rating` = '{$dados['rating']}',
-                `image` = '{$dados['imagem']}',
-                `gender` = '{$dados['genero']}'
+            SET {$query}
             WHERE `id` = {$dados['post_id']}";
+        //die(var_dump($con));
 
         try {
             $res = $this->pdo->prepare($con);
 
             $res->execute();
         } catch (Exception $e) {
-            die($e->getMessage());
+            die(var_dump($e->getMessage()));
         }
     }
 
