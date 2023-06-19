@@ -24,7 +24,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Lista de Posts</title>
+
+    <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
+
+    <title>Gerenciar Posts</title>
   </head>
   <body class="bg-nuvens bg-repeat">
   <?php require('./app/views/layouts/sidebar.php'); ?>
@@ -306,7 +309,7 @@
           <textarea
             name="sinopse"
             rows="4"
-            class="cor block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm text-roxo-medio-1 placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
+            class="block w-full rounded-lg border border-none bg-roxo-claro-1 p-2.5 text-sm placeholder-roxo-escuro-2 focus:border-none focus:shadow-none focus:outline-none"
             placeholder="Escreva a sinopse aqui"
           ></textarea>
           <p class="font-semibold">Resenha</p>
