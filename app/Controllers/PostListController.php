@@ -53,12 +53,8 @@ class PostListController{
 
     public function search(){
         $valor_buscado = $_GET['search'];
-        $posts = App::get('database')->searchPost($valor_buscado);
+        $posts_pagination = App::get('database')->searchPost($valor_buscado);
 
-        $postsBuscados = [
-            'posts' => $posts
-        ];
-
-        return view('site/postList', $postsBuscados);
+        return view('site/postList', compact('posts_pagination'));
     }
 }

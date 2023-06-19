@@ -263,7 +263,7 @@ div.row >a>button{
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.text-bg-primary{background-color: #c77dff !important; font-size: 14px !important; font-weight: 800 !important;}
+.text-bg-primary{background-color: #c77dff !important; font-size: 14px !important; font-weight: 800 !important; border-radius: 0 !important;}
 
 .post-datas{
     width: 100%;
@@ -353,7 +353,7 @@ div.row >a>button{
     appearance: none;
     background-color: #c77dff;
     border: 2px solid #1A1A1A;
-    border-radius: 15px;
+    border-radius: 8px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
@@ -375,6 +375,13 @@ div.row >a>button{
     width: 100%;
     will-change: transform;
   }
+
+  .fifty-chars {
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
   
   .button-card:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;

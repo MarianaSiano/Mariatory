@@ -1,3 +1,4 @@
+<?php if(isset($_GET['pagina'])): ?>
 <nav aria-label="Page navigation example" class="paginacao">
     <ul class="pagination justify-content-center">
 
@@ -30,3 +31,4 @@
         <?php endif; ?>
     </ul>
 </nav>
+<?php endif ?>

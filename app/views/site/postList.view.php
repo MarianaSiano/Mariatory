@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="card-body">
-                                <h5 class="card-title"><?= $post->title ?></h5>
+                                <h5 class="card-title fifty-chars"><?= $post->title ?></h5>
                                 <p class="card-text"><?= $post->synopsis ?></p>
                             </div>
 
@@ -71,7 +71,7 @@
         </div>
     <?php else : ?>
         <div class="error-search">
-            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)< /div>
+            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)</div>
                     <div _ngcontent-ng-c2168645827 class="error-msg">Não foi possível encontrar o post com o título <span>"<?= $_GET['search'] ?></span>"</div>
             </div>
         </div>
