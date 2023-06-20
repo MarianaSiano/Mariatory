@@ -41,6 +41,9 @@ $router->get('postList', 'PostListController@show');
 //-> Busca de Posts
 $router->get('buscar', 'PostListController@search');
 
+/* Comentários */
+$router->post('comment/criarComentario', 'CommentController@createComments');
+
 //posts
 
 //-> Criação
