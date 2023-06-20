@@ -49,6 +49,7 @@ ul {
     flex-basis: max-content;
     justify-content: center;
     text-decoration: none;
+    gap: 30px;
 }
 
 ul a{
@@ -68,11 +69,18 @@ li {
     padding: 20px 10%;
     background-color: #E0AAFF;
     display: flex;
+    width: 205px;
     border: 2px solid #C77DFF;
     box-shadow: 0 0 10px 3px #46035d47;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 30px;
+    /* margin-right: 15px;
+    margin-left: 15px;*/
+    margin-bottom: 30px; 
+}
+
+.centralizar img{
+    width: 160px;
+    height: 150px;
+    
 }
 
 .button-card {
@@ -138,6 +146,7 @@ img {
 
 .todosAlinhamentos{
     flex-direction: row;
+    width: 250px;
 }
 
 .titulosesquerda{
@@ -150,7 +159,6 @@ img {
     /* margin-left: 2.5%;
     margin-right: 2.5%; */
     margin-top: 0;
-    margin-bottom: 5%;
     animation-name: posts;
     animation-duration: 2s;
 }
