@@ -49,4 +49,5 @@ $router->post('post/criarPost', 'PostController@create');
 $router->get('teste', 'PostController@show');
 $router->get('post/excluir', 'PostController@excluir');
 $router->post('post/editar', 'PostController@editar');
+$router->get('buscarPost', 'PostController@search');
 

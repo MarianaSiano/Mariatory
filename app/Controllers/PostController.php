@@ -18,6 +18,11 @@ class PostController {
     
     public function view()
     {
+        if(isset($_GET['valor_pesquisado'])) { 
+            $posts = App::get('database')->searchPost($_GET['valor_pesquisado']);
+            return view('admin/listaPostAdm', compact('posts'));
+        }
+
         $posts = App::get('database')->selectAll('posts');
         return view('admin/listaPostAdm', compact('posts'));
     }
@@ -68,6 +73,26 @@ class PostController {
         $post->rating = $numeroDeEstrelasPreenchidas;
         $post->author = $this->recuperaDadosDoAutor($post->author_post);
         return view('site/vpost', compact('post'));
+    }
+
+    public function search()
+    {
+        $idPost = $_GET['post_id'];
+        $post = App::get('database')->search('posts', 'id', $idPost);
+        $numeroDeEstrelasPreenchidas = '';
+        for($contadora = 1; $contadora <= 5; $contadora++) { 
+            if($post->rating >= $contadora) { 
+                $numeroDeEstrelasPreenchidas .= '&starf;';
+            } else {
+                 $numeroDeEstrelasPreenchidas .= '&star;'; 
+            }
+        }
+        $post->gender = explode(",", $post->gender);
+        array_pop($post->gender);
+        $post->rating = $numeroDeEstrelasPreenchidas;
+        $post->author = $this->recuperaDadosDoAutor($post->author_post);
+        echo json_encode($post);
+        //return view('site/vpost', compact('post'));
     }
 
     public function excluir()

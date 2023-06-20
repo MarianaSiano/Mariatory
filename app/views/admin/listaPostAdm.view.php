@@ -628,12 +628,12 @@
       <div
         class="mx-[12.5%] flex flex-row gap-5 smartphone:flex-col smartphone:gap-2"
       >
-        <form class="flex basis-full gap-2">
+        <form method="get" class="flex basis-full gap-2">
           <input
             type="search"
             class="focus:ring-none w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-6 text-sm text-gray-900 drop-shadow-lg focus:border-none"
             placeholder="Procurar post"
-            required
+            name="valor_pesquisado"
           />
           <button
             type="submit"
@@ -889,6 +889,21 @@
           if(botaoOriginalEditarClicado) {
             document.getElementById('id_post').value = botaoEditar.getAttribute('id-post');
           }
+          /*fetch('http://localhost:8000/buscarPost?post_id=' + document.getElementById('id_post').value)
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error(Fetching JSON went wrong - ${response.statusText});
+                }
+                return response.json();
+              })
+              .then((data) => {
+                console.log(data);
+                alert("mensagem");
+                // Process the JSON data here
+              })
+              .catch((error) => {
+                console.error(error);
+              });*/
 			  });
         botaoOriginalEditarClicado = true;
 			}
