@@ -31,51 +31,53 @@ h1 {
 h2 {
     font-size: 200%;
     color: #3C096C;
-    /* margin-left: 5%;
-    margin-right: 0%; */
 }
 
 h3 {
     font-size: 150%;
     color: #240046;
-    /* margin-left: 5%; */
-    /* margin-right: 0%;
-    margin-bottom: 9%; */
 }
 
-ul {
+.post-list {
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     flex-basis: max-content;
-    justify-content: center;
+    justify-content: space-around;
     text-decoration: none;
-    gap: 30px;
+    gap: 10px;
 }
 
-ul a{
-    text-decoration: none;
-}
-
-li {
-    margin-left: 10px;
-    margin-right: 10px;
-    list-style-type: none;
+.post {
+    animation-name: posts;
+    animation-duration: 2s;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-color: #E0AAFF;
     display: flex;
-    flex-direction: row;
+    border: 2px solid #C77DFF;
+    box-shadow: 0 0 10px 3px #46035d47;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
+/*
 .centralizar{
     border-radius: 10px;
     padding: 20px 10%;
     background-color: #E0AAFF;
     display: flex;
-    width: 205px;
     border: 2px solid #C77DFF;
     box-shadow: 0 0 10px 3px #46035d47;
-    /* margin-right: 15px;
-    margin-left: 15px;*/
+    margin-right: 15px;
+    margin-left: 15px;
     margin-bottom: 30px; 
 }
+*/
 
 .centralizar img{
     width: 160px;
@@ -127,10 +129,11 @@ img {
 .classificacao {
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .elementos {
-    flex-basis: min-content;
+    flex-basis: max-content;
     background-color: #5A189A;
     font-size: 13px;
     padding-top: 7px;
@@ -144,24 +147,12 @@ img {
     box-shadow: 0 0 10px 3px #46035d47;
 }
 
-.todosAlinhamentos{
-    flex-direction: row;
-    width: 250px;
-}
-
 .titulosesquerda{
     margin: 5px 0px;
     color:#5A189A;
     font-size:larger;
 }
 
-.post {
-    /* margin-left: 2.5%;
-    margin-right: 2.5%; */
-    margin-top: 0;
-    animation-name: posts;
-    animation-duration: 2s;
-}
 
 body {
     right: 0;
@@ -201,33 +192,43 @@ body {
     h2 {
         font-size: 150%;
         color: #3C096C;
-        /* margin-left: 31%;
-        margin-right: 0%; */
     }
 
     h3 {
         font-size: 100%;
         color: #240046;
-        /* margin-left: 31%;
-        margin-right: 0%; */
-        margin-bottom: 30%;
+    }
+
+
+    .post-list {
+        display: flex;
+        flex-wrap: wrap;
     }
     
+
     .upper-content {
         display: flex;
         flex-direction: column;
         justify-content:center;
         align-items: center;
+        padding: 0px 20px;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .post {
         clear: left;
         display: flex;
-        margin-left: 31%;
+        margin-left: 0%;
         margin-right: 0%;
         margin-top: 10%;
         margin-bottom: 5%;
         animation-name: posts;
         animation-duration: 2s;
+    }
+
+    
+    .elementos {
+        flex-basis: min-content;
     }
 }
