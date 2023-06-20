@@ -259,6 +259,7 @@ class QueryBuilder
             $sql = $this->pdo->prepare($sql);
 
             $sql->execute();
+            
             return $sql->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e) {
             die($e->getMessage());
