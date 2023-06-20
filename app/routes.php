@@ -39,7 +39,7 @@ $router->get('buscarUsuario', 'UsuarioController@search');
 //-> Exibição da página
 $router->get('postList', 'PostListController@show');
 //-> Busca de Posts
-$router->get('buscar', 'PostListController@search');
+$router->post('buscar', 'PostListController@search');
 
 //posts
 

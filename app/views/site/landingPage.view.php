@@ -37,154 +37,58 @@
 
 
         <ul>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
-                                </div>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Avaliação </h3>
-                                <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post">
-                    <div class="centralizar">
-                        <div class="todosAlinhamentos">
-                            <div class="imagem">
-                                <img src="../../../public/assets/osmeh.jpg" alt="capa do livro">
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Título </h3>
-                                <p> Os 7 maridos de Evelyn Hugo </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Autor </h3>
-                                <p> Taylor Jenkins Reid </p>
-                            </div>
-                            <div class="alinhamento">
-                                <h3 class="titulosesquerda"> Gênero </h3>
-                                <div class="classificacao">
-                                    <p class="elementos">Romance</p>
+            <?php foreach ($posts as $post) : ?>
+                <li>
+                    <div class="post">
+                        <div class="centralizar">
+                            <div class="todosAlinhamentos">
+                                <div class="imagem">
+                                    <img src=<?= '../../../' . ($post->image ?? 'public/images/posts/comprovante.png') ?> alt="capa do livro">
                                 </div>
                                 <div class="alinhamento">
+                                    <h3 class="titulosesquerda"> Título </h3>
+                                    <p> <?php echo $post->title ?? 'Desconhecido' ?> </p>
+                                </div>
+                                <div class="alinhamento">
+                                    <h3 class="titulosesquerda"> Autor </h3>
+                                    <p> <?php echo $post->author_book ?? 'Desconhecido' ?> </p>
+                                </div>
+                                <div class="alinhamento">
+                                    <h3 class="titulosesquerda"> Gênero </h3>
+                                    <div class="classificacao">
+                                        <?php foreach (explode(',', $post->gender) ?? [] as $gender) : ?>
+                                            <p class="elementos"> <?php echo $gender; ?> </p>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+
+                                <div class="alinhamento">
                                     <h3 class="titulosesquerda"> Avaliação </h3>
-                                    <p id="estrelas">&starf;&starf;&starf;&star;&star;</p>
+                                    <p id="estrelas">
+                                        <?php if ($post->rating == 0) : ?>
+                                            &star;&star;&star;&star;&star;
+                                        <?php elseif ($post->rating == 1) : ?>
+                                            &starf;&star;&star;&star;&star;
+                                        <?php elseif ($post->rating == 2) : ?>
+                                            &starf;&starf;&star;&star;&star;
+                                        <?php elseif ($post->rating == 3) : ?>
+                                            &starf;&starf;&starf;&star;&star;
+                                        <?php elseif ($post->rating == 4) : ?>
+                                            &starf;&starf;&starf;&starf;&star;
+                                        <?php elseif ($post->rating == 5) : ?>
+                                            &starf;&starf;&starf;&starf;&starf;
+                                        <?php endif; ?>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <a href="vpost2?id=<?php echo $post->id ?>"><button class="button-card" role="button">Saber Mais</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </li>
-
-
+                </li>
+            <?php endforeach; ?>
         </ul>
 
 

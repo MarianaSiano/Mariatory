@@ -26,6 +26,22 @@ class QueryBuilder
         }
     }
 
+    // Função para selecionar os últimos 5 posts cadastrados
+    public function selectFive($table)
+    {
+        $res = "SELECT * FROM {$table} ORDER BY created_at DESC LIMIT 5";
+        
+        try {
+            $res = $this->pdo->prepare($res);
+
+            $res->execute();
+
+            return $res->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function selectUserName($id){
         try{
             $res = $this->pdo->prepare("SELECT name from users WHERE id = {$id}");
@@ -259,7 +275,7 @@ class QueryBuilder
             $sql = $this->pdo->prepare($sql);
 
             $sql->execute();
-            
+
             return $sql->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e) {
             die($e->getMessage());
