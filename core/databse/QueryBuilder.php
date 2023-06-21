@@ -64,7 +64,7 @@ class QueryBuilder
         $con = "UPDATE `posts` 
             SET {$query}
             WHERE `id` = {$dados['post_id']}";
-        //die(var_dump($con));
+        die(var_dump($dados['post_id']));
 
         try {
             $res = $this->pdo->prepare($con);
@@ -99,7 +99,7 @@ class QueryBuilder
     public function delete($table, $id)
     {
         try {
-            $res = $this->pdo->prepare("DELETE FROM $table WHERE id = $id");
+            $res = $this->pdo->prepare("DELETE FROM $table WHERE id = '{$id}'");
             $res->execute();
         } catch (Exception $e) {
             die($e->getMessage());

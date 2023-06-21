@@ -60,7 +60,7 @@
 
             <div class="btnEditar">
                 <button class="botaoSim fechar">Salvar</button>
-                <button class="botaoSim fechar">Calcelar</button>
+                <button class="botaoSim fechar">Cancelar</button>
             </div>
         </form>
     </div>
@@ -271,8 +271,8 @@
                                 </div>
                             </div>
                             <div class="btnEditar">
-                                <button type="submit" class="botaoSim fechar">Salvar</button>
-                                <a style="text-decoration: none"  href="/listaDeUsuarios" class="botaoSim fechar">Calcelar</a>
+                                <button type="submit" class="botaosalvar">Salvar</button>
+                                <a style="text-decoration: none"  href="/listaDeUsuarios" class="botaocancelar">Cancelar</a>
                             </div>
                         </div>
                     </form>
@@ -297,7 +297,7 @@
                             </p>
                             <div class="botoesExcluir">
                                 <button class="botaoSim fechar" type="submit">sim</button>
-                                <a style="text-decoration: none" href="/listaDeUsuarios" class="botaoSim fechar">não</a>
+                                <a style="text-decoration: none" href="/listaDeUsuarios" class="botaonaoexcluir">não</a>
                         
                             </div>
                             </div>
