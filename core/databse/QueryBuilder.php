@@ -96,7 +96,7 @@ class QueryBuilder
         $con = "UPDATE `posts` 
             SET {$query}
             WHERE `id` = {$dados['post_id']}";
-        die(var_dump($dados['post_id']));
+        
 
         try {
             $res = $this->pdo->prepare($con);

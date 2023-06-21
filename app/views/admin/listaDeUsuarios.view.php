@@ -206,7 +206,7 @@
                                     <p>Imagem de perfil:</p>
                                     <label for="dropzone-file" class="imagem">
                                     <?php if($user->image): ?>
-                                            <div class="salvenos"><img src="<?=$user->image?>" alt=""></div>
+                                            <img src="<?=$user->image?>" class="img-fluid">
                                         <?php endif; ?>    
                                     </label>
                                 </div>
