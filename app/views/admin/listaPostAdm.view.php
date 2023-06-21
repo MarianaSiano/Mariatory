@@ -391,7 +391,7 @@
     </h1>
     <div class="mx-[12.5%] flex flex-row gap-5 smartphone:flex-col smartphone:gap-2">
       <form class="flex basis-full gap-2">
-        <input type="search" class="focus:ring-none w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-6 text-sm text-gray-900 drop-shadow-lg focus:border-none" placeholder="Procurar post" required />
+        <input type="search" class="focus:ring-none w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-6 text-sm text-gray-900 drop-shadow-lg focus:border-none" placeholder="Procurar post" />
         <button type="submit" class="rounded-lg bg-roxo-medio-1 px-4 py-2 text-sm font-medium text-white drop-shadow-lg hover:bg-roxo-medio-2 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255)">
             <path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path>
