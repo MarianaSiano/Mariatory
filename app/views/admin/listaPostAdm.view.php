@@ -464,7 +464,7 @@
         </td>
       </tr>
     </table>
-    <?php require('./app/views/layouts/pagination.php'); ?>
+    
   </div>
 
   <script src="../../../public/js/modalListaPostAdm.js"></script>
