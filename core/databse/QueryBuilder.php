@@ -281,4 +281,39 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    //criar comentarios
+
+    public function insertComments($dados){
+        try{
+            $res = $this->pdo->prepare(
+                "INSERT INTO comments(
+                    username,
+                    comment_text,
+                    post_id
+                ) VALUES (
+                    '{$dados['username']}',
+                    '{$dados['comment_text']}',
+                    '{$dados['post_id']}'
+                )"    
+            );
+
+            $res->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function selectComments($id){
+        $sql = "SELECT * from comments WHERE post_id = {$id}";
+        
+        try{
+            $sql = $this->pdo->prepare($sql);
+
+            $sql->execute();
+            return $sql->fetchAll(PDO::FETCH_CLASS);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
 }

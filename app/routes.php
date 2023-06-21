@@ -41,6 +41,9 @@ $router->get('postList', 'PostListController@show');
 //-> Busca de Posts
 $router->post('buscar', 'PostListController@search');
 
+/* Comentários */
+$router->post('comment/criarComentario', 'CommentController@createComments');
+
 //posts
 
 //-> Criação
@@ -49,4 +52,5 @@ $router->post('post/criarPost', 'PostController@create');
 $router->get('teste', 'PostController@show');
 $router->get('post/excluir', 'PostController@excluir');
 $router->post('post/editar', 'PostController@editar');
+$router->get('buscarPost', 'PostController@search');
 
