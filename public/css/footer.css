@@ -77,6 +77,7 @@ footer {
     gap: 1.5rem;
     list-style: none;
     text-align: center;
+    margin-top: 30px;
 }
 
 .footer-mission p {
