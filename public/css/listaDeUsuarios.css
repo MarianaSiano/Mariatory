@@ -357,6 +357,7 @@ body {
 .campoPreencher {
     flex: 65%;
     margin-left: 10px;
+    margin-bottom: 5vh;
 }
 
 .campoIMG {
@@ -372,8 +373,8 @@ body {
 .imagem {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    width: 15vw;
+    height: 20vh;
     cursor: pointer;
     justify-content: center;
     align-items: center;

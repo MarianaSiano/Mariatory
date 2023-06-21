@@ -14,10 +14,6 @@
 </head>
 
 <body>
-
-    <!--import da navbar-->
-    <?php require('./app/views/layouts/navbar.php'); ?>
-
     <?php
     if (!isset($post) || empty($post)) {
         $post = new stdclass();
@@ -42,14 +38,6 @@
                             </div>
                         </div>
                         <div class="alinhamento">
-                            <h3 class="titulosesquerda"> Redflags </h3>
-                            <div class="classificacao">
-                                <p class="elementos">cc</p>
-                                <p class="elementos">bb</p>
-                                <p class="elementos">aa</p>
-                            </div>
-                        </div>
-                        <div class="alinhamento">
                             <h3 class="titulosesquerda"> Avaliação </h3>
                             <p class="textinhoesquerda" id="estrelas"><?= $post->rating ?? '' ?></p>
                         </div>
@@ -65,25 +53,9 @@
                     <h2 class="h2">Resenha</h2>
                     <p class="texto"><?= $post->review ?? '' ?></p>
                 </div>
-                <div class="comentarios">
-                    <h2 id="titulocomentarios"> Comentários </h2>
-                    <div class="espacocomentarios">
-                        <input type="text" class="text" placeholder="Comente aqui" />
-                    </div>
-                    <div class="outroscomentarios">
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-    <!--import do footer-->
-    <?php require('./app/views/layouts/footer.php'); ?>
 </body>
 
 </html>

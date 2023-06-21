@@ -64,7 +64,7 @@
     
                 <div class="btnEditar">
                     <button class="botaoSim fechar">Salvar</button>
-                    <button class="botaoSim fechar">Calcelar</button>
+                    <button class="botaoSim fechar">Cancelar</button>
                 </div>
             </form>
         </div>
@@ -220,8 +220,6 @@
                                         <input readonly class="Nome" disabled value="<?= $user->name ?>" />
                                         <p id="nomeUsuario">E-mail:</p>
                                         <input readonly class="email" disabled value="<?= $user->email ?>" />
-                                        <p id="nomeUsuario">Senha:</p>
-                                        <input readonly class="senha" disabled value="<?= $user->password ?>" type="password" />
     
                                     </div>
                                 </div>
@@ -269,14 +267,12 @@
                                             <input class="Nome" name="name" value="<?= $user->name ?>" />
                                             <p id="nomeUsuario">E-mail:</p>
                                             <input class="email" name="email" value="<?= $user->email ?>" />
-                                            <p id="nomeUsuario">Senha:</p>
-                                            <input class="senha" name="password" value="<?= $user->password ?>" type="text" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="btnEditar">
                                     <button type="submit" class="botaoSim fechar">Salvar</button>
-                                    <a style="text-decoration: none"  href="/listaDeUsuarios" class="botaoSim fechar">Calcelar</a>
+                                    <a style="text-decoration: none"  href="/listaDeUsuarios" class="botaoSim fechar">Cancelar</a>
                                 </div>
                             </div>
                         </form>
