@@ -378,7 +378,7 @@
         </div>
       </form>
     </dialog>
-    <dialog id="modalVisualizacao" class="  overflow-x-hidden rounded-lg p-4 backdrop:bg-roxo-escuro-2/20 mx-[auto] mt-10">
+    <dialog id="modalVisualizacao" class="  overflow-x-hidden rounded-lg p-4 backdrop:bg-roxo-escuro-2/20 mx-[auto] my-[auto]">
       <iframe id="visualizar_post" class="h-[80vh] w-[80vw]"></iframe>
       <button class="m-2 flex min-w-fit flex-row justify-end rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2" id="fecharVisualizacao">
         Fechar
