@@ -21,7 +21,7 @@
 <body class="bg-nuvens bg-repeat h-[auto]">
   <?php require('./app/views/layouts/sidebar.php'); ?>
   <div class="main">
-    <dialog id="myModal" class=" mx-[auto] mt-[25%] rounded-lg border border-solid border-roxo-escuro-2 bg-white p-5 backdrop:bg-roxo-escuro-2/20">
+    <dialog id="myModal" class=" mx-[auto] my-[auto] rounded-lg border border-solid border-roxo-escuro-2 bg-white p-5 backdrop:bg-roxo-escuro-2/20">
       <div class="flex items-center justify-between">
         <h2 class="mb-3 mt-0 text-center text-xl font-semibold">EXCLUIR POSTAGEM</h2>
         <div id="fecharExcluir"><i class="bx bx-x"></i></div>
@@ -378,7 +378,7 @@
         </div>
       </form>
     </dialog>
-    <dialog id="modalVisualizacao" class="rounded-lg p-0 backdrop:bg-roxo-escuro-2/20">
+    <dialog id="modalVisualizacao" class="  overflow-x-hidden rounded-lg p-4 backdrop:bg-roxo-escuro-2/20 mx-[auto] mt-10">
       <iframe id="visualizar_post" class="h-[80vh] w-[80vw]"></iframe>
       <button class="m-2 flex min-w-fit flex-row justify-end rounded-lg bg-roxo-medio-1 px-2 py-3 text-white drop-shadow-lg hover:bg-roxo-medio-2" id="fecharVisualizacao">
         Fechar
@@ -466,7 +466,7 @@
         </td>
       </tr>
     </table>
-    
+
   </div>
 
   <script src="../../../public/js/modalListaPostAdm.js"></script>

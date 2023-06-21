@@ -21,7 +21,7 @@
     <div class="heading">
         <form action="buscar" class="formulario" method="GET">
             <div class="btnProcurar">
-                <input name="search" type="search" class="procurar" placeholder="Digite o nome do post" required />
+                <input name="search" type="search" class="procurar" placeholder="Digite o nome do post" />
             </div>
 
             <div class="btnBusca">
@@ -38,43 +38,43 @@
         <div class="row">
             <?php foreach ($posts_pagination as $post) : ?>
                 <div class="col-md-4">
-                    
-                        <div class="card">
 
-                            <span class="badge rounded-pill text-bg-primary bg-purple"><?= $post->gender ?></span>
+                    <div class="card">
 
-                            <div class="content-image">
+                        <span class="badge rounded-pill text-bg-primary bg-purple"><?= $post->gender ?></span>
 
-                                <img src="https://poltronanerd.com.br/wp-content/uploads/2017/12/81cAEHClU4L.jpg" alt="Imagem ilustrativa">
+                        <div class="content-image">
 
-                            </div>
+                            <img src="https://poltronanerd.com.br/wp-content/uploads/2017/12/81cAEHClU4L.jpg" alt="Imagem ilustrativa">
 
-                            <div class="card-body">
-                                <h5 class="card-title fifty-chars"><?= $post->title ?></h5>
-                                <p class="card-text"><?= $post->synopsis ?></p>
-                            </div>
-
-                            <ul class="post-datas">
-                                <li>Por <span><?= $post->author_post ?></span></li>
-                                <br>
-                                <?php if($post->updated_at): ?>
-                                <small class="text-muted">Atualizado em <?= date('d/m/Y', strtotime(explode(' ', $post->updated_at)[0]))?> às <?= explode(' ', date('Y-m-d H:i:s', strtotime($post->updated_at)))[1]?></small>
-                                <?php endif; ?>
-                            </ul>
-
-                            <a href="/vpost2?id=<?php echo $post->id?>"><button class="button-card" role="button">Saber Mais</button></a>
-
-                            <div class="card-footer">
-                                <i class='bx bx-calendar'></i> Criado em <?= date('d/m/Y', strtotime(explode(' ', $post->created_at)[0]))?>
-                            </div>
                         </div>
-                    
+
+                        <div class="card-body">
+                            <h5 class="card-title fifty-chars"><?= $post->title ?></h5>
+                            <p class="card-text"><?= $post->synopsis ?></p>
+                        </div>
+
+                        <ul class="post-datas">
+                            <li>Por <span><?= $post->author_post ?></span></li>
+                            <br>
+                            <?php if ($post->updated_at) : ?>
+                                <small class="text-muted">Atualizado em <?= date('d/m/Y', strtotime(explode(' ', $post->updated_at)[0])) ?> às <?= explode(' ', date('Y-m-d H:i:s', strtotime($post->updated_at)))[1] ?></small>
+                            <?php endif; ?>
+                        </ul>
+
+                        <a href="/vpost2?id=<?php echo $post->id ?>"><button class="button-card" role="button">Saber Mais</button></a>
+
+                        <div class="card-footer">
+                            <i class='bx bx-calendar'></i> Criado em <?= date('d/m/Y', strtotime(explode(' ', $post->created_at)[0])) ?>
+                        </div>
+                    </div>
+
                 </div>
             <?php endforeach; ?>
         </div>
     <?php else : ?>
         <div class="error-search">
-            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)</div>
+            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)< /div>
                     <div _ngcontent-ng-c2168645827 class="error-msg">Não foi possível encontrar o post com o título <span>"<?= $_GET['search'] ?></span>"</div>
             </div>
         </div>
@@ -91,15 +91,14 @@
     <script>
         const input = document.querySelector('.procurar');
 
-        function changeContent(){
+        function changeContent() {
             const screenWidth = window.innerWidth;
 
-            if(screenWidth >= 580 && screenWidth < 760){
+            if (screenWidth >= 580 && screenWidth < 760) {
                 input.placeholder = "Nome do post";
-            }else if(screenWidth < 580){
+            } else if (screenWidth < 580) {
                 input.placeholder = "Título post";
-            }
-            else{
+            } else {
                 input.placeholder = "Digite o nome do post";
             }
         }
