@@ -1,3 +1,5 @@
+<?php include('./app/views/site/protectLogin.php'); ?> <!--Estava faltando -->
+
 <!DOCTYPE html>
 <html>
 

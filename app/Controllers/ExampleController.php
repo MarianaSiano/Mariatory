@@ -33,7 +33,10 @@ class ExampleController
 
     public function landingPage() 
     { 
-        return view('site/landingPage');
+
+        $posts = App::get('database')->selectFive('posts');
+    
+        return view('site/landingPage', compact('posts'));
     }
 
     public function vpost(){

@@ -39,7 +39,7 @@ $router->get('buscarUsuario', 'UsuarioController@search');
 //-> Exibição da página
 $router->get('postList', 'PostListController@show');
 //-> Busca de Posts
-$router->get('buscar', 'PostListController@search');
+$router->get('buscar', 'PostListController@search'); //Estava como post
 
 /* Comentários */
 $router->post('comment/criarComentario', 'CommentController@createComments');
@@ -52,4 +52,5 @@ $router->post('post/criarPost', 'PostController@create');
 $router->get('teste', 'PostController@show');
 $router->get('post/excluir', 'PostController@excluir');
 $router->post('post/editar', 'PostController@editar');
+$router->get('buscarPost', 'PostController@search');
 
