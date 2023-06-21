@@ -107,7 +107,7 @@
             </div>
             <div class="btnEditar">
                 <button class="botaoSim fechar">Salvar</button>
-                <button class="botaoSim fechar">Calcelar</button>
+                <button class="botaoSim fechar">Cancelar</button>
             </div>
         </div> -->
     
@@ -223,7 +223,8 @@
                             </div>
     
                             <div class="btnEditar">
-                                <button class="botaoSim fechar">Sair</button>
+                                <button type="submit" class="botaosalvar">Salvar</button>
+                                <a style="text-decoration: none"  href="/listaDeUsuarios" class="botaocancelar">Cancelar</a>
                             </div>
     
                         </div>

@@ -328,6 +328,7 @@ body {
     border-radius: 0.5rem;
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
     margin-right: 8px;
+    border: none;
 }
 
 
@@ -357,11 +358,11 @@ body {
 .campoPreencher {
     flex: 65%;
     margin-left: 10px;
-    margin-bottom: 5vh;
+    transform: translate(0%, -10%)
 }
 
 .campoIMG {
-    flex: 30%;
+    flex: 30%; 
 }
 
 .campos {
@@ -490,6 +491,56 @@ img{
     color: black;
 }
 
+
+
+.botaonaoexcluir{
+    background-color: #E0AAFF;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1rem;
+    color: #040404;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    margin-right: 8px;
+
+}
+
+.botaosalvar{
+    background-color:#7B2CBF;
+    width: 90px;;
+    height:40px; 
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border: none;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    margin-right: 8px;
+    transform: translate(10%, 27%)
+    
+}
+
+.botaocancelar{
+    background-color: #E0AAFF;
+    width: 90px;
+    height:40px;  
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    margin-right: 8px;
+    transform: translate(15%, -10%)
+    
+}
 @media screen and (max-width: 520px) {
     .tabela1{
         font-size: 12px;
