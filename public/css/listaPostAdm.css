@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -436,6 +436,9 @@ video {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -483,6 +486,9 @@ video {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -532,6 +538,18 @@ video {
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .bottom-1 {
   bottom: 0.25rem;
 }
@@ -543,6 +561,11 @@ video {
 .mx-\[12\.5\%\] {
   margin-left: 12.5%;
   margin-right: 12.5%;
+}
+
+.mx-\[auto\] {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mx-auto {
@@ -560,12 +583,21 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.my-\[auto\] {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
 
 .mb-3 {
   margin-bottom: 0.75rem;
+}
+
+.mb-44 {
+  margin-bottom: 11rem;
 }
 
 .ml-2 {
@@ -576,12 +608,56 @@ video {
   margin-top: 0px;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-\[25\%\] {
+  margin-top: 25%;
+}
+
+.mt-\[10\%\] {
+  margin-top: 10%;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[50\] {
+  margin-top: 50;
+}
+
+.mt-\[50v\] {
+  margin-top: 50v;
+}
+
+.mt-\[50vw\] {
+  margin-top: 50vw;
+}
+
+.mt-\[vw\] {
+  margin-top: vw;
+}
+
+.mt-\[45vh\] {
+  margin-top: 45vh;
+}
+
+.mt-\[30\%\] {
+  margin-top: 30%;
+}
+
+.mt-\[27\%\] {
+  margin-top: 27%;
 }
 
 .block {
@@ -618,6 +694,10 @@ video {
 
 .h-\[80vh\] {
   height: 80vh;
+}
+
+.h-\[auto\] {
+  height: auto;
 }
 
 .h-full {
@@ -667,6 +747,10 @@ video {
   cursor: pointer;
 }
 
+.resize {
+  resize: both;
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -707,8 +791,12 @@ video {
   gap: 1.25rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .rounded-lg {
@@ -799,7 +887,7 @@ video {
 }
 
 .bg-nuvens {
-  background-image: url(../assets/fundosite.png);
+  background-image: url('/public/assets/fundosite.png');
 }
 
 .bg-repeat {
@@ -825,6 +913,10 @@ video {
 
 .p-2\.5 {
   padding: 0.625rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-5 {
@@ -874,6 +966,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -900,11 +997,6 @@ video {
 .text-roxo-escuro-2 {
   --tw-text-opacity: 1;
   color: rgb(60 9 108 / var(--tw-text-opacity));
-}
-
-.text-roxo-medio-1 {
-  --tw-text-opacity: 1;
-  color: rgb(157 78 221 / var(--tw-text-opacity));
 }
 
 .text-roxo-medio-2 {
@@ -940,6 +1032,10 @@ video {
 
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

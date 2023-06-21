@@ -13,28 +13,23 @@ include('./app/views/site/protectLogin.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="icon" type="image/png" href="/public/assets/Maristory-Navbar.png" sizes="32x32">
 
-    <title>Maristory</title>
+
+    <title>Dashboard</title>
 </head>
 <body>
     <?php require('./app/views/layouts/sidebar.php'); ?>
-    <div class="container">
-
-        <div class="left-container">
-
-            <img src="/public/assets/Maristory-Transparente2.png" alt="Maristory logo">
-
+    <div class="main">
+        <div class="container">
+            <div class="left-container">
+                <img src="/public/assets/Maristory-Transparente2.png" alt="Maristory logo">
+            </div>
+            <div class="right-container">
+                <button class="listPosts"><i class="fa-regular fa-note-sticky"></i><a href="listaPostAdm">Gerenciar Posts</a></button>
+                <button class="formPosts"><i class="fa-solid fa-list"></i><a href="postList">Listagem de Posts</a></button>
+                <button class="listUser"><i class="fa-regular fa-user"></i><a href="listaDeUsuarios">Gerenciar Usuários</a></button>
+                <button class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="login/logout">Logout</a></button>
+            </div>
         </div>
-
-        <div class="right-container">
-
-            <button class="listPosts"><i class="fa-regular fa-note-sticky"></i><a href="#">Lista de Posts</a></button>
-            <button class="formPosts"><i class="fa-regular fa-clipboard"></i></i><a href="#">Form de Posts</a></button>
-            <button class="listUser"><i class="fa-regular fa-user"></i><a href="#">Lista de Usuários</a></button>
-            <button class="formUser"><i class="fa-regular fa-id-badge"></i><a href="#">Form de Usuários</a></button>
-            <button class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="login/logout">Logout</a></button>
-
-        </div>
-
     </div>
     
 <body>

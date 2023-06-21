@@ -39,6 +39,10 @@ header {
     font-weight: 400;
 }
 
+.nav-link:hover{
+    color: #985fc4;
+}
+
 .mobile-menu-icon {
     display: none;
 }

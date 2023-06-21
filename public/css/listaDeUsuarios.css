@@ -223,13 +223,27 @@ body {
     padding: 0.5rem;
 }
 
-.l1c3 {
+.l1c3 { 
     display: flex;
     justify-content: center;
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-color: rgb(17 24 39);
     padding: 0.5rem;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #9D4EDD !important;
+    border-color: #10002B !important;
+}
+
+.page-link{
+    color: #10002B !important;
+}
+
+.page-link:hover{
+    color: #10002B !important;
+    background-color: #c77dff !important;
 }
 
 .l1c3 button{
@@ -360,8 +374,8 @@ body {
 .imagem {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 80%;
+    width: 15vw;
+    height: 20vh;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -496,4 +510,24 @@ body {
     transform: translate(15%, -10%)
     
 }
+@media screen and (max-width: 520px) {
+    .tabela1{
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .tabela1{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .tabela1{
+        font-size: 9px;
+    }
+
+}
+
 

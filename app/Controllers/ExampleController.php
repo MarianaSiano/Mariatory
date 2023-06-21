@@ -33,11 +33,30 @@ class ExampleController
 
     public function landingPage() 
     { 
-        return view('site/landingPage');
+
+        $posts = App::get('database')->selectFive('posts');
+    
+        return view('site/landingPage', compact('posts'));
     }
 
-    public function vpost() 
-    { 
+    public function vpost(){
         return view('site/vpost');
+    }
+
+    public function vpost2() 
+    {
+        $id = ($_GET['id']);
+
+        $post = App::get('database')->viewPost($id);
+
+        // die(var_dump($post));
+
+        $aux = App::get('database')->selectUserName($post[0]->author_post);
+
+        $post[0]->author_post = $aux;
+
+        $comments = App::get('database')->selectComments($id);
+        // die(var_dump($comments));
+        return view('site/vpost2', compact('post', 'comments'));
     }
 }

@@ -26,6 +26,36 @@ class QueryBuilder
         }
     }
 
+    // Função para selecionar os últimos 5 posts cadastrados
+    public function selectFive($table)
+    {
+        $res = "SELECT * FROM {$table} ORDER BY created_at DESC LIMIT 5";
+        
+        try {
+            $res = $this->pdo->prepare($res);
+
+            $res->execute();
+
+            return $res->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectUserName($id){
+        try{
+            $res = $this->pdo->prepare("SELECT name from users WHERE id = {$id}");
+            
+            $res->execute();
+
+            return $res->fetch()[0];
+        }catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    
+
     public function insertUsuarios($dados)
     {
         try {
@@ -126,6 +156,38 @@ class QueryBuilder
         }
     }
 
+    public function searchPost($title){
+        $sql = "SELECT * FROM posts WHERE title LIKE '%{$title}%'";
+
+        try {
+            $stnt = $this->pdo->prepare($sql);
+            $stnt->execute();
+
+
+            return $stnt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+
+            die($e->getMessage());
+        }
+    }
+
+    public function pagination($table, $start, $limit){
+        if($table == 'posts'){
+            $res = "SELECT * FROM posts ORDER BY created_at, title ASC LIMIT {$start}, {$limit}";
+        }else{
+            $res = "SELECT * FROM users ORDER BY id ASC LIMIT {$start}, {$limit}";
+        }
+        
+        try{
+            $res = $this->pdo->prepare($res);
+            $res->execute();
+
+            return $res->fetchAll(PDO::FETCH_CLASS);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
     public function search(
         string $tabela, 
         string $campoParaPesquisar, 
@@ -176,6 +238,22 @@ class QueryBuilder
         return $register->rowCount();
     }
 
+    public function countAll($table)
+    {
+
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function searchUsers($name){
         $sql = "SELECT * FROM users WHERE name LIKE '%{$name}%'";
 
@@ -189,7 +267,53 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    
-    
 
+    public function viewPost($id){
+        $sql = "SELECT * FROM posts WHERE id = '{$id}'";
+
+        try {
+            $sql = $this->pdo->prepare($sql);
+
+            $sql->execute();
+
+            return $sql->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //criar comentarios
+
+    public function insertComments($dados){
+        try{
+            $res = $this->pdo->prepare(
+                "INSERT INTO comments(
+                    username,
+                    comment_text,
+                    post_id
+                ) VALUES (
+                    '{$dados['username']}',
+                    '{$dados['comment_text']}',
+                    '{$dados['post_id']}'
+                )"    
+            );
+
+            $res->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function selectComments($id){
+        $sql = "SELECT * from comments WHERE post_id = {$id}";
+        
+        try{
+            $sql = $this->pdo->prepare($sql);
+
+            $sql->execute();
+            return $sql->fetchAll(PDO::FETCH_CLASS);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
 }

@@ -10,10 +10,11 @@ $router->get('dashboard', 'ExampleController@dashboard');
 $router->get('listaPostAdm', 'ExampleController@listaPostAdm');
 
 $router->get('', 'ExampleController@landingPage');
-$router->get('postList', 'ExampleController@postList');
 $router->get('vpost', 'ExampleController@vpost');
+$router->get('vpost2', 'ExampleController@vpost2');
 
 /*Login*/
+
 //-> Processo para logar
 $router->post('login/logar', 'LoginController@login');
 //-> Retorna a página de login
@@ -31,6 +32,17 @@ $router->get('listaDeUsuarios', 'UsuarioController@show');
 $router->post('users/deletarUsuario', 'UsuarioController@deleteUsers');
 //-> Editar
 $router->post('users/editarUsuario', 'UsuarioController@editUsers');
+//-> Buscar
+$router->get('buscarUsuario', 'UsuarioController@search');
+/*Lista de Posts*/
+
+//-> Exibição da página
+$router->get('postList', 'PostListController@show');
+//-> Busca de Posts
+$router->get('buscar', 'PostListController@search'); //Estava como post
+
+/* Comentários */
+$router->post('comment/criarComentario', 'CommentController@createComments');
 
 //posts
 
@@ -40,3 +52,5 @@ $router->post('post/criarPost', 'PostController@create');
 $router->get('teste', 'PostController@show');
 $router->get('post/excluir', 'PostController@excluir');
 $router->post('post/editar', 'PostController@editar');
+$router->get('buscarPost', 'PostController@search');
+
