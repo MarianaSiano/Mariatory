@@ -4,7 +4,7 @@
 <head>
     <title>Resenha - TÍTULO DO LIVRO AQUI</title>
 
-    <link rel="stylesheet" href="../../../public/css/vpost.css">
+    <link rel="stylesheet" href="../../../public/css/vpost2.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,15 +74,22 @@
                 </div>
                 <div class="comentarios">
                     <h2 id="titulocomentarios"> Comentários </h2>
-                    <div class="espacocomentarios">
-                        <input type="text" class="text" placeholder="Comente aqui" />
-                    </div>
+
+                    <form action="comment/criarComentario" method="POST">
+                        <input type="text" name="post_id" value="<?= $_GET['id']?>" hidden>
+                        <div class="espacocomentarios">
+                            <input type="text" class="text" placeholder="Nome de Usuário" name="username"/>
+                        </div>
+                        <div class="espacocomentarios">
+                            <input type="text" class="text" placeholder="Comente aqui" name="comment_text"/>
+                        </div>
+                        <button type="submit"> Enviar </button>
+                    </form>
+                    
                     <div class="outroscomentarios">
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p><strong>@nomeusuário</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <?php foreach($comments as $key => $comment) : ?>
+                            <p><strong>@<?= $comment->username ?? '' ?></strong><br><?= $comment->comment_text ?? '' ?> </p>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

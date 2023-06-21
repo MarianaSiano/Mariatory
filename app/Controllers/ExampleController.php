@@ -52,6 +52,8 @@ class ExampleController
 
         $post[0]->author_post = $aux;
 
-        return view('site/vpost2', compact('post'));
+        $comments = App::get('database')->selectComments($id);
+        // die(var_dump($comments));
+        return view('site/vpost2', compact('post', 'comments'));
     }
 }
