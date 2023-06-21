@@ -7,6 +7,8 @@ use Exception;
 
 class UsuarioController
 {
+    const UPLOAD_PATH = 'public/images/users/';
+
     public function __construct()
     {
         if(!isset($_SESSION)) {
@@ -27,15 +29,19 @@ class UsuarioController
             header('Location: /listaDeUsuarios');
             exit();
         }
+        
+        $imagePath = self::UPLOAD_PATH . basename($_FILES['image']['name']);
+        if(move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
+            $parametros = [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'image' => $imagePath
+            ];
 
-        $parametros = [
-            'name' => $_POST['name'],
-            'email' => $_POST['email'],
-            'password' => $_POST['password']
-        ];
-
-        App::get('database')->insertUsuarios($parametros);
-        header('Location: /listaDeUsuarios');
+            App::get('database')->insertUsuarios($parametros);
+            header('Location: /listaDeUsuarios');
+        }
     }
 
     public function show()
@@ -79,15 +85,26 @@ class UsuarioController
     }
 
     public function editUsers()
-    {
-        $parametros = [
-            'id' => $_POST['id'],
-            'name' => $_POST['name'],
-            'email' => $_POST['email'],
-            'password' => hash("sha512", $_POST['password'])
-        ];
+    {   
+        $imagePath = self::UPLOAD_PATH . basename($_FILES['img']['name']);
+        if(move_uploaded_file($_FILES['img']['tmp_name'], $imagePath)){
+            $parametros = [
+                'id' => $_POST['id'],
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'image' => $imagePath
+            ];
+            $flag = true;
+        } else{
+            $parametros = [
+                'id' => $_POST['id'],
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+            ];
+            $flag = false;
+        }
 
-        App::get('database')->editUsers($parametros);
+        App::get('database')->editUsers($parametros, $flag);
         header('Location: /listaDeUsuarios');
     }
 

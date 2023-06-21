@@ -63,11 +63,13 @@ class QueryBuilder
                 "INSERT INTO users(
                     name, 
                     email, 
-                    password
+                    password,
+                    image
                 ) VALUES (
                     '{$dados['name']}', 
                     '{$dados['email']}', 
-                    '{$dados['password']}'
+                    '{$dados['password']}',
+                    '{$dados['image']}'
                 )"
             );
 
@@ -105,17 +107,26 @@ class QueryBuilder
         }
     }
 
-    public function editUsers($dados)
+    public function editUsers($dados, $flag)
     {
         //Tratamento para a geração da consulta  
 
         $id = $dados["id"];
 
-        $con = "UPDATE `users` 
+        if($flag){
+            $con = "UPDATE `users` 
             SET `name` = '{$dados['name']}', 
                 `email` = '{$dados['email']}', 
-                `password` = '{$dados['password']}' 
+                `password` = '{$dados['password']}',
+                `image` = '{$dados['image']}'
             WHERE `users`.`id` = $id";
+        }else{
+            $con = "UPDATE `users` 
+            SET `name` = '{$dados['name']}', 
+                `email` = '{$dados['email']}', 
+                `password` = '{$dados['password']}'
+            WHERE `users`.`id` = $id";
+        }
 
         try {
             $res = $this->pdo->prepare($con);

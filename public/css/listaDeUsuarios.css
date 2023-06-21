@@ -323,7 +323,7 @@ body {
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     color: #ffffff;
     border-radius: 0.5rem;
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
@@ -386,6 +386,37 @@ body {
     background-color: #E0AAFF;
 
 
+}
+
+@media screen and (max-width: 900px){
+    .salvenos{
+        width: 150px !important;
+        height: 119px;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .salvenos{
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .salvenos{
+        width: 80px !important;
+        height: 100px !important;
+    }
+}
+
+.salvenos{
+    width: 200px;
+    height: 119px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
 }
 
 .imagem:hover {
