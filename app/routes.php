@@ -39,7 +39,7 @@ $router->get('buscarUsuario', 'UsuarioController@search');
 //-> Exibição da página
 $router->get('postList', 'PostListController@show');
 //-> Busca de Posts
-$router->post('buscar', 'PostListController@search');
+$router->get('buscar', 'PostListController@search'); //Estava como post
 
 /* Comentários */
 $router->post('comment/criarComentario', 'CommentController@createComments');
