@@ -144,7 +144,7 @@
         <div class="heading">
             <form action = "buscarUsuario" class="formulario" method="GET">
                 <div class="btnProcurar">
-                    <input name = "search" type="search" class="procurar" placeholder="Procurar usuário" />
+                    <input name = "search" type="search" class="procurar" placeholder="Procurar usuário"/>
                 </div>
     
                 <div class="btnBusca">
