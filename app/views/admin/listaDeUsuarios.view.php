@@ -35,7 +35,7 @@
                 <div class="x"><i class="bx bx-x fechar"></i></div>
             </div>
             <hr />
-            <form action="users/criarUsuario" method="POST">
+            <form enctype="multipart/form-data" action="users/criarUsuario" method="POST">
                 <div class="tudo">
                     <div class="campoIMG">
                         <p>Imagem de perfil:</p>
@@ -46,7 +46,7 @@
                                     </path>
                                 </svg>
                             </div>
-                            <input id="dropzone-file" type="file" class="hidden" />
+                            <input name="image" id="dropzone-file" type="file" class="hidden" />
                         </label>
                     </div>
                     <div class="campoPreencher">
@@ -205,13 +205,9 @@
                                 <div class="campoIMG">
                                     <p>Imagem de perfil:</p>
                                     <label for="dropzone-file" class="imagem">
-                                        <div class="img1">
-                                            <svg aria-hidden="true" class="img2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                        <input id="dropzone-file" type="file" class="hidden" />
+                                    <?php if($user->image): ?>
+                                            <img src="<?=$user->image?>" class="img-fluid">
+                                        <?php endif; ?>    
                                     </label>
                                 </div>
                                 <div class="campoPreencher">
@@ -241,7 +237,7 @@
                             </svg></button>
     
     
-                        <form action="users/editarUsuario" method="post">
+                        <form enctype="multipart/form-data" action="users/editarUsuario" method="POST">
                             <input hidden value="<?= $user->id ?>" name="id">
                             <div class="modalllll hide meditar" id="modalEditar-<?= $user->id ?>">
                                 <div class="headerModal">
@@ -259,7 +255,7 @@
                                                     </path>
                                                 </svg>
                                             </div>
-                                            <input id="dropzone-file" type="file" class="hidden" />
+                                            <input name="img" id="dropzone-file" type="file" class="hidden" />
                                         </label>
                                     </div>
                                     <div class="campoPreencher">

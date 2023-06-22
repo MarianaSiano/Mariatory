@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Resenha - TÍTULO DO LIVRO AQUI</title>
+    <title>Resenha - <?= $post[0]->title ?></title>
 
     <link rel="stylesheet" href="../../../public/css/vpost2.css">
 
@@ -27,7 +27,7 @@
         <div class="conteudo">
             <div class="esquerda">
                 <div class="centralizar">
-                    <img src=<?= '../../../' . ($post->image ?? 'public/images/posts/comprovante.png') ?> alt="capa do livro">
+                    <img style="margin-bottom: 1rem;" src=<?= $post[0]->image ?? "/public/assets/Maristory-Navbar.png"?> alt="Imagem ilustrativa" ?>
                     <div class="todosAlinhamentos">
                         <div class="alinhamento">
                             <h3 class="titulosesquerda"> Autor </h3>
