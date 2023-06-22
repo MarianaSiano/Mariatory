@@ -1082,6 +1082,10 @@ video {
     margin-bottom: 0.5rem;
   }
 
+  .smartphone\:flex {
+    display: flex;
+  }
+
   .smartphone\:flex-col {
     flex-direction: column;
   }
