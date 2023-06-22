@@ -495,7 +495,7 @@ body {
 }
 
 .botaocancelar{
-    background-color: #E0AAFF;
+    background-color: #7B2CBF;;
     width: 90px;
     height:40px;  
     padding-top: 0.25rem;
@@ -503,7 +503,7 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     margin-top: 1rem;
-    color: #ffffff;
+    color: #fff;
     border-radius: 0.5rem;
     filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
     margin-right: 8px;
