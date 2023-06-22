@@ -20,6 +20,20 @@
   /* 2 */
 }
 
+.active>.page-link, .page-link.active {
+  background-color: #9D4EDD !important;
+  border-color: #10002B !important;
+}
+
+.page-link{
+  color: #10002B !important;
+}
+
+.page-link:hover{
+  color: #10002B !important;
+  background-color: #c77dff !important;
+}
+
 ::before,
 ::after {
   --tw-content: '';
@@ -629,7 +643,7 @@ video {
 }
 
 .mt-\[\] {
-  margin-top: ;
+  margin-top: 0;
 }
 
 .mt-\[50\] {

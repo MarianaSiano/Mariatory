@@ -23,7 +23,7 @@
             <div class="logo">
 
                 <span class="img">
-                    <img src="/public/assets/Maristory-Transparente2.png" alt="Logotipo do site">
+                    <a href="./"><img src="/public/assets/Maristory-Transparente2.png" alt="Logotipo do site"></a>
                 </span>
 
             </div>

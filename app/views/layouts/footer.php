@@ -16,7 +16,7 @@
         <div class="footer-content">
 
             <div class="footer-logo">
-                <a class="logo" href="#"><img src="/public/assets/Maristory-Navbar-Transparente.png" alt="Maristory logo"></a>
+                <a class="logo" href=".\"><img src="/public/assets/Maristory-Navbar-Transparente.png" alt="Maristory logo"></a>
             </div>
 
 

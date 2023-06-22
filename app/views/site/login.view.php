@@ -15,7 +15,7 @@
 <body>
     <div>
         <a href="./"><img src="../../../public/assets/Maristory-Navbar-Transparente.png" alt="maristory logo"></a>
-        <h1> Bem vindo(a)! </h1>
+        <h1> Bem vinde! </h1>
         <form action="login/logar" method="POST">
             <input type="text" required name="email" placeholder="Nome do Usuário ou Email" autofocus>
             <br><br>

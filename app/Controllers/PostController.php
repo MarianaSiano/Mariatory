@@ -21,10 +21,40 @@ class PostController {
         if(isset($_GET['valor_pesquisado'])) { 
             $posts = App::get('database')->searchPost($_GET['valor_pesquisado']);
             return view('admin/listaPostAdm', compact('posts'));
-        }
+        }else{
+            if(isset($_GET['pagina'])){
+                $page = $_GET['pagina'] ?? 1;
+    
+                if(intval($_GET['pagina']) <= 0){
+                    $page = 1;
+                }
+            }else{
+                $_GET['pagina'] = 1;
+                $page = 1;
+            }
 
-        $posts = App::get('database')->selectAll('posts');
-        return view('admin/listaPostAdm', compact('posts'));
+            $qtd_posts = 5;
+            //Operador de colascência nula para caso o GET['pagina'] seja NULL. 
+
+            $start = $page - 1;
+            $start *= $qtd_posts;
+
+            $posts = App::get('database')->selectAll('posts');
+
+            $total_posts = count($posts);
+
+            //Pegar o teto da divisão  
+            $total_pages = ceil($total_posts/$qtd_posts);
+
+            $posts = App::get('database')->pagination('posts', $start, $qtd_posts);
+
+            // die(var_dump($posts_pagination));
+
+            $identificador = 'listaPostAdm';
+
+            // return view('admin/listaPostAdm', compact('posts'));
+            return view('admin/listaPostAdm', compact('posts', 'total_pages', 'qtd_posts', 'total_posts', 'start', 'page', 'identificador'));
+        }
     }
 
     public function create()

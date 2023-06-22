@@ -442,7 +442,7 @@
         </tr>
       <?php endforeach ?>
 
-      <tr>
+      <tr style="display: none;">
         <td class="p-2">Felicidade Clandestina</td>
         <td class="border-x border-gray-900 p-2">03/11/22</td>
         <td class="p-2">
@@ -466,7 +466,7 @@
         </td>
       </tr>
     </table>
-
+    <?php require('./app/views/layouts/pagination.php'); ?>
   </div>
 
   <script src="../../../public/js/modalListaPostAdm.js"></script>
