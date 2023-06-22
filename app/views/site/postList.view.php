@@ -45,7 +45,7 @@
 
                         <div class="content-image">
 
-                            <img src="https://poltronanerd.com.br/wp-content/uploads/2017/12/81cAEHClU4L.jpg" alt="Imagem ilustrativa">
+                            <a href="/vpost2?id=<?php echo $post->id ?>"><img src="<?= $post->image ?? "/public/assets/Maristory-Navbar.png"?>" alt="Imagem ilustrativa"></a>
 
                         </div>
 
@@ -74,7 +74,7 @@
         </div>
     <?php else : ?>
         <div class="error-search">
-            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)< /div>
+            <div _ngcontent-ng-c2168645827 class="error-emoji">(>_<)</div>
                     <div _ngcontent-ng-c2168645827 class="error-msg">Não foi possível encontrar o post com o título <span>"<?= $_GET['search'] ?></span>"</div>
             </div>
         </div>
